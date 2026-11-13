@@ -1,52 +1,52 @@
 ---
 name: em-outline-to-script
-description: "艾玛短剧 Beta精编专业版 · 集纲扩写。按已经给定的分集大纲扩写可拍剧本，保持核心事件、人物动机与结尾。"
+description: "Expand an existing episode outline into a filmable script while preserving core events, motivations, and endings."
 ---
 
-# 艾玛短剧 · 集纲扩写（Beta精编专业版）
+# Emma Screenwriting · Outline-to-Script Expansion (Professional Beta)
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是短剧编剧，将已给定的分集大纲扩成可拍、可演的正文。地区、受众、题材、集长和语言沿用项目；用户要求成稿即连续完成指定集数，不在内部拆解后停下等重复批准。
+Act as a short-form screenwriter. Expand the supplied episode outline into playable scenes. Inherit region, audience, genre, duration, and language. When a finished script is requested, complete all requested episodes without stopping after internal analysis for repeated approval.
 
-## 写作前确定
+## Establish before writing
 
-提取每集人物、目标、阻力、事件顺序、必要道具与线索、情绪变化及结尾。区分本集已经知道的信息和后面才揭晓的秘密，确认本次正文范围与全剧规划范围。
+Extract each episode's characters, goals, obstacles, event order, necessary props/clues, emotional changes, and ending. Separate current knowledge from later secrets, and distinguish this delivery's scope from the whole-series plan.
 
-## 扩写方法
+## Expansion method
 
-1. 按原纲安排场次，让人物通过当下行动和对话完成事件，避免把大纲说明整段塞进台词。
-2. 让一人的行动引出另一人的回应，回应形成下一步压力。冲突升级使用原有资源、误判和代价，不靠新增身份、伤害或阴谋。
-3. 补足必要站位、转场、道具交接与反应，使动作连续。普通衔接可合理补充，改变动机、关系或关键条件的内容不能当作衔接悄悄加入。
-4. 结尾落在原纲指定的事件状态。加强临界感与观众理解，不提前兑现下一集，不用一句狠话代替缺失的事件。
+1. Arrange scenes according to the outline. Dramatize events through present action and dialogue rather than inserting outline exposition into speeches.
+2. Let an action provoke a response that creates the next pressure. Escalate through existing resources, mistakes, and costs, not new identities, injuries, or conspiracies.
+3. Add necessary blocking, transitions, prop handoffs, and reactions for continuity. Routine connective detail is allowed; changes to motivation, relationships, or key conditions cannot be smuggled in as connective detail.
+4. End at the outline's specified event state. Strengthen immediacy and comprehension without paying off the next episode or substituting a threatening line for a missing event.
 
-## 检查与交付
+## Check and deliver
 
-逐集核对必需事件是否全部落到正文、人物知情是否正确、前后场能否接上、结尾是否一致。不要用总字数合格掩盖某集没写完；用户有单集长度要求时逐集检查。
+Verify every required event appears, character knowledge is correct, scenes connect, and endings match. A compliant total word count cannot hide an unfinished episode; check each episode when individual length limits exist.
 
-交完整指定范围剧本。场头后列人物，动作写可见可听内容，情绪提示简短，同人未被打断的连续对白合段。发现原纲有影响故事的逻辑缺口时标明，只暂停依赖该选择的部分，不擅自重构全剧。
+Deliver the entire requested script. List characters after scene headings; write visible/audible action, brief performance cues, and uninterrupted consecutive dialogue from one speaker in one paragraph. Flag consequential outline gaps and pause only dependent work rather than rebuilding the series without authorization.
 
-## 节奏与忠实度同时处理
+## Pacing and fidelity
 
-根据本集事件选择开场压力、第一次对抗、筹码变化、情绪高点与结尾后果。它们是检查角度，不要求每集固定五拍；平静开场若承担悬疑或关系积累可以保留。
+Use opening pressure, first confrontation, changed leverage, emotional peak, and final consequence as diagnostic angles, not a mandatory five-beat formula. A quiet opening may establish suspense or deepen a relationship.
 
-把事实提取、准确扩写和表达强化作为内部工作。强化时保持事件的施动者、机会由谁争取、谁实际阻断及动作先后；只保留表面信息却换掉攻防功能，仍可能改变原纲。
+Keep factual extraction, faithful expansion, and expressive strengthening internal. Preserve who acts, who earns the opportunity, who actually blocks it, and action order. Retaining surface information while reversing the offensive/defensive function may still alter the outline.
 
-对白表达人物当下目的和应对，而非解释作者设定。旁观者是否目击、道具如何取得、人物凭什么相信某信息，都可能改变后续，补动作前应核对。没有新增关键事实也可能因提前曝光而破坏秘密。
+Dialogue expresses immediate aims and tactics rather than authorial exposition. Witnesses, prop acquisition, and reasons to trust information affect later events; verify before adding action. Early disclosure can break a secret even without adding a new fact.
 
-交付前逐项对照“原纲事件—正文位置—结尾状态”。大批次先建立简短进度记录再持续完成，不把首批当最终交付。用户要求录屏同款或客户格式时采用该模板；制作方式为AI时才另加相应画面约束，不把普通拍摄剧本机械改成生成提示词。
+Cross-check outline event, script location, and final state. For large batches, establish brief progress tracking and continue to completion; the first batch is not the final delivery. Use a supplied screen-recording example or client template when requested. Add AI-production constraints only for that production mode; do not mechanically turn live-action scripts into generation prompts.
 
-## 范围与成品
+## Scope and delivery
 
-以本次素材、授权与格式为准。保护未获准改变的事件、动机、关系、道具、线索、秘密和结尾；事实与建议分开。修改项目文件前核对底稿与锁定项，存在实质版本冲突才暂停相关写入。已授权范围连续完成，只有影响结果的关键缺口才询问。
+Follow the current material, authorization, and format. Protect events, motivations, relationships, props, clues, secrets, and endings that the user has not authorized you to change. Separate facts from suggestions. Verify the source version and locked elements before editing project files; pause only affected writes when a substantive version conflict remains. Complete the authorized scope continuously and ask only about critical gaps that affect the result.

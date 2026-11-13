@@ -1,22 +1,22 @@
-# 赛博属性提炼指南
+# Cyberpunk Attribute Extraction
 
-本文件提供观察维度，不包含第三方剧本摘录，也不是待套入新作品的既定设定。分析结论必须来自本次可读取素材；只读了文字就按文字取证。
+This guide supplies observation dimensions, not third-party script excerpts or predefined rules to impose on new work. Base findings on currently available material. If only text was read, use textual evidence.
 
-| 维度 | 观察重点 |
-| --- | --- |
-| 社会与规则 | 谁控制技术、维修、数据与资源？使用能力有什么代价、限制或禁忌？ |
-| 职业与人物 | 改造和技术怎样进入劳动、消费、身份、地位与亲密关系？ |
-| 剧情机制 | 世界观元素实际怎样参与交易、背叛、救援、反击和选择？ |
-| 身体与材质 | 保留素材写明的结构、材质、颜色、光源位置与变化顺序。 |
-| 道具与交互 | 记录人物操作、界面反馈、实体变化和环境反应；没有展示的步骤不补写。 |
-| 场景与视觉 | 观察空间、构图、声音与新旧材质的组合；纯视觉特色也可独立收录。 |
+| Dimension | Observe |
+|---|---|
+| Society/rules | Who controls technology, repairs, data, and resources? What costs, limits, or taboos govern abilities? |
+| Jobs/characters | How do modification and technology affect work, consumption, identity, status, and intimacy? |
+| Plot mechanisms | How do these elements participate in transactions, betrayal, rescue, retaliation, and choice? |
+| Bodies/materials | Preserve explicit structure, material, color, light-source location, and sequence of change. |
+| Props/interaction | Record operation, interface feedback, physical change, and environmental response. Do not invent unseen steps. |
+| Setting/visuals | Observe space, composition, sound, and old/new material combinations. Purely visual expression can qualify independently. |
 
-## 证据边界
+## Evidence boundaries
 
-- 每条记录来源位置、素材事实、分析判断与可借鉴表达；未知功能明确标注未知。
-- “具有赛博风格”与“赛博独有”不同。跨题材共用元素可通过组合形成特色，不因并非独有就删去。
-- 灯光颜色不自动证明能源类型；扫描动作不证明已经获得诊断；机械身体不证明人物没有情感。
-- 不把身体改造自动当成道德或阵营标签，不把一部作品的规则推成全部题材的规则。
-- 用户点名的动作、颜色、构图等细节要保留；归并条目时不要丢失动作阶段。
-- 需要创作建议时，单列“扩展设想”，不能放回原作事实列。
-- 用户要求持续收录时，在其私有工作区保存有来源的案例；公开分享需另行授权。
+- Record source location, fact, interpretation, and reusable expression. Mark unknown functions as unknown.
+- “Cyberpunk style” differs from “exclusive to cyberpunk.” Shared genre elements can form distinctive combinations; do not discard them merely because they are not exclusive.
+- Light color does not establish energy source; scanning does not prove a diagnosis; a mechanical body does not prove absence of feeling.
+- Body modification is not automatically a moral/faction label. One work's rules do not govern the whole genre.
+- Preserve named actions, colors, and compositions. Consolidation must not erase action stages.
+- Put requested creative suggestions under “proposed extensions,” never back into source facts.
+- Save sourced cases privately when continued collection is requested. Public sharing needs separate authorization.

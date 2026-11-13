@@ -1,27 +1,27 @@
 ---
 name: em-dialogue-efficiency
-description: 艾玛短剧 · 台词两步精修的兼容入口。用户点名台词效率或旧名称时，转入 em-dialogue 的 Step 1 场景与人物判断、Step 2 逐句效率删改；不再单独运行旧版评分流程。
+description: "Compatibility entry for the two-step em-dialogue workflow. When the user requests dialogue efficiency or this legacy name, run scene/character assessment followed by line-level efficiency editing rather than the old standalone scoring workflow."
 ---
 
-# 台词效率：统一入口
+# Emma Screenwriting · Dialogue Efficiency — Compatibility Entry
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-读取并执行 [em-dialogue 主文件](../em-dialogue/SKILL.md)。先完成 Step 1，再完成 Step 2；本轮已经完成对应步骤则复用结果，不重复评分或改写。用户只要求某一步、只诊断或只要净稿时遵从其范围。
+Read and execute [em-dialogue](../em-dialogue/SKILL.md). Complete Step 1 before Step 2; reuse steps already performed in the current task rather than scoring or rewriting twice. Respect one-step, diagnosis-only, or clean-draft requests.
 
-默认保留 F／E 双维度与 S=max(F,E) 的编辑口径、低于 5 删除和 5 至不足 7 重写门槛；具体定义、人物魅力与情绪保护、事实锁定、成文格式和交付以 em-dialogue 当前规则为准。不运行历史规则覆盖当前两步流程。
+Retain the F/E dimensions and S=max(F,E) editorial convention, with deletion below 5 and rewriting from 5 to below 7. Current `em-dialogue` governs definitions, character appeal, emotional protection, factual locks, formatting, and delivery. Historical rules must not override the current two-step method.
 
-用户明确要求维护技能时，统一更新 em-dialogue 的相应规则与 references/dialogue-principles.md，不再产生两份冲突规则。两个目录应一起安装，兼容入口不能单独提供完整方法。
+When maintenance is explicitly authorized, update `em-dialogue` and its `references/dialogue-principles.md`, not two conflicting rule sets. Install both directories; this compatibility entry does not contain the full method.
 
-若当前列表未显示 em-dialogue，按名称查找已安装技能并读取；不能仅凭本转接页声称已执行完整两步。
+If `em-dialogue` is missing from the current list, search installed skills by name and read it. Do not claim to have completed the full two-step workflow from this routing page alone.

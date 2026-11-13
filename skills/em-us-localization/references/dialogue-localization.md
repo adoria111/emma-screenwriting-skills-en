@@ -1,109 +1,60 @@
-# 台词本地化（中文短剧 → 地道美式竖屏台词）
+# Chinese-to-US Dialogue Localization
 
-> 核心心法：**本地化 ≠ 翻译**。不是把中文台词译成正确英语，而是"重写成一个美国角色在这个情境下真的会说的话"。
-> 译对了但"美国人不这么说"，就是失败。读出来要像 ReelShort/TikTok 短剧，不像字幕组。
-> 通用台词功能（一句一功能、对比/曲解/PUA/金句、信息去重）见 `em-ai-script/references/dialogue-engine.md`；本文件只讲**中→美的语言落地**。
+Localization is not merely grammatically correct translation. Re-express what this character would say in this situation while preserving meaning and approved facts. Read aloud for playable speech rather than subtitle-like mirroring. For general dialogue function, use the bundled `em-dialogue` references or the advanced chief-writer dialogue chapter; no private `em-ai-script` dependency is required.
 
----
+Examples illustrate techniques, not cross-context substitutions. Never add a fact, threat, or decision merely to create a punchline. Neither language nor nationality dictates one speaking style.
 
-所有例句只展示表达手段，不能跨情境替换。保留源意、人物声音与已批准设定，不为加入 punchline 新增事实、威胁或决定。
+## 1. Diagnose before rewriting
 
-## 1. 翻译腔病症清单（先诊断，再改写）
-
-| 病症 | ❌ 翻译腔 | ✅ 美式 |
+| Candidate problem | Literal/stiff example | Possible contextual rendering |
 |---|---|---|
-| 直译成语/书面语 | "Blood is thicker than water, how can you do this to family?" | "We're family. That's supposed to mean something." |
-| 中式称谓堆叠 | "You unfilial, ungrateful daughter!" | "After everything we did for you — this is who you are?" |
-| 反问句过长绕弯 | "Do you really think you have the right to talk to me like that?" | "Excuse me?" / "You don't get to talk to me like that." |
-| 语气词直译 | "Aiya, you really…" / "Hmph!" | （删掉，用动作或停顿：she scoffs / beat） |
-| 解释性台词（说出潜台词） | "I'm so angry because you always favored him!" | "Of course. It's always him." |
-| 称呼对方全名 | "Sarah Mitchell, you listen to me!" | "Sarah. Look at me." |
-| 中式威胁 | "You'll regret this!" | "You're gonna wish you hadn't done that." |
+| Overexplained family idiom | “Blood is thicker than water, how can you do this to family?” | “We're family. That's supposed to mean something.” |
+| Moral-label stack | “You unfilial, ungrateful daughter!” | “After everything we did for you, this is who you are?” |
+| Long challenge | “Do you really think you have the right to talk to me like that?” | “Excuse me?” / “You don't get to talk to me like that.” |
+| Literal interjection | “Aiya...” / “Hmph!” | Omit or convey through an already permitted pause/reaction |
+| Explaining subtext | “I'm so angry because you always favored him!” | “Of course. It's always him.” when the accusation remains clear |
+| Repeated full names | “Sarah Mitchell, you listen to me!” | “Sarah. Look at me.” if intended force is preserved |
+| Threat phrasing | “You'll regret this!” | “You're gonna wish you hadn't done that.” when voice fits |
 
-**原则**：目标是适合当前角色与情境的自然口语，兼顾潜台词、语气和留白，不按语言或国籍一概判定表达方式。译完后**朗读一遍**，拗口或"没人这么讲"就重写。
+These are options, not inherently superior sentences. “Blood is thicker than water” and “You'll regret this” can be natural English. Read aloud and assess this character's intention, register, and space for implication.
 
----
+## 2. Different registers
 
-## 2. 语域分层（按角色给不同腔调，不要全员一个声音）
-
-| 角色 | 腔调特征 | 例 |
+| Character pattern | Possible voice | Example |
 |---|---|---|
-| 霸总男主 | 短、冷、控制感；很少形容词；命令句/陈述句 | "Sit. We're not done." / "I don't repeat myself." |
-| 独立女主（觉醒后） | 克制、锋利、带 dry sarcasm；不哭喊 | "I'm not asking for permission." / "Keep the house. I'm keeping my dignity." |
-| 反派女配/小三 | 甜里带刺、扮无辜、passive-aggressive | "Oh, I didn't realize you were still here." / "No offense, but…" |
-| 恶母/恶婆婆 | guilt-trip、道德绑架、倚老卖老 | "After all I sacrificed for you?" / "Is that any way to talk to your mother?" |
-| 闺蜜/盟友 | 最口语、用俚语和缩写、情绪外放 | "Girl, no. Block him." / "Oh he did NOT just say that." |
-| 律师/职场 | 精准、术语、冷静 | "That's a breach of contract." / "I'd advise you not to say another word." |
-| 青少年/teen | 网络用语、短promise | "That's cap." / "It's giving desperate." |
+| Controlling executive lead | Short, cool, few adjectives | “Sit. We're not done.” |
+| Independent heroine after a turn | Restrained, sharp, dry | “I'm not asking for permission.” |
+| Apparently sweet antagonist | Feigned innocence, passive aggression | “Oh, I didn't realize you were still here.” |
+| Manipulative parent/in-law | Sacrifice, guilt, seniority | “After all I sacrificed for you?” |
+| Friend/ally | Casual contractions, expressive energy | “Girl, no. Block him.” |
+| Lawyer/professional | Precise, calm, appropriate terms | “I'd advise you not to say another word.” |
+| Teen | Context/period-appropriate brevity/slang | “That's cap” only if it fits this character/time |
 
-> 一字之差定强弱（同 dialogue-engine "果然/竟然"）：
-> - "You actually showed up." （强势、居高临下）
-> - "You came back…?" （弱势、受伤）
+These are examples, not personality mandates: an independent heroine may cry, and a teenager need not use internet slang. Small wording changes alter power: “You actually showed up” differs from “You came back?”
 
----
+## 3. Four conflict techniques
 
-## 3. 美式冲突台词四式（对应中文四技的英文落地）
+- **Comparison:** contrast unequal treatment. “You never remembered my birthday. But you flew across the country for hers.” Use only established facts.
+- **Twisting:** recast a legitimate demand as wrongdoing. A divorce request might provoke an accusation of another lover only when that accusation fits the scene.
+- **Guilt pressure:** apparent moral authority or “for your own good.” “Everything I've done was to protect this family.” Preserve whether the line is truth, justification, or deception.
+- **Punchline:** a concise culmination at a climax/awakening; do not manufacture one in every exchange.
 
-### ① 对比法 Comparison
-- 公式："You won't even ___, but you'll ___ for ___."
-- 例："You never remembered my birthday. But you flew across the country for hers."
+## 4. Address, interjections, profanity
 
-### ② 故意曲解 / 扣帽子 Twisting
-- 把对方正当诉求歪曲。美式更爱用反问 + 假设。
-- 例：她说 "I want a divorce." → 他："So who is he? Who's been in my house?"
+The source grouped expressions roughly as mild (damn, hell, screw you, shut up, jerk, idiot), stronger (bastard, son of a bitch, ass), and highly explicit (f-word/s-word). These are register examples, not platform whitelists. Match source intensity, character, audience, and current verified platform rules; censor or substitute only according to the project.
 
-### ③ PUA / 道德绑架 Guilt-trip
-- 站道德高地，"for your own good"。
-- 例："I did this for you. One day you'll thank me." / "Everything I've done was to protect this family."
+Short interruptions may work: “Are you serious right now?”, “Unbelievable,” “Wow. Okay.” Terms such as sweetheart, honey, or buddy may express affection or contempt depending on context. Replace literal interjections with speech, a beat, or an existing action only within scope. Verify current release restrictions; invent no permanent moderation/traffic rule.
 
-### ④ 金句 / Punchline
-- 高潮/觉醒时一句点题（见第5节）。
+## 5. Memorable lines
 
----
+Possible forms: values (“Love shouldn't cost you yourself”), a boundary (“Keep the ring. I'm keeping my name”), parallel retaliation (“You wanted a quiet wife. You got a quiet exit”), or identity/power confirmation (“I don't work for him. He works for me”). Each can add claims absent from a source; use only if facts, voice, and authorization support it.
 
-## 4. 称呼、感叹、脏话 —— 平台安全尺度
+Public comments/short-drama excerpts can inform a sourced expression library when authorized; do not treat borrowed lines as original or automatically collect/publish project material.
 
-| 强度 | 语域示例（非平台白名单） | 较粗俗表达（按项目尺度） |
-|---|---|---|
-| 轻 | damn, hell, screw you, shut up, jerk, idiot | — |
-| 中 | bastard, son of a bitch, ass | bitch（女性互骂常见但易限流，慎用/打点） |
-| 重 | （基本不用 f-word 原形） | f***、s***：写成委婉或用动作替代 |
+## 6. Rhythm and format
 
-- 美式拌嘴常用**短促打断**而非长篇：`"Are you serious right now?"` / `"Unbelievable."` / `"Wow. Okay."`
-- 称呼可带情绪：sweetheart / honey（反讽时阴阳怪气）、"buddy"（男性挑衅）。
-- 感叹词替换：哼→（scoff）、哎呀→（删）、呵呵→"Right." / "Sure."（冷笑）。
-- ⚠️ 平台审核尺度属时效信息，随平台政策变，发布前现查；不要把具体可用词写成永久白名单。
+Prefer concise speech without splitting every sentence into separate cues. Dialogue-only work adds no action beats. Merge uninterrupted same-speaker turns while retaining responses, pauses, emotional turns, and vocal-mode boundaries. VO/OS follow information function and viewpoint, not a usage quota. A necessary `(beat)`, `(coldly)`, or `(voice shaking)` can convey delivery without overdirection. Make amounts/times speakable, such as “a hundred grand” when that established amount/register fits.
 
----
+## 7. Final check
 
-## 5. 金句 / Punchline 英文写法
-
-短、对仗、可截图、可当视频标题。配方：
-- **价值观反转**："Love shouldn't cost you yourself." / "He didn't lose me. He threw me away."
-- **冷处理宣言**："Keep the ring. I'm keeping my name." / "I'm done explaining myself to people who already decided."
-- **反杀对仗**："You wanted a quiet wife. You got a quiet exit." / "You made me. Now watch what I do with it."
-- **身份反转**："You're talking to the owner." / "I don't work for him. He works for me."
-
-> 收集来源：刷 ReelShort/TikTok 短剧评论区高赞英文金句，建库（同中文金句库逻辑）。
-
----
-
-## 6. 节奏与格式（美式竖屏）
-
-- 短句优先但不机械按行数拆句；只做对白时不新增动作 beat。
-- 同角色连续台词在意图和节拍一致时可合并，保留回应、停顿与转折。
-- OS/V.O. 按信息功能与视点处理，不以次数删必要旁白；只改对白时不擅改叙事手段。
-- 用 `(beat)` 表停顿、`(scoffs)/(coldly)/(voice shaking)` 表情绪，替代中文语气词。
-- 数字、时间、货币随对话口语化：用 "a hundred grand" 而非 "$100,000" 在台词里更自然。
-
----
-
-## 7. 台词自检 checklist（中→美）
-- [ ] 朗读无翻译腔、"美国人真会这么说"
-- [ ] 不同角色腔调有区分（语域分层）
-- [ ] 删了直译成语/语气词/解释性台词
-- [ ] 冲突用了对比/曲解/PUA/punchline 的英文落地
-- [ ] 脏话/称呼在平台安全尺度内（现查）
-- [ ] 高潮处已有关键表达清楚有力，不为凑金句扭曲人物或源意
-- [ ] 短句化、OS节制、连续台词已合并
-- [ ] 数字/时间/货币在口语里读起来自然
+Read aloud; distinguish voices; resolve unnecessary literal idioms/interjections/exposition; use conflict techniques only where appropriate; verify profanity/address against the current brief; make existing climax expression clear without adding facts; check sentence rhythm, necessary VO, merged turns, and natural numeric phrasing. Fidelity and character specificity outrank a punchline quota.

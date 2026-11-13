@@ -1,84 +1,68 @@
 ---
-name: "em-us-localization"
-description: "艾玛短剧 · 美国本地化。把中文短剧或尚未本地化的直译稿首次落成美国文化语境及英文或中英成品，保持获准故事机制和戏剧功能。已有美国版设定、只打磨英文对白时使用英文对白打磨模块。"
-metadata:
-  short-description: "艾玛短剧 · 美国本地化：把中文短剧首次落成美国语境及英文或中英成品。"
+name: em-us-localization
+description: "Adapt a Chinese short-drama source or unlocalized literal translation into a coherent US cultural setting and English or bilingual script while preserving authorized story mechanisms and dramatic functions. Use English polish for an already established US version that only needs dialogue refinement."
 ---
 
-# 艾玛短剧 · 美国本地化
+# Emma Screenwriting · US Cultural and Script Localization
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-把中文原稿或尚未完成本地化的直译稿，转换成可理解、可演且内部一致的美国版短剧。文化落地授权不自动包含情节重构：未获准改变的剧情因果、关系、动机、道具能力、线索、秘密、知情顺序、揭示与集尾钩子必须保留。
+Turn a Chinese source or unlocalized literal draft into an understandable, playable, internally consistent US version. Cultural-localization authorization does not automatically authorize plot reconstruction. Preserve unapproved changes to causality, relationships, motives, prop capabilities, clues, secrets, knowledge order, revelations, and endings.
 
-## 路由与边界
+## Routing
 
-- **使用本模块**：需要首次建立美国版姓名、地域、制度、生活细节、文化语境和英文表达，或交付完整英文／中英版本。
-- **使用 `em-english-polish`**：美国版设定和英文稿已经成立，只需二次打磨英文对白的忠实度、自然度、人物声音或跨集一致性。
-- **使用 `em-adaptation`**：请求改变人设功能、核心动机、关系、关键事件、结构或结局。若本地化任务同时明确授权这些变化，只在授权维度调用其方法，不扩大范围。
-- **只审阅**：交付可定位问题、影响与建议，不回写正式文件。
+- **This module:** first establish US names, geography, institutions, everyday detail, cultural context, and English expression, or deliver a full English/bilingual version.
+- **`em-english-polish`:** US context and English draft already exist; only refine fidelity, speech, voices, or continuity.
+- **`em-adaptation`:** change character function, core motive, relationship, major event, structure, or ending. When localization explicitly includes such changes, use adaptation methods only in the authorized dimensions.
+- **Review only:** provide located findings, impact, and suggestions; do not write back.
 
-## 建立本地化契约
+## Localization agreement
 
-修改剧本项目文件前使用 `drama-truesource`，读取 `_真源指针.md`、权威源稿和锁定项。底稿唯一可判定时可建立缺失指针后继续；存在影响目标稿的真源冲突时，只暂停相关写入。不要用最新时间戳替代权威判断。
+Before project-file edits, verify source pointer, authoritative draft, and locks. Use `drama-truesource` if available, otherwise check directly. If the sole source is clear, proceed and record a missing pointer if needed. Pause only outputs affected by a substantive source conflict; timestamps do not establish authority.
 
-从材料中整理：
+Extract requested episodes/scenes, languages/files, approved adaptation, immutable facts, backgrounds/kinship/ethnicity/period/register/names, locations/amounts/institutions/communications/key props/scene functions, and established platform/format requirements.
 
-- 本次集场、语言和文件范围；
-- 已批准的故事改编与不可变内容；
-- 人物背景、亲缘、族裔、年代、语域和姓名；
-- 地域、金额、制度、通讯、关键道具与场景功能；
-- 目标平台和格式中已经明确的要求。
+Use reasonable context-based defaults for ordinary preferences. Ask collectively only where answers change facts, locks, target region, or key cultural choices. Complete authorized work without approvals at every internal step.
 
-普通偏好可根据上下文采用合理默认。只有不同答案会改变故事事实、锁定项、目标地区或关键文化选择时才集中询问；已授权范围直接做完，不按内部步骤逐轮确认。
+## Execution
 
-## 执行
+1. **Map before drafting.** For multi-episode work record names, address, locations, currency, institutions, communication, world terms, and props. For a short excerpt, summarize mappings briefly.
+2. **Preserve function.** Replacements must preserve information, choices, risks, and evidentiary ability. A voice message is not a video call; property documents are not interchangeable when their legal functions differ.
+3. **Localize to character background.** American does not mean white, Californian, or brand-heavy. Plausible Chinese names, Asian-family habits, hotpot, and tea may remain. Keep names, jobs, locations, and lifestyle compatible.
+4. **Verify institutions/amounts.** Legal, medical, financial, policing, platform, exchange-rate, and price facts vary by place/time. Check authoritative local sources when precision matters. If unverifiable, preserve dramatic function and flag the uncertainty; invent no institutions.
+5. **Write English, not a word-for-word mirror.** Preserve facts, intent, intensity, and relationship power through character-appropriate speech, pauses, and tactics. A memorable line cannot add an unsupported judgment, threat, decision, or identity.
+6. **Keep format/consistency.** Retain scene/episode numbering and requested file format. Dialogue-only tasks do not rearrange action, headings, or SFX. Locate repeated strings by speaker/scene rather than replacing globally.
 
-1. **先建映射，再落稿。** 对全本或多集任务记录姓名、称谓、地点、货币、机构、通讯方式、世界术语和关键道具的对应；短片段可在交付说明中简要列出。
-2. **保留戏剧功能。** 文化元素替换后，人物仍应拥有同样的信息、选择、风险和证据能力。微信语音不能误换成视频通话，房产文件不能被换成法律功能不同的文件。
-3. **按人物背景美国化。** 美国化不等于白人化、加州化或品牌堆砌。合理的中文名、亚裔家庭习惯、火锅和茶可以保留；姓名、职业、地点与生活细节要彼此兼容。
-4. **制度与金额先核实功能。** 法律、医疗、金融、警务、平台尺度、汇率和价格是时效或地域信息。需要精确事实时查目标地区的权威来源；不能核实时保留剧情功能并列出待核项，不编造制度。
-5. **重写英文，不逐字镜像。** 保留事实、意图、语气强度和关系权力，用符合人物的口语、停顿与攻击策略表达。金句不能新增源稿没有的判断、威胁、决定或身份。
-6. **保持格式和全稿一致。** 沿用项目集场编号和文件格式；对白限定任务不重排动作、场景头或音效。相同字符串按角色与场景定位，不盲目全局替换。
+Read as needed: [names](references/name-table.md), [culture/function swaps](references/culture-swap.md), [dialogue localization](references/dialogue-localization.md), and [historical case](references/case-sugar-daddy.md). The case demonstrates method; it is not an authoritative source for new projects.
 
-按需读取：
+## Verification and delivery
 
-- 命名与辨识原则：[name-table.md](references/name-table.md)
-- 通讯、法律、货币和生活文化候选：[culture-swap.md](references/culture-swap.md)
-- 中文到美式对白的语义与语域处理：[dialogue-localization.md](references/dialogue-localization.md)
-- 历史项目案例（仅作方法示范，不是真源）：[case-sugar-daddy.md](references/case-sugar-daddy.md)
+Verify actual output, not number of substitutions: all requested scenes/dialogue have a processing status; names/kinship/address/ethnicity/places/institutions/amounts/terms agree; facts, relationships, motives, props, clues, secrets, knowledge, revelations, and hooks remain intact; replacements preserve function; institutional facts have evidence or flags; English reads aloud with distinct voices and no factual drift; protected Chinese/action/headings remain unchanged; output files open and representative paragraphs/tables/pages render correctly.
 
-## 验证
+For Word output, use the current document workflow and retain a recoverable source. Default to a complete new version, with a short mapping summary, coverage, verification, and genuine unresolved items. Do not automatically overwrite, promote a source version, or send externally.
 
-根据实际成品检查，而不是按替换数量验收：
 
-- 请求范围内的集场和对白全部有处理状态；
-- 姓名、亲缘、称谓、族裔、地点、机构、金额与术语前后一致；
-- 剧情、关系、动机、道具、线索、秘密、知情链、揭示与钩子没有漂移；
-- 文化替换的功能与源稿等价，制度性事实有依据或明确待核；
-- 英文可朗读、人物声音可区分，没有因追求自然度增删事实；
-- 中文、动作、场景头等保护内容在应保留时未被改变；
-- `.docx` 等成品能打开，段落、表格和代表性页面渲染正常。
+## Consecutive speech formatting
 
-需要 Word 成品时使用当前文档技能，保留可恢复底稿。默认交付完整指定范围的新版本，附简短映射摘要、覆盖结果、验证结果和确有的未决项；不自动覆盖原稿、晋升真源或发送给外部对象。
+Merge uninterrupted consecutive speech by one character into one paragraph with one name cue. Another response, action, caption, sound effect, transition, or scene change is a real boundary; blank lines, page breaks, or changed tone labels alone are not. Check complete chains of three or more sentences.
 
-## 成文格式：同一角色连续发言
+Keep one dominant delivery cue. Consolidate whispering, coaxing, breathlessness, or aggression across one turn without repeating the name sentence by sentence. Retain meaningful physical action and emotional turns in place; real interruptions still divide the turn.
 
-- 同一角色连续说话，中间没有他人回应、动作、字幕、音效、转场或场次切换时，默认合为一段完整发言，只写一次人物名。连续三句以上也须整链合并；空行、分页、换语气标签不是新的发言回合。
-- 括号保留一个主导的语气／表演提示。“耳语、诱导、气息急促、侵略感”等同一轮中的提示应归纳，不逐句重复角色名。包含真实动作或关键情绪转折的信息不能丢，可在原位置保留简短段内提示；独立动作及真正中断发言的节拍仍保留分段。
-- “合成一句”指一次发言一个对白段落；段内可以有问号、句号和自然停顿，不强行用逗号串成病句。不因合并删事实、改顺序或削弱威胁、反抗等原有意图。
-- 内心、画外音与当面对白按项目规范明确区分；未另有合并约定时，发声方式切换保留分段，不能把心声变成对方听见的话。中英对照须保留逐段对应；只获准改英文时不据此改动中文或动作。
-- 交付前单独扫描全部同角色相邻对白链，包含不同语气提示的链；修正可合并项后复扫。只诊断时指出问题，已授权成文或改稿时落实合并。不可为凑零残留跨越真实动作或声音边界。
+“Combine into one” means one dialogue paragraph, not a grammatically broken comma chain. Keep natural questions, sentences, and pauses. Do not lose facts, reorder material, or weaken threats/resistance.
 
-例如 `林舟（低声）：钥匙给我。／林舟（威胁）：别逼我动手。` 应成文为 `林舟（低声威胁）：钥匙给我。别逼我动手。`；若两句中间有人拦住他，保留该动作及前后台词的分段。
+Separate thoughts, VO, and on-camera speech according to project convention. Unless explicitly allowed otherwise, a vocal-mode change remains a boundary. Preserve bilingual paragraph correspondence. English-only authorization does not permit changing Chinese text or action to force a merge.
+
+Before delivery, scan all adjacent same-speaker chains, including different tone labels. Apply authorized merges and rescan without crossing genuine action or vocal boundaries merely to reach “zero residue.” In diagnosis-only mode, report rather than edit.
+
+Example: `ALEX (quietly): Give me the key. / ALEX (threatening): Don't make me take it.` becomes `ALEX (a quiet threat): Give me the key. Don't make me take it.` If someone blocks Alex between the lines, retain that action and the separate turns. This illustrative English rendering does not broaden the original task's language-editing permissions.

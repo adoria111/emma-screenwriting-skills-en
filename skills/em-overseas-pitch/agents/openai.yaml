@@ -1,4 +1,4 @@
 interface:
-  display_name: "艾玛短剧 · 海外投稿包装"
-  short_description: "把已有海外短剧整理为卖点、完整梗概、人设、分集和样稿投稿包"
-  default_prompt: "请用 $em-overseas-pitch 整理可审阅的海外短剧投稿包，不发送。"
+  display_name: "Emma · Pitch and Submission Packaging"
+  short_description: "Package a project for a specific submission brief"
+  default_prompt: "Use $em-overseas-pitch to prepare a reviewable pitch package from my existing project and the supplied recipient requirements."

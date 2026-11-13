@@ -1,61 +1,56 @@
-# C05：50集覆盖与钩子承接
+# C05: Complete 50-episode coverage and hook responses
 
-来源及限制见 [案例C05](cases.md)。按文本记录，未经视频或市场数据验证。
+Source boundaries are in [Case C05](cases.md). This map records the supplied text, not video verification or market results. “Hook” means the actual unfinished action, question, or emotional promise at the ending; it does not prove a paid cutoff. Responses are events actually recorded later. Where names are inconsistent, contextual roles distinguish the intentional swap from transcription errors.
 
-## 逐集完整覆盖映射
-
-以下“钩子”指实际集尾的未完成动作、问题或情绪承诺，不等同已证实付费点；“承接”记录后文实际发生的结果。错名处按情境称谓，避免把换位剧情和转录错名混为一谈。
-
-| 集 | 事件＋实际集尾 | 后续承接／来源 |
-|---|---|---|
-| 1 | Jodi遭前夫推下悬崖，在雪地发现诅咒濒死的Nick；她触碰他，他突然抓住她手腕。 | 2-1解释她能触碰、缓解灼痛；1-1—1-4。 |
-| 2 | Nick以唯一解药为由恳求亲密；次晨守卫赶走Jodi，使她以为再遭遗弃。 | 3-2交代怀孕与育儿，45-1才解释离开及守卫说法；2-1—2-3。 |
-| 3 | 五年后Jodi以裁缝谋生、抚养Bella，观众得知她已能化龙；女儿被抓，父亲留信逼她回家。 | 4集返城；3-1—3-6。 |
-| 4 | Jodi化为紫龙返城，前夫赞美龙形而不识她；卫兵阻路宣布前夫召见。 | 5-1女主拒见；4-1—4-5。 |
-| 5 | Jodi拒绝前夫搭讪，闯入妹妹仪式，以父亲绑走女儿揭出自己身份，家人震惊。 | 6-1转入要女儿与联姻谈判；5-1—5-2。 |
-| 6 | 父亲用孩子胁迫她三日后联姻；另一处Kathy病中说姐姐在呼唤，Nick震惊。 | 7集追问地点并启程；6-1—6-2。 |
-| 7 | Kathy描述相貌相同、被锁在水晶之城的姐姐，Nick不顾Melody阻拦启程。 | 10—11集抵达并救Jodi；7-1—7-2。 |
-| 8 | Jodi偷钥匙夜探地牢救女，刚见Bella便被卫兵堵住，红发妹妹抓住头发。 | 9集威胁孩子并带去仪式；8-1—8-2。 |
-| 9 | 妹妹以伤害Bella迫使Jodi服从，家族宣布用水晶锤碎骨重塑身体以掩盖生育史。 | 10集行刑临近与救援；9-1—9-2。 |
-| 10 | 行刑即将落锤，Nick见熟悉身影，化龙破窗救下Jodi。 | 11集接救援与女主认出男主；10-1—10-5。 |
-| 11 | Jodi认出雪地男人；Melody独处时以惩罚逼Kathy否认姐姐，孩子哭泣。 | 12-1继续禁足；孩子秘密尚被压住；11-1—11-3。 |
-| 12 | Nick因女主无疤而否定旧日身份，称自己来找女儿；Jodi猜测他说的是Bella。 | 13集Melody以“我们的女儿”误导女主；12-1—12-2。 |
-| 13 | Melody谎称Kathy已无恙，Nick将离开；Jodi为了保护女儿公开自己有五岁孩子。 | 14集Nick不介意生育史，允许携女成婚；13-1—13-2。 |
-| 14 | Nick批评隐瞒、维持一年婚盟并准许带女儿；Jodi感伤他与往日不同。 | 婚事继续，关系误解留存；14-1。此为情绪悬念，非即时危险。 |
-| 15 | Bella钻栏逃牢，Kathy感应转好离开马车；Nick和Melody发现车中无人。 | 16集发生父母错认；15-1—15-8。 |
-| 16 | Nick误把举棍救母的Bella带走；Jodi误将Kathy认作女儿拥抱，Kathy不愿回假母身边。 | 17—19集展开换位生活；16-1—16-3，原稿部分错标孩子名字。 |
-| 17 | Bella抵达Nick领地，否认Melody是母亲；Melody独处时拿银针威胁她伸手。 | 18集Bella反抗，Nick介入；17-1—17-2。 |
-| 18 | Bella反抗针刺并求援，Nick限制Melody接近孩子；Melody察觉孩子像变了个人。 | 换位秘密仍未揭，22集Nick也发现异常；18-1—18-3。 |
-| 19 | Kathy向Jodi维护Nick、体验温柔照顾；Jodi送苹果派时迎面撞上前夫与妹妹，前夫认出美人。 | 20集揭露美人就是前妻；19-1—19-2。 |
-| 20 | Paul得知Jodi身份，对外貌改观后命人把她带来，决心重新占有。 | 21集邀约被拒后绑架；20-1—20-2。 |
-| 21 | Jodi以Paul的邀约反击妹妹并连续拒收礼物，随后被蒙面人捂嘴掳走。 | 23集在Paul房中醒来；中间22集切Nick调查；21-1—21-2。 |
-| 22 | Bella听说父亲将娶Jodi而高兴；Nick发现“女儿”异常活泼，下令见Jodi的女儿核实。 | 24—25集救Jodi，双娃同框核实迟至41集；22-1。调查与找到绑架处的过程未完整展示。 |
-| 23 | Jodi在陌生床上醒来，遭捆绑及强迫涂油；Paul出现，绑架者身份揭晓。 | 24集施暴威胁升级；23-1。 |
-| 24 | Paul强迫触碰并灌药，Nick在危急处破门质问。 | 25集打退Paul、解缚救走；24-1。 |
-| 25 | Nick以未婚妻身份救人，Paul以命定伴侣索权被否定，Nick抱Jodi离开。 | 26—27集处理药效与身体识别线；25-1。救援已局部兑现。 |
-| 26 | 车中Jodi因药效失控，Nick试图唤醒她，两人靠近，车厢出现魔法与震动声。 | 27集发生亲密及耐受诅咒线索；26-1—26-2。不可把药后表现当有效同意范例。 |
-| 27 | Nick说只有一人能承受诅咒，发现Jodi亲密后无伤，却仍未完成相认，命准备婚礼。 | 28集婚前误会延续；27-1—27-4。已足以推动核验的线索被延后。 |
-| 28 | 婚纱Jodi想坦白旧事，Melody强调一年婚期、母亲地位及前未婚妻死亡，威胁母女。 | 29集Jodi因恐惧限制孩子出门；28-1。 |
-| 29 | Jodi命身边的Kathy待房间；另处Bella听女仆说妈妈搬来，跑去找她。 | 30集真Bella遭母亲误认已被叮嘱过；29-1—29-2，原稿均标Bella。 |
-| 30 | Jodi把来找自己的Bella送回房间，Nick恰好看到，质问她对孩子做了什么。 | 31集误解扩大；30-1—30-3。 |
-| 31 | Nick把保护性的禁足认作虐待，拒听解释，拖Jodi去大厅并命女仆照顾孩子。 | 32集孩子追赶，33集公开退婚；31-1。 |
-| 32 | 两处孩子先后得知Jodi可能受罚，急于找父母解释。 | 33集双娃同奔，34集被截走；32-1—32-2。原文“多年后”跳切与连续事件冲突。 |
-| 33 | Nick公开指责Jodi虐待、取消婚礼，双娃手牵手奔来叫妈妈，父母听见声音。 | 34集Melody先截走双娃，相认被阻；33-1—33-3。 |
-| 34 | Melody化龙掳走双娃，宴会中的家族与Nick共同抛弃Jodi，她再受驱逐。 | 35集囚禁孩子与母亲发现失踪；34-1—34-2。 |
-| 35 | Melody确认双胞胎与雪地女人身份并囚禁两人；Jodi准备离开却发现Bella不见。 | 36集孩子商议逃跑，女主求援；35-1—35-2。 |
-| 36 | Bella鼓励Kathy拿玩具剑面对恐惧、一起逃跑；Jodi向Nick报告Bella失踪。 | 37集搜索；40集孩子撬锁；36-1—36-3。 |
-| 37 | Nick协助通宵找人并拒绝Melody“母亲藏女骗留”的说辞，Melody决定除掉Jodi。 | 38集假线索诱杀；37-1—37-2。 |
-| 38 | Melody用蓝裙和水晶剑细节使寻女心切的Jodi相信线索，诱她踏入禁地法阵。 | 39集困龙锁链收紧；38-1—38-2。 |
-| 39 | Jodi从对方掌握孩子服饰推知绑架真凶；Nick发现两娃都不见，前往Melody住处。 | 40—41集救双娃；39-1—39-2。 |
-| 40 | Bella撬锁与Kathy逃出，却被持蛇恶徒拦住；Nick出现制止伤害。 | 41集救援、父女相认、指认真凶；40-1—40-2。 |
-| 41 | Nick看到同貌双娃，听Bella解释母亲关门的真实用意，纠正误判并确认Melody囚人。 | 42集追寻Jodi；41-1—41-3。 |
-| 42 | 卫兵目击Melody带Jodi去北边，Nick率众救援；Jodi濒危，孩子骑龙呼唤妈妈。 | 43集破阵救人；42-1—42-3。 |
-| 43 | Nick化龙救出昏迷Jodi，确认雪地救命关系；Melody欲逃，却被Nick堵在门口。 | 44集抓捕与追问身世；43-1—43-2，救人台词末尾误写Melody。 |
-| 44 | Melody被关押待公审；Jodi以混合血脉解释禁地生还，Nick问她为何隐瞒身份。 | 45-1双方解释五年误会；44-1—44-2。公审本身未展示。 |
-| 45 | 两人解释错过，Nick承诺公开妻子身份；Paul仍以她遭抛弃为由羞辱，她拒绝并拍开手。 | 46—48集公开身份兑现；45-1—45-2。 |
-| 46 | Paul推搡Jodi，妹妹倒打一耙，父母以不知和解的旧信息逼她离开。 | 47集动用卫兵，48集身份反转；46-1。 |
-| 47 | Jodi点破家人害怕血脉秘密，父亲命拖走鞭打；Nick到场喝止。 | 48集护妻与经济制裁；47-1。 |
-| 48 | Nick公开护妻、终止家族扶持，Jodi拒绝家人利益绑架；家人喊出她是屠龙者。 | 49集群体反对；48-1。 |
-| 49 | 龙族贵族和将领以死敌血脉反对婚事，Nick公开Jodi五年前救他性命。 | 50集以贡献事实与承担选择代价回应；49-1。 |
-| 50 | Nick说明女主救命对领地的价值，Jodi自述未伤害龙族，Nick允许反对者离开，众人接纳，两人拥吻。 | 50-1—50-3后明确`The End`；终局归属兑现，非续集悬念。 |
-
+| Episode | Events and actual ending | Later response and source |
+| --- | --- | --- |
+| 1 | Jodi is pushed off a cliff by her former husband, finds the cursed, dying Nick in the snow, and touches him; he grabs her wrist. | Scene 2-1 explains that her touch eases the burning. Source: 1-1–1-4. |
+| 2 | Nick pleads for intimacy as his only cure; the next morning guards drive Jodi away, making her believe she has been abandoned again. | Pregnancy and parenting are established in 3-2; the departure and guards are not explained until 45-1. Source: 2-1–2-3. |
+| 3 | Five years later, Jodi works as a seamstress and raises Bella; viewers learn she can become a dragon. Her daughter is taken, and her father leaves a letter forcing her home. | She returns in Episode 4. Source: 3-1–3-6. |
+| 4 | Jodi returns as a purple dragon. Her former husband admires the dragon without recognizing her; guards block her and announce his summons. | She refuses in 5-1. Source: 4-1–4-5. |
+| 5 | Jodi rejects her former husband, interrupts her sister’s ceremony, and reveals her identity while accusing her father of taking her daughter. | Episode 6 moves into a negotiation over the daughter and an arranged marriage. Source: 5-1–5-2. |
+| 6 | Her father uses the child to force a marriage in three days. Elsewhere, the ill Kathy says her sister is calling; Nick is startled. | Episode 7 establishes the location and departure. Source: 6-1–6-2. |
+| 7 | Kathy describes an identical sister locked in Crystal City. Nick leaves despite Melody’s objection. | He arrives and rescues Jodi in Episodes 10–11. Source: 7-1–7-2. |
+| 8 | Jodi steals a key and enters the dungeon at night. On finding Bella she is surrounded by guards; her red-haired sister grabs her hair. | Episode 9 threatens the child and moves Jodi to the ritual. Source: 8-1–8-2. |
+| 9 | Her sister threatens Bella to force obedience. The family plans to use a crystal hammer to break and reshape Jodi’s body, concealing that she has given birth. | The threatened blow and rescue follow in Episode 10. Source: 9-1–9-2. |
+| 10 | The hammer is about to fall. Nick recognizes a familiar figure, becomes a dragon, and breaks through the window to rescue Jodi. | Episode 11 continues the rescue and her recognition of him. Source: 10-1–10-5. |
+| 11 | Jodi recognizes the man from the snow. Alone with Kathy, Melody threatens punishment to make her deny her sister; the child cries. | Confinement continues in 12-1; the secret remains suppressed. Source: 11-1–11-3. |
+| 12 | Nick rejects Jodi’s old identity because she has no scars and says he is looking for his daughter. Jodi thinks he means Bella. | Melody’s “our daughter” misleads Jodi in Episode 13. Source: 12-1–12-2. |
+| 13 | Melody falsely claims Kathy is well, and Nick is about to leave. To protect her child, Jodi publicly admits she has a five-year-old daughter. | In Episode 14 Nick accepts her history and permits her to bring the child into the marriage. Source: 13-1–13-2. |
+| 14 | Nick objects to concealment but maintains the one-year marriage agreement and allows the daughter to come. Jodi mourns how different he seems. | The marriage proceeds with the misunderstanding unresolved. Source: 14-1. This is an emotional question, not immediate physical danger. |
+| 15 | Bella squeezes through the dungeon bars. Kathy senses improvement and leaves the carriage; Nick and Melody find it empty. | The parents misidentify the children in Episode 16. Source: 15-1–15-8. |
+| 16 | Nick takes Bella, who carries a stick to rescue her mother. Jodi embraces Kathy as her own daughter; Kathy does not want to return to her false mother. | The exchanged lives develop in Episodes 17–19. Source: 16-1–16-3; some child names are mislabeled. |
+| 17 | Bella reaches Nick’s territory and denies that Melody is her mother. Alone with her, Melody threatens her with a silver needle. | Bella resists and Nick intervenes in Episode 18. Source: 17-1–17-2. |
+| 18 | Bella resists the needle and calls for help. Nick restricts Melody’s access; Melody notices that the child seems changed. | The swap remains hidden; Nick notices the difference in Episode 22. Source: 18-1–18-3. |
+| 19 | Kathy defends Nick to Jodi and experiences gentle care. Delivering apple pie, Jodi meets her former husband and sister; he recognizes the beautiful woman. | Episode 20 identifies her as his former wife. Source: 19-1–19-2. |
+| 20 | Paul learns Jodi’s identity. His changed view of her appearance becomes a determination to possess her again, and he orders her brought to him. | An invitation is rejected and a kidnapping follows in Episode 21. Source: 20-1–20-2. |
+| 21 | Jodi uses Paul’s invitation to rebut her sister, rejects his gifts, and is then seized by a masked abductor. | She wakes in Paul’s room in Episode 23; Episode 22 cuts to Nick’s investigation. Source: 21-1–21-2. |
+| 22 | Bella is delighted that her father plans to marry Jodi. Nick notices his “daughter” is unusually lively and orders a meeting with Jodi’s daughter. | He rescues Jodi in Episodes 24–25, but the twins are not seen together for verification until Episode 41. The investigation-to-rescue route is not fully shown. Source: 22-1. |
+| 23 | Jodi wakes bound on an unfamiliar bed and is forcibly oiled; Paul appears, identifying the abductor. | The assault threat escalates in Episode 24. Source: 23-1. |
+| 24 | Paul forces contact and administers a drug. Nick breaks through the door at the crisis point. | Episode 25 defeats Paul, frees Jodi, and takes her away. Source: 24-1. |
+| 25 | Nick rescues his fiancée. Paul’s claim of entitlement as a fated mate is rejected; Nick carries Jodi away. | Episodes 26–27 address the drug’s effects and the body/identity clue. The rescue is already a partial payoff. Source: 25-1. |
+| 26 | In the carriage Jodi loses control under the drug’s effect. Nick tries to rouse her; they draw close as magical effects and movement are heard. | Episode 27 shows intimacy and tolerance of the curse. Drug-induced behavior is not an example of valid consent. Source: 26-1–26-2. |
+| 27 | Nick says only one person can endure the curse. He finds Jodi unharmed after intimacy but does not complete the recognition; he orders wedding preparations. | Premarital misunderstanding continues in Episode 28; evidence sufficient to prompt verification is delayed. Source: 27-1–27-4. |
+| 28 | In her wedding dress Jodi wants to explain the past. Melody stresses the one-year term, her claimed maternal position, and a dead former fiancée to threaten mother and child. | Jodi restricts the child’s movements out of fear in Episode 29. Source: 28-1. |
+| 29 | Jodi tells the Kathy beside her to stay in the room. Elsewhere, Bella hears that her mother has moved in and runs to find her. | In Episode 30 Jodi mistakes the real Bella for the child she already instructed. Source: 29-1–29-2; both are labeled Bella in the source. |
+| 30 | Jodi sends Bella back to the room. Nick sees this and demands to know what she is doing to the child. | The misunderstanding escalates in Episode 31. Source: 30-1–30-3. |
+| 31 | Nick mistakes protective confinement for abuse, refuses an explanation, and drags Jodi to the hall while a maid watches the child. | Children follow in Episode 32; he publicly cancels the wedding in Episode 33. Source: 31-1. |
+| 32 | The children in the two locations learn Jodi may be punished and hurry to explain to their parents. | They run together in Episode 33 and are intercepted in Episode 34. Source: 32-1–32-2; a “years later” cue conflicts with the continuous action. |
+| 33 | Nick publicly accuses Jodi and cancels the wedding. The twins run hand in hand calling for their mother; the parents hear them. | Melody intercepts them first in Episode 34, blocking recognition. Source: 33-1–33-3. |
+| 34 | Melody becomes a dragon and abducts the twins. At the banquet, Nick and the family reject Jodi and drive her away again. | Episode 35 shows confinement and Jodi discovering the disappearance. Source: 34-1–34-2. |
+| 35 | Melody confirms the twins and the woman from the snow, then confines the children. Jodi prepares to leave but cannot find Bella. | The children plan escape and Jodi seeks help in Episode 36. Source: 35-1–35-2. |
+| 36 | Bella encourages Kathy to face fear with a toy sword and escape together. Jodi tells Nick Bella is missing. | Search follows in Episode 37; lock-picking in Episode 40. Source: 36-1–36-3. |
+| 37 | Nick helps search all night and rejects Melody’s claim that Jodi hid the child to stay. Melody decides to eliminate Jodi. | A false lead becomes a trap in Episode 38. Source: 37-1–37-2. |
+| 38 | Details of a blue dress and crystal sword make Melody’s lead credible to the desperate Jodi, whom she lures into a forbidden formation. | Dragon-binding chains tighten in Episode 39. Source: 38-1–38-2. |
+| 39 | Jodi infers the kidnapper from Melody’s knowledge of the child’s clothing. Nick realizes both children are missing and goes to Melody’s residence. | The twins are rescued in Episodes 40–41. Source: 39-1–39-2. |
+| 40 | Bella picks the lock and escapes with Kathy, but a thug with a snake blocks them. Nick appears to stop the harm. | Episode 41 delivers rescue, recognition, and identification of the perpetrator. Source: 40-1–40-2. |
+| 41 | Nick sees the identical twins. Bella explains why her mother shut the door, correcting his judgment and confirming Melody confined them. | He searches for Jodi in Episode 42. Source: 41-1–41-3. |
+| 42 | A guard saw Melody take Jodi north. Nick leads a rescue; Jodi is near death as the children call for her from a dragon. | Episode 43 breaks the trap and rescues her. Source: 42-1–42-3. |
+| 43 | Nick becomes a dragon, rescues unconscious Jodi, and confirms their snowbound rescue history. He blocks Melody’s attempted escape. | Episode 44 brings arrest and questions about identity. Source: 43-1–43-2; a rescue line incorrectly ends with Melody’s name. |
+| 44 | Melody is detained pending public trial. Jodi explains surviving the forbidden place through mixed ancestry; Nick asks why she concealed her identity. | The five-year misunderstanding is explained in 45-1. The public trial itself is not shown. Source: 44-1–44-2. |
+| 45 | They explain their separation, and Nick promises to acknowledge Jodi publicly as his wife. Paul still insults her as abandoned; she refuses him and knocks his hand away. | Public recognition is delivered across Episodes 46–48. Source: 45-1–45-2. |
+| 46 | Paul shoves Jodi; her sister reverses the accusation. The parents, unaware of the reconciliation, use old information to force her away. | Guards are used in Episode 47; identity reverses the situation in Episode 48. Source: 46-1. |
+| 47 | Jodi exposes the family’s fear of her ancestry. Her father orders her dragged away and whipped; Nick arrives and stops it. | Episode 48 brings public support and financial consequences. Source: 47-1. |
+| 48 | Nick acknowledges his wife and ends support for her family. Jodi rejects their financial coercion; the family announces that she is a dragon slayer. | Collective opposition follows in Episode 49. Source: 48-1. |
+| 49 | Dragon nobles and generals oppose the marriage because of her enemy ancestry. Nick publicly states that she saved his life five years earlier. | Episode 50 answers through her contribution and the cost of the choice. Source: 49-1. |
+| 50 | Nick explains the value of Jodi’s rescue to the territory; she states she has never harmed dragonkind. He permits dissenters to leave. The group accepts her, and the couple kisses. | Scenes 50-1–50-3 are followed by “The End.” Belonging is resolved; this is not a sequel hook. |

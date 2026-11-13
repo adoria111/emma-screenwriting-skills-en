@@ -1,4 +1,4 @@
 interface:
-  display_name: "Dialogue Localizer"
-  short_description: "Localize short-drama dialogue only, preserving action lines."
-  default_prompt: "Localize this Chinese short-drama script dialogue only. Keep Chinese dialogue and insert natural North American English dialogue on the next line."
+  display_name: "Emma · Dialogue-Only Chinese-to-English Localization"
+  short_description: "Localize Chinese dialogue into North American English"
+  default_prompt: "Use $drama-dialogue-localizer to localize only my Chinese dialogue into North American English and keep action lines unchanged."

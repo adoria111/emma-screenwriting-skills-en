@@ -1,0 +1,4 @@
+interface:
+  display_name: "Emma · Script Humanizer — Chinese Working Drafts"
+  short_description: "Humanize Chinese wording within locked story beats"
+  default_prompt: "Use $drama-humanizer to humanize the wording of my Chinese script while preserving locked beats and checking required dependencies."

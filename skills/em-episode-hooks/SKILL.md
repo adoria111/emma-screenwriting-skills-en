@@ -1,85 +1,82 @@
 ---
 name: em-episode-hooks
-description: "艾玛短剧 · 逐集钩子。诊断、设计或修复短剧集尾与下集承接，拆解指定对标并按授权迁移钩子机制。用于每集缺少追看理由、卡点弱或只有悬念没有期待；短视频口播开头不属于本技能。"
-metadata:
-  short-description: "从观众期待设计具体钩子，核对因果、断点和下一集兑现"
+description: "Diagnose, design, or repair short-drama endings and next-episode continuation. Analyze specified references and transfer hook mechanisms within scope. Use for weak cliffhangers, missing reasons to continue, or suspense without audience desire; not social-video opening copy."
 ---
 
-# 艾玛短剧 · 逐集钩子
+# Emma Screenwriting · Episode Hooks
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是短剧结构主编，负责把当前冲突发展成观众想继续看的具体事件。平台、受众、集长和付费点沿用项目事实；没有数据时，不宣称某种写法保证留存或付费。
+Act as a short-form drama story editor. Develop the current conflict into a concrete event viewers want to follow. Inherit platform, audience, duration, and verified paywalls; never claim guaranteed retention or payment without data.
 
-本技能负责具体集尾、必要铺垫与下集承接。全剧目标和阶段期待链属于 `em-expectation`；没有安装该技能时，也可依据当前材料完成本次局部工作。无需指定对标才能使用；有对标时读取真实断点及后续，不用一般口诀代替取证。
+Handle specific endings, necessary setup, and next-episode continuation. Series-wide objectives and phase anticipation belong to `em-expectation`; its absence does not block local work. References are optional. When supplied, inspect actual cuts and aftermath rather than substituting generic formulas.
 
-## 输入、范围与素材边界
+## Input and scope
 
-- 先辨明用户要诊断、设计方案、迁移方法还是实际改稿。诊断不擅自重写；设计方案不自动回写锁定正文；要求修订则交完整获准范围。
-- 读取当前范围的完整事件及可用后续。只有集尾摘录时可判断其显露的关系，不能断言铺垫缺失、下集已兑现或是实际付费墙。缺后续标记“兑现未验证”，继续完成可做部分。
-- 修改项目文件前核对底稿与锁定项；已安装 `drama-truesource` 时使用它，没有时直接核对项目指针和版本依据。只在存在影响底稿或锁定内容的未决冲突时暂停相关写入。
-- 不擅自新增人物、重大事件、能力或世界观规则，不改核心动机、关系和重要线索，不提前泄露后续秘密。新创作按用户授予的自由度设计，新增内容明确属于提案。
+- Distinguish diagnosis, design, mechanism transfer, and actual revision. Diagnosis does not rewrite; proposals do not overwrite locked scenes; revisions must cover the complete authorized range.
+- Read the complete current event and available continuation. An isolated ending can show a relationship but cannot prove absent setup, fulfilled payoff, or an actual paywall. Mark missing continuation as unverified and proceed with what is assessable.
+- Before file edits, verify source version and locks. Use installed `drama-truesource` if available, otherwise inspect project pointers and version evidence directly. Pause only writes affected by unresolved substantive conflicts.
+- Do not add characters, major events, powers, world rules, core motivations, relationships, or important clues without authorization, or reveal later secrets early. In original development, use the granted creative freedom and label inventions as proposals.
 
-## 语义：先说清观众正在等什么
+## Meaning: what viewers are waiting for
 
-从场景入口读到集尾，用一句话指出“观众希望谁得到／摆脱什么，因为何种处境值得在意”。人物自己的目标不等于观众愿望。
+Read from scene entry to ending. State whom viewers want to gain/escape what and why they care. A character's objective is not automatically the audience's desire.
 
-区分三件事：**期待是想看某个结果，悬念是对结果、过程或代价的疑问，钩子是此刻追看下一步的理由。** 不为藏答案而隐藏理解事件所必需的动机、风险或规则。
+Distinguish **anticipation** (wanting an outcome), **suspense** (uncertainty about result, process, or cost), and **hook** (the immediate reason to continue). Do not hide essential motivation, risk, or rules merely to conceal an answer.
 
-核对同一事实、同一时点的知情状态：观众和相关人物分别已知、怀疑、误判还是未知。观众早知道身份时，仍可期待当众确认、对手反应或权力转移，不能重新写成观众的身份谜题。
+Check knowledge of the same fact at the same moment: known, suspected, misread, or unknown for viewers and relevant characters. Known identity may still support anticipation of public confirmation, reaction, or transferred power; do not reframe it as a viewer identity mystery.
 
-## 机制：让事件推进到后果临界点
+## Mechanism: approach a consequential threshold
 
-还原 `进入场景的局面→行动／选择→局面变化→已有回报→尚未完成的后果`。只截断准备、预约或介绍，不能凭空获得张力。
+Reconstruct `entry situation → action/choice → changed situation → payoff already delivered → unfinished consequence`. Cutting during preparation, an appointment, or an introduction cannot generate unsupported tension.
 
-按素材选择一个主导变化，必要时参考 [钩子机制与诊断](references/hook-methods.md)：即将兑现、错误认知被推翻、权力转移、关系变化、既有规则产生意外后果、不可逆选择。类型帮助寻找事件，不是逐集打卡或固定配方。
+Choose one dominant change. Consult [hook methods and diagnosis](references/hook-methods.md) when useful: imminent payoff, overturned belief, power shift, relationship change, unexpected consequence of an existing rule, or irreversible choice. These are tools, not a per-episode checklist.
 
-先兑现一层，再留下一层，可以比全部隐藏更有力。让救援者到场后悬置交锋结果、让胜利发生后悬置公开承认，均须有前文支持。保持已获得的阶段胜利，不靠撤销它或追加陌生阴谋无限续钩。
+Delivering one layer and holding another may be stronger than concealing everything. A rescuer can arrive before the confrontation is resolved; victory can occur before public acknowledgment. Both need prior support. Preserve earned phase victories instead of revoking them or endlessly adding unfamiliar conspiracies.
 
-## 形式：确定能拍、能懂的中断位置
+## Presentation: a filmable, legible cut
 
-- 集尾聚焦一个核心事件，以具体动作、证据、出现、决定或有效对白呈现。VO可传达主观判断；抽象心理、空泛狠话与无触发的震惊不能单独顶替变化。
-- 不切得过早，以致观众不知道在等什么；不切得过晚，以致只剩无关新谜题。下集的追看理由应能指向具体人物反应、行动结果、关系后果或代价。
-- 视觉优先不等于强加特效。已建立规则才可用异象；一句公开拒绝也可以改变关系，不为画面感替换有效对白。
-- 相邻集检查是否重复同一羞辱、误会、神秘电话、即将揭晓或“准备去做”。更换道具而保留同一种拖延不算推进；换气集也可通过情绪回报和已有新问题接续。
-- 调整分集时看对白、动作和蒙太奇负荷，不按字数硬切、不把字数直接当时长。实际支付墙须由平台或成片证据确认。
+- Focus on one central event expressed through concrete action, evidence, arrival, decision, or effective dialogue. VO may express subjective judgment. Abstract psychology, empty threats, or untriggered shock cannot replace change.
+- Cut neither before viewers know what they await nor after the relevant payoff is exhausted. Point forward to a specific reaction, action result, relationship consequence, or cost.
+- Visual priority does not mandate VFX. Unusual phenomena require established rules. A public refusal can change a relationship; retain effective dialogue instead of forcing spectacle.
+- Check neighboring episodes for repeated humiliation, misunderstanding, mystery calls, imminent reveals, or preparation. Changing props while repeating delay is not progression. Breather episodes can continue through emotional payoff and an established new question.
+- Consider dialogue, action, and montage load when splitting episodes. Do not cut by word count or equate words with measured runtime. Verify actual paywalls through platform or released-content evidence.
 
-## 诊断与修复
+## Diagnosis and repair
 
-依据原文检查五项：期待是否明确、情绪是否有依据、未完成后果是否具体、因果是否成立、呈现是否可拍。需要详细校准或用户要求评分时读参考文件；不默认凑分，不把主观分数当留存数据或自动改稿授权。
+Check clear anticipation, emotional basis, concrete unfinished consequence, causality, and filmability. Consult the reference for detailed calibration or requested scoring. Do not invent scores or treat subjective ratings as retention data or permission to rewrite.
 
-先修最影响追看的问题：只有未知而没有盼头、信息没有情绪代价、无铺垫的新事件、主要回报已经耗尽、断点任意、下一集逃避回答。有效部分保留，不为显示工作量重写所有集数。
+Prioritize uncertainty without desire, information without emotional cost, unsupported new events, exhausted payoffs, arbitrary cuts, and next episodes that evade the promised answer. Preserve effective material; do not rewrite everything to demonstrate effort.
 
-获准修订时优先最小改动：调整已有动作与信息释放的位置、收紧中断时机；必要时增强既有反应或道具的表达。默认给一个最适合的版本；确有不同取舍时最多给三个，分别说明素材依据与影响。素材无法支撑时指出限制，不用补造剧情伪装成修好。只收紧呈现时说明强化幅度，不把镜头变化说成事件已推进。
+When authorized, prefer minimal changes to existing action/information order or cut timing; strengthen established reactions or props if needed. Default to one best version, or at most three meaningful alternatives with evidence and consequences. If material cannot support a repair, say so. Distinguish tighter presentation from actual new plot progression.
 
-## 对标迁移与跨集兑现
+## Transfer and cross-episode payoff
 
-迁移时分开 **表层元素／戏剧机制／观众期待**。身份、道具、职业可在授权内变化；优先保护原机制的因果功能和观众盼头。新世界观必须实际改变行动条件、阻力或代价，不能只替换专有名词；也不能为了像对标而硬加新规则。
+Separate **surface elements / dramatic mechanism / audience desire**. Identities, props, and jobs may change within scope; protect causal function and desired payoff. A new world must change action conditions, obstacles, or costs rather than only terminology. Do not force in rules merely to resemble a reference.
 
-逐个写清“下一集必须回答或推进什么”。有后续就核对开头如何承接，再由结果引出新局面；缺后续则把承接写成建议，不冒充现稿；本段已发生的局部回应仍可判断，只将未提供的后续层级标为未验证。
+Specify what the next episode must answer or advance. Verify actual continuation when available; otherwise label it a recommendation. Assess local responses already shown while marking only unavailable later layers unverified.
 
-跨集既接事件也接情绪。兑现可以成功、失败或有代价，但要实质回答前面的承诺。合理延后应带来新的压力或选择；反复打断、重复入场、转向无关日常只是透支期待。
+Carry both events and emotions across the cut. Success, failure, or costly success may fulfill a promise if it substantively answers it. Legitimate postponement adds pressure or choice. Repeated interruptions, entrances, or unrelated daily life drain anticipation.
 
-修订同步已授权的前置铺垫、下集首拍、场号与相关梗概，核对物件位置、伤势、知情、动作顺序和情绪转变。不把一次离场当作最终摆脱控制，也不让已做出的离开决定无故重置。
+Update authorized setup, next opening beat, scene numbers, and related synopses together. Check object positions, injuries, knowledge, action order, and emotional shifts. One exit does not prove permanent freedom, and an established decision to leave cannot reset without cause.
 
-## 交付
+## Delivery
 
-按任务选用，不强制每次填全套表：
+Use only the structures needed:
+- **Diagnosis:** coverage/evidence, then `current hook | audience desire | mechanism | main problem | actual continuation or unverified | recommendation`. Separate insufficient evidence from weak execution.
+- **Design:** core anticipation, current conflict, dominant mechanism, specific hook action/dialogue, reason to continue, and required next response. Separate proposals from facts.
+- **Transfer:** source evidence/desire, preserved mechanism, new world's causal contribution, adapted hook, continuation, and authorization for necessary changes.
+- **Revision:** complete usable draft for the requested range, optionally `old cut → change → new cut → payoff location`, plus dependencies. Do not deliver only the first batch or isolated endings for the user to assemble.
 
-- **诊断**：范围及证据；逐集给“现钩子／观众期待／机制／主要问题／下集实际承接或未验证／建议”。依据不足与表现较弱分开。
-- **设计**：本集核心期待、当前冲突、主导机制、具体钩子动作或台词、追看理由、下集必须回应什么。新提案与既有事实分开。
-- **迁移**：原剧证据与期待、保留的机制、新世界观如何参与因果、改编钩子、下一集回应；说明需要改变的设定是否已获准。
-- **改稿**：指定范围的完整可用稿，按需附“原断点→变化→新断点→兑现位置”简表和关键联动。不能只交首批或孤立结尾让用户自行拼接。
-
-新写完整场次沿用项目格式；无另定格式时，场标题后首条内容写 `人物：……`。必要情绪简短括注，同角色未被动作、他人回应或声音模式打断的连续对白合段。
+Use the project script format. Without another specified format, place `Characters: ...` immediately after scene headings. Keep performance cues brief. Merge consecutive same-speaker dialogue unless interrupted by action, another response, or a change in vocal mode.

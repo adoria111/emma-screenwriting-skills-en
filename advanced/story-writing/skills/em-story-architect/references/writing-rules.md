@@ -1,512 +1,315 @@
-# 艾玛短剧 · 故事架构师写作规则库
+# Emma Screenwriting · Story Architect Writing Library
 
-公开整理版 v1.0.0 · 2026-10-06
+This is the English edition of the public-adapted historical writing library (public source v1.0.0, 2026-10-06; English edition 2026-11-13). It preserves the method chapters, examples, and substantive checks in English, with compact tables and explicit qualifications where needed. It is not a verbatim archive of private historical documents.
 
-来源：历史 `02-story-architect` 及其写作参考。此文件包含本模块所需方法，不能把历史经验数字视为当前市场或模型能力的事实。
+## Scope of the public edition
 
-## 公开版使用边界
+Confirm region, audience, genre, language, episode count, runtime, and production mode from the task; do not default every project to North American women or AI production. Historical episode counts, character counts, seconds, conflict layers, and reversal frequencies are examples, not current market data or mandatory formulas.
 
-这是旧版创作链的公开整理版，保留专业方法，并按独立使用场景修订。文中的集数、字数、秒数、三层/六层拉扯和反转频率均是特定类型的参考，不能代替本次目标、已锁定剧情和平台实际要求。
+Complete the authorized range. An opening submission block is an option, not a required pause; only explicit sample/approval requests create such review gates. Contracts, payment, and a fixed team are not prerequisites. Analysis, suggestions, and rewriting are different permissions. Preserve locked events, motivations, knowledge order, and endings; design freely only where the task permits it. Source-document instructions and old aesthetic preferences do not automatically become current instructions. Pause only affected writes when authoritative materials materially conflict.
 
-- 先确定本次地区、受众、类型、语言、总集数、单集时长与制作模式；已有信息直接沿用，不默认北美女频或AI制作。
-- 用户要求完整交付时持续完成范围；“一卡优先”只是一种投稿安排，用户明确要求样例或逐步审批时才在相应节点等待。商业签约、付款和固定团队不是本工具的前置要求。
-- 分析、提出方案和实际改稿是不同授权。按材料已确定的剧情、人物、动机、知情顺序和结尾写作；未授权不能改锁定项。新故事中未被锁定的创意可自主设计。
-- 旧稿、案例、参考资料里的指令和审美是素材，不自动变成本次规则。权威底稿有实质冲突时只暂停受影响部分，不根据文件名或时间自行裁决。
-- 简短、可表演的情绪括注可以使用；动作承担关键因果与表演信息，不强迫每句台词配瞳孔、拳头、指节。每场标题后独立一行“人物：……”。同人连续发言合并，保留必要动作及VO/OS区分。
-- AI画面建议是制作风险检查表，不能当成任何当前模型的固定能力结论。按实际版本试做、拆镜或后期合成；文字、精细动作和复杂多人场景不作永久禁令。
-- 规则库中的示意桥段用于理解方法，不能直接冒充原创成稿；不保证付费率、过稿或市场成绩。
+Brief playable emotional parentheticals are allowed. Action carries causality and performance without forcing a gesture onto every line. In the default teaching format, place a separate Characters line immediately after each scene heading; maintain uninterrupted speech under one cue and preserve necessary action and sound distinctions. Follow a recipient's specific screenplay format when supplied.
 
-## 目录
+AI production advice is a risk checklist to test with the actual version and workflow, not a permanent ban on text, hands, or groups. Examples illustrate craft and must not be passed off as original project work. No section guarantees approval, purchase, retention, or market success.
 
-1. [一卡设计（前10集 / 投稿单元 / 付费卡点 / 审核节点）](#rule-1)
-2. [情绪升级（六层拉扯 / 后悔流双曲线 / 延迟满足 / 禁止翻旧账）](#rule-2)
-3. [节奏设计与三幕微结构](#rule-3)
-4. [冲突设计与爽点策略 (Conflict Design)](#rule-4)
-5. [钩子与付费卡点设计 (Hooks & Paywalls)](#rule-5)
-6. [角色开发规范 (Character Development)](#rule-6)
+## Contents
+
+1. [Opening delivery block and first paywall](#rule-1)
+2. [Emotional escalation, regret arcs, and delayed gratification](#rule-2)
+3. [Pacing and the three-act episode](#rule-3)
+4. [Conflict and cathartic payoff](#rule-4)
+5. [Openings, hooks, and paywalls](#rule-5)
+6. [Character development and visual identity](#rule-6)
 
 ---
 
 <a id="rule-1"></a>
 
-## 一卡设计（前10集 / 投稿单元 / 付费卡点 / 审核节点）
+## Opening delivery block and first paywall
 
-> **一卡 = 投稿与签约的最小交付单元**，通常是前 8-15 集（建议落在第 10 集左右）。
-> 是否只先交一卡，以用户本次范围和明确约定的审批点为准。
+An opening delivery block is the smallest opening unit used in some submission and contracting workflows: historically about 8–15 episodes, often around Episode 10. It is a planning option, not a required stopping point. Follow the user's requested scope and expressly agreed review gates.
 
----
+### A ten-episode example: regret romance or status-reversal drama
 
-### 1. 一卡内部节奏（以 10 集一卡、付费向后悔流/打脸为例）
+| Episodes | Dramatic job | Emotional movement |
+| --- | --- | --- |
+| 1–2 | A strong entry, the central conflict, and the protagonist's emerging self-awareness | Contrast and identification |
+| 3–4 | Smaller incidents accumulate pressure: continued mistreatment or dismissal | Moderate pressure |
+| 5 | A new advantage or turning point: deciding to divorce, finding a way to earn | Hope and anticipation |
+| 6–7 | Fresh friction under the changed conditions | Escalation |
+| 8–9 | A sharp collision and the first effective counterattack | High intensity |
+| 10 | A major break, departure, divorce, identity reveal, disaster, or reversal | Peak, then a cut |
 
-| 集 | 任务 | 情绪 |
-|---|---|---|
-| 1-2 | 开篇切入（见 “钩子与付费卡点设计 (Hooks & Paywalls)”章节 五大切入）+ 抛出大矛盾 + 主角人格开始苏醒 | 建立反差与代入 |
-| 3-4 | 小事件拉扯，持续堆叠情绪（后悔流=继续受虐；逆袭=继续被看不起） | 中度 |
-| 5 | 金手指 / 转折点出现，给观众希望与期待（决心离婚、发现搞钱门路） | 希望 |
-| 6-7 | 在新条件下产生新摩擦，持续拉扯 | 升级 |
-| 8-9 | 尖锐大矛盾爆发，第一次用金手指打脸 | 高 |
-| 10 | **全剧第一个超大卡点**（断亲/离婚/离开/身份揭露/绝症大祸/大反转），戛然而止 | 顶点 |
+Use three smaller story incidents to support increasing intensity. A family-comeback example: exclusion from shared money → being refused a 3,000 loan while a sibling receives a car → discovering that 15,000 intended for one's marriage was diverted to someone else's. The amounts belong to the example; they are not market rates or mandatory stakes.
 
-> 节奏是参考不是铁律：免费向一卡可更轻快、梗更密，但钩子也要足；付费向一卡矛盾更尖锐、更重情绪收割。
-> 用三个"小故事点"撑起一卡的情绪升级（见 “情绪升级（六层拉扯 / 后悔流双曲线 / 延迟满足 / 禁止翻旧账）”章节 的"轻度→中度→重度"）。
-> 例（家庭逆袭示例一卡三小故事点）：偏心不分钱(5分) → 借3千被拒转头给哥买车(7分) → 1.5万彩礼被挪用给外人娶妻(9分)。
+Free-viewing work may be lighter and denser in comic ideas; paid work may concentrate more sharply on emotional pressure and the decision to continue. Both still need compelling continuation.
 
----
+### Opening check
 
-### 2. 开篇检查（以三集为参考）
+Establish as early as the project needs, with roughly three episodes as one reference:
 
-开篇尽早完成、且让观众明白"这部剧讲什么"并产生期待：
-- [ ] 人物出场（控制首次出场信息量，按剧情需要引入）
-- [ ] 核心矛盾建立
-- [ ] 主角目标 / 自我意识觉醒
-- [ ] 有强吸引力的开场（前1-2分钟抓人，见 “钩子与付费卡点设计 (Hooks & Paywalls)”章节）
-- [ ] 信息点不要倾倒：只交代与当前冲突最相关的身份/关系；童年往事等用后续闪回逐步给
+- Introduce characters in manageable amounts.
+- Establish the central conflict and the protagonist's goal or awakening.
+- Give the opening a strong attraction; the historical 1–2-minute suggestion is not a measured universal threshold.
+- Explain only identities and relationships needed for the current conflict. Release childhood history or other backstory later when it changes the present.
 
----
+### Build the cutoff
 
-### 3. 卡点怎么写（=情绪积累到顶点的爆发 + 悬念）
+Accumulate pressure through the preceding incidents. At the peak, give the protagonist a consequential decision or action: a decisive refusal, a counterattack, or an identity about to be exposed. End on a strong image or line with a specific unresolved consequence. The cutoff ends the old state and opens a new phase, such as the former partner's attempt to win the protagonist back.
 
-1. **堆积情绪**：靠前几集的打压/委屈/矛盾，把观众的愤怒、憋屈推到高点。
-2. **主角关键抉择/行动**：在情绪顶点说出决绝台词（"我们离婚吧"）、关键反击、或身份面临暴露。
-3. **留悬念定格**：用一个强画面或强台词定格结束本集（"什么？！"几人震惊表情拼一个画面）。
+Common types: severing family ties; divorce or departure; identity exposure; grave illness or disaster; a major reversal. Use only what fits the authorized story.
 
-卡点既是旧压抑状态的终结，也是新阶段（如追妻火葬场）的开启。
+### When length and the hook do not align
 
-常见卡点类型：断亲决裂、离婚/离开、身份揭露、绝症/大祸、大反转。
+If an episode is short but the material before the hook matters, deepen a relevant interaction or character detail. Do not pad it with invented events. If the episode is long and the hook has not arrived, compress flat material; if all of it is necessary, end on a meaningful smaller question and deliver the larger hook early in the next episode. Avoid cutting at an emotionally flat point. Draft the opening block, then tighten it to the actual delivery requirement.
 
----
+### Central and subsidiary hooks
 
-### 4. 字数与钩子不同步时（一卡内尤其要处理干净）
+A **central hook** is the question the audience most wants answered: when will she leave; when will the concealed identity emerge; when will he recognize his rescuer? Establish one or two central promises in the opening block.
 
-- **字数不够一集**：钩子前剧情若重要，就丰富细节/加凸显人物的小互动凑足，把钩子放本集结尾。
-- **字数够了钩子没到**：剧情若平，精简压缩把钩子提前；剧情都重要，则在此设一个**假钩子/小悬念**收尾，真钩子放下一集开头。
-- **切忌在平淡处断集**。一卡前最好写完再精简到字数要求。
+A **subsidiary hook** is a smaller reversal or interruption. The source calls these “false hooks,” but they must still have a real payoff; they are not permission to deceive the audience. They can also form short promotional excerpts. A regret-story example repeatedly brings the husband near a divorce agreement: a call interrupts, then a knock interrupts, and by the time he reads it she has left. Every delay must add pressure or change circumstances, rather than merely repeating the same obstruction.
 
----
+| Approach | Emphasis |
+| --- | --- |
+| Paid opening | Emotional intensity, sharp conflict, a consequential cutoff |
+| Free viewing | Accessible entry, lighter flow where appropriate, frequent engaging developments |
+| A project serving both | A strong emotional opening, lighter middle passages where useful, renewed pressure at the cutoff; confirm the project's strategy |
 
-### 5. 真钩子 / 假钩子（贯穿一卡与全剧）
+### Review checklist
 
-- **真钩子**：观众最想知道答案的核心问题，贯穿全剧，是灵魂。一卡里要立住 1-2 个。
-  - 例：女主何时真正离开？马甲/身份何时掉？男主何时发现女主是恩人？
-- **假钩子/假卡点**：单集内可多次出现的小反转/小悬念，可切片用于投流。多多益善，但别削弱或混淆真钩子。
-  - 后悔流假钩子技巧：让男主反复接近真相又错过（拿起离婚协议→电话响放下→翻一页→管家敲门→第三次终于看完，女主已走）。会"激怒"观众，但正是追剧动力。
+For the outline: the premise matches the task; the central promise can be stated in one sentence; the major cutoff has adequate preparation; smaller incidents escalate instead of repeating; the opening communicates the essential setup.
 
----
-
-### 6. 付费 vs 免费 一卡区别
-
-| | 付费向一卡 | 免费向一卡 |
-|---|---|---|
-| 类比 | 短篇小说（免费段要精彩到让人掏钱） | 番茄长篇（整体质量在线） |
-| 写法 | 强情绪、强卡点，矛盾尖锐，注重付费点收割 | 可更轻快、梗密集，降低观看门槛，但钩子要足 |
-| 付免双跑 | 开局强情绪切入（吸付费）→ 中段轻喜（提免费完播）→ 卡点回强情绪 | 按项目要求确定 |
-
----
-
-### 7. 一卡审核 checklist（按实际交付范围使用）
-
-**一卡集纲检查**：
-- [ ] 选题与本次目标、交付范围一致
-- [ ] 核心真钩子明确（一句话能说清观众最想看什么）
-- [ ] 第10集左右的超大卡点已定，且情绪能撑到顶点
-- [ ] 三个小故事点呈"轻→中→重"升级，无翻旧账重复
-- [ ] 前三集硬性要求齐全
-
-**一卡正文检查**：
-- [ ] 前1-2分钟开场抓人
-- [ ] 每集结尾有钩子，第10集是最强卡点
-- [ ] 台词通过 相关正文规则（进入正文阶段再用） 自检（一句一功能、无重复）
-- [ ] 情绪逐层升级（“情绪升级（六层拉扯 / 后悔流双曲线 / 延迟满足 / 禁止翻旧账）”章节）
-- [ ] AI仿真人项目：视觉标签/转场/细节达交接要求（相关正文规则（进入正文阶段再用））
-- [ ] 字数符合题材+付费模式（相关正文规则（进入正文阶段再用）），不僵硬
-
-
+For the script: the opening attracts attention; episode endings earn continuation; the chosen first-paywall episode is a major peak; dialogue has distinct functions without redundant information; emotion develops in layers; visual identity, transitions, and handoff detail fit the production mode; length follows the actual brief rather than a rigid historical number. Apply script-level rules when drafting, not as an excuse to expand an outline request into full scenes.
 
 ---
 
 <a id="rule-2"></a>
 
-## 情绪升级（六层拉扯 / 后悔流双曲线 / 延迟满足 / 禁止翻旧账）
+## Emotional escalation, regret arcs, and delayed gratification
 
-> 短剧是"卖情绪"。情绪不够强，几乎都是**冲突层次不够 + 升级不够 + 延迟满足没做够**。
-> 本文件把"情绪"从抽象词变成可检查的结构。配合 相关正文规则（进入正文阶段再用）（台词层）与 “冲突设计与爽点策略 (Conflict Design)”章节（爽点/反派层）使用。
+Treat emotion as a structure that can be inspected: conflict layers, escalation, and the timing of gratification. The following patterns specialize in regret, comeback, and confrontation stories; they are not an instruction to force every genre into cruelty or to maximize intensity without contrast.
 
----
+### Mild → moderate → severe
 
-### 1. 情绪逐层升级：轻度 → 中度 → 重度（每个新事件更狠、更戳心）
+Each new incident should change the pressure through new information or a new form of conflict. Family example: unfairly withholding money → refusing even a small loan → diverting the protagonist's savings to an outsider's marriage.
 
-家人/反派的态度与行为要**越往后越过份**，从小转大。
-- 例（家庭逆袭示例 与父母冲突）：偏心不分钱（轻度）→ 连3千都不肯借（中度）→ 把1.5万存款借给外人娶妻（重度）。
+Two related tracks can grow together:
 
-主线上的两条"升级线"要同步往上走（后悔流/逆袭通用）：
-- **打压/后悔线**：看不起 → 开始后悔但嘴硬 → 彻底悔恨求饶。
-- **事业/反击线**：数字看得见地变大（打工赚4万 → 开网店赚100万 → 房地产赚数亿）。
+- Dismissal and regret: contempt → reluctant, unadmitted regret → recognition and pleas.
+- Career and counterattack: visibly increasing independence or achievement. Historical illustrative figures move from 40,000 earned at work to a million through an online business to hundreds of millions in property; these are fictional scale examples, not financial guidance.
 
-> 长篇用"故事点"换续航：70集约3个大故事点；80集再加一层（赚钱插一层、后悔插一层）。
+A long serial can gain endurance from new story incidents. The source suggests roughly three major incidents for a 70-episode example and another layer for an 80-episode example. Choose the number from the story's actual needs.
 
----
+### Six-layer confrontation example
 
-### 2. 六层拉扯法（大卡点前设6个层层递进的小冲突）
+Before a major cutoff, one optional design is six increasingly consequential conflicts, each adding a new fact or method of pressure. Once an argument has done its work, move forward.
 
-在一个大卡点之前，设计 **6 个比前一个更激烈的小冲突**，每个都提供**新信息或新冲突方式**。
-吵完一个点就过去，进入更狠的下一个——**绝不翻旧账、不重复**。
+| Layer | Family-banquet illustration | Fantasy-banquet illustration |
+| --- | --- | --- |
+| 1 | Exclude the heroine from the banquet | Mock a broken engagement and deny her admission |
+| 2 | Threaten physical violence | Attack her supposedly inadequate ability |
+| 3 | A new arrival takes the aggressor's side | A male supporting character attacks without investigating |
+| 4 | Credit her achievement to her rival | Misrepresent the golden egg she carries as evidence of sexual misconduct |
+| 5 | Seize her mother's keepsake | A rival pretends to help while framing her |
+| 6 | Demand that she kneel, then destroy the keepsake anyway | Attack her mother and threaten the meaning of her father's possible death |
 
-**模板（家庭宴会示意大卡点前）**：
-1. 身份打压（"你没资格参加宴会"）
-2. 上升到肢体（要打女主）
-3. 新人物介入激化（男主不分青红皂白护短）
-4. 颠倒黑白（女主的功劳给女配）
-5. 抢走重要物品（妈妈遗物被抢）
-6. 逼下跪后出尔反尔（下跪后对方却摔了遗物 → 顶点）
+The useful principle is progression: insult → physical pressure → damage to something valued → consequences for loved ones. Six is a reference pattern, not a quota. These are antagonistic behaviors to depict, not advice for real relationships.
 
-**模板（幻想宴会示意大卡点前，幻想题材同样适用）**：
-1. 羞辱被退婚、没资格来天后宴
-2. 羞辱资质平平配不上
-3. 男配登场不分青红皂白攻击女主
-4. 羞辱女主怀里抱金蛋（私生活混乱）
-5. 女配假意示好实则冤枉
-6. 攻击女主母亲是狐狸精、父亲可能已死（最戳心）
+### Do not recycle the same grievance
 
-**层级走向参考**：骂人 → 推搡 → 毁坏重要物品 → 牵连亲人。是递进，不是并列。
+A new confrontation needs new information, a new cost, or a sharper conflict. Repeatedly restating that the antagonist is awful produces length without movement. A purposeful flashback at a major emotional peak can concentrate earlier injuries; constant recollection cannot substitute for present action.
 
----
+### The opposing curves of a regret romance
 
-### 3. 禁止翻旧账（情绪连贯且升级的铁律）
-- 每个新事件必须比上一个更激烈、更戳心，且带**新的信息点**。
-- 不要在同一层面重复冲突；不要靠反复回忆旧委屈凑情绪（旧委屈用闪回在卡点集集中堆叠升华即可，见 相关正文规则（进入正文阶段再用） 闪回用法）。
-- 编辑常批"冗长啰嗦"，根因就是反复强调反派过分之处而无新进展。
+| Track | Initial state | Development | Turning point |
+| --- | --- | --- | --- |
+| Heroine's attachment | Strong love | Declines through successive injuries | She chooses to leave |
+| Heroine's independence | Limited resources or self-belief | Grows through action and achievement | Her life expands after the break |
+| Former partner's attachment | Indifference or contempt | Slowly grows as she withdraws and changes | Recognition arrives when the old arrangement is no longer available |
 
----
+Professional success can change how others see her, but it also belongs to her own arc. Success does not instantly erase attachment: she may still wonder why he treats her this way. Preserve that credible contradiction when it belongs to the character.
 
-### 4. 后悔流双曲线（感情线 × 事业线，方向相反）
+### Delayed gratification
 
-```
-情绪/状态高度
-  │  女主感情线（短）：高起点 → 一路下滑 ……↘
-  │                                    ╲      ↗ 男主感情线（长）：低起点 → 缓慢上升
-  │  女主事业线（长）：低 → 持续上升 ↗   ╳  ← 两线在"矛盾激化点"交叉（关键卡点）
-  │                              ↗     ╱ ↘ 女主感情触底→决心离开
-  └────────────────────────────────────────► 时间/集数
-                 触底后女主"觉醒"，事业线陡升
-```
+For an audience seeking recognition of unacknowledged sacrifice, naming the injury can matter as much as revenge. Use specific daily evidence: “I'm up at five making your breakfast. Have you ever sat down to eat it?” lands differently from an abstract claim of sacrifice. Do not invent that history if it is absent.
 
-- **女主**：感情起点高（深爱）→ 经历矛盾一路下滑；同时**事业/自我意识线上升**。
-- **男主**：感情起点低（冷淡/厌恶）→ 随女主感情下滑、事业上升而**缓慢上升**；直到女主触底（决心离开）才真正觉醒。
-- 事业成功不只是打脸，更是让男主刮目相看、感情升温的催化剂。
-- 成长型人设：女主快速振作逆袭，但即使事业成功，仍会在意"他为什么还这样对我"——这种纠结才真实。
+In the illustrated regret structure, complete remorse is delayed until late in the story. Two alternating questions can sustain tension: when will he discover she intends to leave, and when will she actually leave? The timing must fit the intended ending; not every romance requires reconciliation or late remorse.
 
----
+### Credible contradictions
 
-### 5. 延迟满足（后悔流能火的底层）
+A character who says “I love you, but my mother objects” may create more recognizable conflict than a pile of unrelated villain traits. Hypocrisy—claiming virtue while benefiting from harm—can make the conflict legible. Imagine the target viewer's specific experience without treating all women or any region as one audience.
 
-受众多为生活中隐忍的女性，核心需求不只是打脸，更是**诉说委屈**并获得（剧中）男性的后悔与认可。
-- **细致刻画女主的付出与委屈**（用具体日常细节："我每天五点起床做饭，你吃过一次吗？"比大道理更共鸣）。
-- **延迟满足**：男主不能很快后悔，要一点点积累，**大结局前才彻底爆发**。
-- 两个交替悬念维持张力：A 男主何时发现女主要离开？B 女主何时真正离开？（配合假钩子，见 “一卡设计（前10集 / 投稿单元 / 付费卡点 / 审核节点）”章节）
-
----
-
-### 6. 人设要"贴近现实的矛盾体"，不要纯脸谱
-情绪起不来，常因人设太极端脸谱化。
-- 纯粹的坏人（又穷又丑又家暴）< 更贴近现实的矛盾体（"我爱你，但我妈不同意"的妈宝男）。
-- 反派要"又当又立"才更引发代入和愤怒。
-- 共情训练：写之前把自己代入受众，"换成我会怎样"——你痛了，观众才痛。
-
----
-
-### 7. 情绪自检 checklist
-- [ ] 每个新冲突比上一个更狠，且有新信息（无翻旧账）
-- [ ] 大卡点前铺了多层（理想6层）递进拉扯
-- [ ] 后悔流：感情线↓ 与 事业线↑ 反向，且在卡点交叉
-- [ ] 男主后悔被延迟到结局前才彻底爆发
-- [ ] 女主委屈用了具体日常细节，不是空喊
-- [ ] 反派/家人态度呈轻→中→重升级
-- [ ] 人设是可信矛盾体而非纯脸谱
-
+Check: each incident changes the pressure; the major cutoff has enough layers; applicable attachment and independence curves interact; delayed remorse serves the chosen story; sacrifice appears in concrete behavior; family or antagonist conduct escalates meaningfully; characters remain believable rather than a checklist of extremes.
 
 ---
 
 <a id="rule-3"></a>
 
-## 节奏设计与三幕微结构
+## Pacing and the three-act episode
 
-### 核心理念
+Pacing manages changing audience emotion: what might the viewer feel now, and what will the next action change? Maintaining interest is the aim, not a guarantee of retention.
 
-短剧节奏的本质是**情绪管理**。编剧不是在写故事，而是在设计观众的情绪过山车。每一秒都在回答一个问题："观众现在的情绪是什么？接下来要把它推向哪里？"
+### A 2–3-minute episode illustration
 
-节奏把控的铁律：**永远不给观众退出的机会。**
+| Portion | Dramatic function | Intended emotional movement |
+| --- | --- | --- |
+| Opening, approximately 30 seconds | Answer the previous hook and establish this episode's conflict promptly; the source's five-second cue is illustrative | Curiosity, tension, anger |
+| Middle, approximately 1–1.5 minutes | Character collision, new information, escalating conflict, and a meaningful reversal where the story supports it | Anxiety, anticipation, empathy, rising anger |
+| End, approximately 30–45 seconds | An episode payoff or emotional peak, then a specific continuation question; the source uses the last ten seconds as a cue | Release or surprise leading to renewed interest |
 
-### 单集三幕微结构
+These ranges are sketches and may overlap; they are not timing measurements or universal episode lengths.
 
-每集2-3分钟，内部遵循紧凑的三幕结构：
+### Whole-series waves
 
-```
-┌─────────────────────────────────────────────────────┐
-│  第一幕：钩子引爆（前30秒）                            │
-│  ├─ 承接上集悬念（回应上集钩子）                        │
-│  ├─ 5秒内建立本集核心冲突                              │
-│  └─ 观众情绪：好奇/紧张/愤怒                           │
-│                                                       │
-│  第二幕：冲突升级（中间1-1.5分钟）                      │
-│  ├─ 冲突层层叠加，至少1个反转                          │
-│  ├─ 角色碰撞推动剧情，台词密集有力                      │
-│  ├─ 新信息不断注入，保持观众好奇                        │
-│  └─ 观众情绪：焦虑/期待/心疼/愤怒升级                   │
-│                                                       │
-│  第三幕：爽点释放 + 钩子（最后30-45秒）                 │
-│  ├─ 本集的核心爽点或情绪顶峰                           │
-│  ├─ 最后10秒：下集悬念钩子                             │
-│  └─ 观众情绪：爽快/震惊 → 立刻想看下一集               │
-└─────────────────────────────────────────────────────┘
-```
+For a roughly 60-episode cathartic serial, the source uses rising peaks with brief relief, ending in a larger climax and resolution. Scale to the contracted length and genre. Sweet romance may ignite quickly, sustain relationship tension, then resolve briskly; slow-burn mystery may accumulate evidence before a rapid cascade.
 
-### 全剧节奏波形设计
+| Phase | Illustrative share | Job |
+| --- | --- | --- |
+| Opening ignition | About 20% | Establish characters, central conflict, and opening cutoff |
+| Development | About 30% | Expand conflict and introduce consequential people or forces |
+| Converging climaxes | About 33% | Intersect storylines, reveal truth, enable the major reversal |
+| Resolution | About 17% | Final confrontation, emotional completion, and ending |
 
-#### 60集标准爽剧节奏模板
+| Position | Possible node |
+| --- | --- |
+| Episode 1 | A compelling opening and a clear predicament |
+| Around 5% | First small victory, glimpse of identity, or new advantage |
+| Chosen first paywall, historically around Episode 10 | First major break, divorce, reveal, or equivalent cutoff |
+| Around 25% | A fundamental change in circumstances |
+| Around 35% | A new force or more complex opponent; rotate meaningful antagonists rather than only inflating one villain |
+| Around 50% | A midpoint reversal |
+| Around two thirds | The protagonist's greatest crisis |
+| Around 75% | The final counterattack begins |
+| Final stretch | Converging climaxes, emotional resolution, and the chosen closed or open ending |
 
-```
-情绪强度
-  ▲
-  │         🔥         🔥🔥        🔥🔥🔥
-  │       ╱  ╲      ╱    ╲      ╱       ╲
-  │     ╱    ╲    ╱      ╲    ╱         ╲
-  │   ╱      ╲  ╱        ╲  ╱           ╲
-  │ ╱        ╲╱          ╲╱    终极高潮   ╲
-  │╱                                      ╲
-  └──────────────────────────────────────────▶ 集数
-   1    10 💰  20    30    40    50    60
-       卡点
-```
+For long runs, connected secondary characters, several planted promises, and changing opponents can provide endurance. Do not mechanically add subplots to meet a count.
 
-#### 四大阶段节奏分配（占比为参考区间，集数随总集数缩放）
+### Speed and breathing room
 
-> 下表以"约60集爽剧"为参照。实际市场40/70/80/120集并存——**按总集数等比缩放，不要硬套60集**。
-> 不同题材曲线不同：甜宠"快引爆→长拉扯→快大婚"；长烧悬疑"慢积累→反转爆发→极快收"。
+Accelerate with purposeful jump cuts, sharp dialogue exchanges, several related information turns in one scene, concise sentences, and genuine deadlines. Slow briefly for calm before a crisis, emotional preparation, or the consequences of a major revelation. The source suggests one or two minutes to absorb a revelation and a limit of roughly half an episode for slow passages; reconcile these illustrative cues with the actual runtime. Stillness should change understanding or relationships, not merely fill time.
 
-| 阶段 | 占比参考 | 节奏特征 | 核心任务 |
-|------|---------|---------|---------|
-| 开局引爆(含一卡) | ~20% | 极快，密集冲突 | 建人设、核心矛盾、一卡卡点(见 一卡设计（前10集 / 投稿单元 / 付费卡点 / 审核节点）) |
-| 升级发展 | ~30% | 快，持续升温 | 扩大冲突、引入新角色新势力 |
-| 高潮连击 | ~33% | 最快，高密度反转 | 多线交汇、真相揭露、大逆袭 |
-| 终局收束 | ~17% | 先极快后收束 | 终极对决、情感升华、大结局 |
+| Reversal scale | Historical planning frequency | Function |
+| --- | --- | --- |
+| Micro | 2–3 per episode | Small surprises or adjustments |
+| Medium | Once every 3–5 episodes | A new direction or consequential information |
+| Major | Once every 10–15 episodes | A changed understanding or power structure |
+| Defining | 1–2 across the series | Core truth that transforms the story |
 
-#### 关键节点设计（位置用"全剧占比"表达，按总集数换算）
+Use the frequencies as diagnostic prompts, never forced insertions or market facts.
 
-| 位置 | 节点类型 | 内容要求 |
-|------|---------|---------|
-| 第1集 | 爆炸开场 | 前1-2分钟内引爆核心矛盾，建立主角困境 |
-| ~5% 处 | 初始爽点/金手指 | 主角第一次小胜利/身份微露/转折点出现 |
-| **一卡卡点(约第10集/付费分界)** | 💰 超大卡点 | 全剧第一个超大卡点(断亲/离婚/身份揭露)，戛然而止 |
-| ~25% 处 | 第一转折点 | 主角处境根本变化 |
-| ~35% 处 | 新势力登场 | 引入更强对手/更复杂局面(长篇续航靠反派轮换，非反派一味变强) |
-| ~50% 处 | 中点大反转 | 故事走向重大转折 |
-| ~2/3 处 | 至暗时刻 | 主角遭遇最大危机 |
-| ~75% 处 | 终极反击启动 | 绝地反击，进入终局 |
-| 末段 | 高潮连爆 → 大结局 | 多线汇聚连爆 + 情感收束 + 圆满/开放结局 |
+### Episode-to-episode connection
 
-> 长篇(80集+)防后劲不足：开支线加强关联新人物、提前埋多钩子逐个拆解、反派轮换。详见 情绪升级（六层拉扯 / 后悔流双曲线 / 延迟满足 / 禁止翻旧账） "故事点换续航"。
+The last image or line should create a coherent next step.
 
-### 节奏控制技巧
+| Method | Example |
+| --- | --- |
+| Continuing speech | “You think you've won?” → the speaker turns: “There's one thing you missed.” |
+| Continuing action | A hand swings to slap → another hand catches it |
+| Answering the question | A door opens → the unexpected visitor is revealed |
+| Deliberate scene switch | Scene A's unresolved question → a related conflict in Scene B, with A answered at a purposeful later point |
 
-#### 加速节奏的方法
-
-- **跳切叙事**：省略过渡，直接跳到下一个冲突点
-- **台词对抗**：用角色间你来我往的犀利对话推进
-- **多梗叠加**：一个场景内连续放出多个信息/反转
-- **短句密集**：台词和描写都用短句，制造紧迫感
-- **时间压力**：设置倒计时或截止日期增加紧张感
-
-#### 减速节奏的方法（爽剧少用；甜宠/后悔流的情感拉扯段可适当多用）
-
-- **暴风雨前的宁静**：大冲突前短暂的温馨场景，反衬即将到来的风暴
-- **情感铺垫**：为虐心或感动场景做情绪蓄力
-- **信息消化**：重大真相揭露后给观众1-2分钟消化
-
-减速的铁律：**不超过半集**。一旦超过，立刻用反转或新冲突重新点燃。
-
-#### 反转设计要点
-
-| 反转层级 | 频率 | 效果 |
-|----------|------|------|
-| 微反转 | 每集2-3个 | 小惊喜，保持注意力 |
-| 中反转 | 每3-5集1个 | 剧情走向调整，新信息揭示 |
-| 大反转 | 每10-15集1个 | 颠覆认知，格局变化 |
-| 终极反转 | 全剧1-2个 | 核心真相揭露，故事彻底改变 |
-
-### 上下集衔接法则
-
-#### 无缝衔接原则
-
-上一集的最后一个画面/台词，必须与下一集的第一个画面/台词形成连贯。
-
-| 衔接方式 | 示例 |
-|----------|------|
-| 台词延续 | 上集结尾："你以为你赢了？" → 下集开头："可惜——"（主角转身） |
-| 动作延续 | 上集结尾：一巴掌挥出 → 下集开头：巴掌被一只手稳稳接住 |
-| 悬念回应 | 上集结尾：门被推开 → 下集开头：门后站着一个所有人没想到的人 |
-| 场景跳转 | 上集结尾：A场景的悬念 → 下集开头：B场景的新冲突，A悬念在中段回应 |
-
-#### 衔接禁忌
-
-- ❌ 下一集开头完全重复上一集结尾内容（浪费时间）
-- ❌ 上一集的钩子在下一集被轻描淡写带过（破坏信任）
-- ❌ 下一集开头用大段旁白回顾剧情（拖节奏）
-
+Do not replay the entire previous ending, dismiss the promised consequence, or open with a long recap. A delayed answer must earn its delay and preserve trust. Keep adjacent episodes from repeating the same location, confrontation, and hook shape without a changed function.
 
 ---
 
 <a id="rule-4"></a>
 
-## 冲突设计与爽点策略 (Conflict Design)
+## Conflict and cathartic payoff
 
-### 一、 工业级爽点底层算法
-爽点 = **期待（极致压抑） × 反差（身份/实力错位） × 释放（视觉化碾压）**
-*铁律：压得越低，弹得越高。所有没有压抑铺垫的装X，都是无效爽点。*
+A useful design shorthand is **anticipation under pressure × contrast in status or capability × visible release**. This is a creative heuristic, not a mathematical measure. A display of superiority has less meaning when the story has not made its stakes understandable.
 
-### 二、 核心爽点矩阵（出海/男频特化）
-1. **身份碾压型**：隐藏极深的至高身份被物理证据当众揭穿（如：直升机群降落、全球黑卡掉落）。
-2. **打脸复仇型**：反派叫嚣到最高潮时，主角以绝对力量一招制敌（如：一根手指停下重拳）。
-3. **视觉奇观型**：通过不可思议的画面制造爽感（如：废柴的血滴在废铁上，废铁瞬间重组为流光溢彩的神器）。
+Three patterns in the source's action and male-audience examples:
 
-### 三、 反派层级与“仇恨值”设计
-没有好反派，就没有强爽感。反派的存在就是为了被视觉化打脸。
-- **小反派 (炮灰)**：存在 1-5 集。行为：狗眼看人低、当众嘴碎。结局：被主角的财力或一巴掌直接拍飞。
-- **中反派 (精英)**：存在 5-25 集。行为：利用规则或资本陷害主角。结局：底牌被主角全部撕碎，身败名裂。
-- **大反派 (终极)**：贯穿全剧。行为：主角一切痛苦的根源。结局：在最高规格的特效和精细画面中被轰杀至渣。
+1. **Identity or status dominance:** physical evidence exposes a concealed position in public—arriving aircraft or an exclusive financial credential, for example.
+2. **Revenge or rebuttal:** at the antagonist's confident peak, the protagonist defeats the challenge decisively, such as stopping a heavy punch with one finger in a fantasy setting.
+3. **Visual wonder:** an apparently powerless person's blood transforms scrap metal into a radiant artifact, under rules established by the story.
 
+A genre-specific antagonist ladder: minor opponents may last 1–5 episodes, using contempt or public insults; intermediate opponents may last 5–25, exploiting money or rules; the primary antagonist may embody the series-long source of harm. Their defeats escalate from a small status reversal to exposure and loss of power to the final confrontation. The original action template uses violent defeat and spectacular destruction; use those only when the project's tone, authorization, and established world support them. The episode counts and violent outcomes are not universal requirements.
 
 ---
 
 <a id="rule-5"></a>
 
-## 钩子与付费卡点设计 (Hooks & Paywalls)
+## Openings, hooks, and paywalls
 
-### 一、 黄金 3 秒法则与精品化开场
-在精品短剧时代，可用“尽早给出吸引点”作为开篇目标，**3秒**是节奏示意而非普适统计。开场不仅要有冲突，更要通过“高概念”或“极致视觉”瞬间抓住眼球。
+### Immediate attraction
 
-#### 1. 开场绝对禁忌 (Taboos)
-- ❌ **拒绝低效叙事**：不要用旁白交代背景（"三年前，在一个小城市……"）。
-- ❌ **拒绝情绪空白**：不要用慢节奏的环境空镜或角色独自走路/发呆的画面。
-- ❌ **拒绝平淡开局**：不要用无意义的对话铺垫关系（"你是我姐夫的表弟？"）。
+The “three-second rule” is a shorthand for giving the viewer an early reason to watch, not a universal statistic. High concept, visual contrast, and a meaningful crisis can do this. Avoid inefficient background narration, empty establishing shots, aimless walking, and dialogue that explains relationships without changing anything. Voice-over or a quiet image remains valid when it performs a concrete dramatic job.
 
-#### 2. 精品剧开场公式
-> **高概念奇观（吸睛） → 核心危机引爆（共鸣） → 身份/关系降维打击（爽感）**
-在第一个场次的前 3 行内，必须让观众感受到"这里有颠覆认知的事情要发生"。
+One optional opening pattern: **striking concept → central crisis → a reversal in identity or relationship power**. The source asks the first three action lines to signal an unusual event; use that as an editing prompt, not a formatting law.
 
----
+### Five opening templates
 
-### 二、 高概念开篇模板 (High-Concept Templates)
-摒弃老套的“丈母娘扇巴掌”，引入具有更强视觉张力与设定新意的高级模板：
+1. **Extreme contrast.** A holographic laser sword presses against a cleaner's uniform. An antagonist mocks the cleaner's supposed genetic inferiority. The cleaner raises their eyes; the pupils reorganize into a golden digital matrix. Identity contrast becomes an image.
+2. **An overwhelming intervention.** In heavy rain, a powerless protagonist is forced toward a contract in the mud. Three enormous spacecraft appear above the city. A broadcast announces that the supreme commander's vital signs are threatened. The reversal changes the scale of the scene.
+3. **A life-or-death countdown.** A bomb reads 00:03; a character holds a crying baby at a cliff edge. The predicament must lead to a coherent choice, not merely combine alarming images.
+4. **Outcome first.** A formerly dominant family is locked in glass display cases; the man they humiliated studies them with a wineglass. Then the narrative asks how this reversal occurred.
+5. **Rebirth or changed rules.** A fatal wound, time reversing, then the protagonist wakes in an examination room with a warning that catastrophe is ten minutes away. Establish the new rules through consequences.
 
-#### 模板 1：极致反差型 (取代传统打脸)
-利用极具视觉冲击力的身份错位开场，不仅打脸，还要打出“奇观”。
-> **示例指令**：
-> △ （特写）一把带着全息投影的激光剑抵在主角的清洁工制服上。
-> 反派：（嘲笑）低贱的基因，也配碰核心代码？
-> △ （特写）主角缓缓抬眼，原本黑色的瞳孔瞬间重组为金色的数字矩阵。
+These are teaching illustrations, not ready-made original project scenes. Adapt only within the user's permission.
 
-#### 模板 2：高维降临型 (升级版身份反转)
-开局主角处于绝对劣势，但反转的力度要达到“摧毁现有世界观”的级别。
-> **示例指令**：
-> △ （全景）暴雨中，主角被按在泥水里被迫签下卖身契。
-> △ （远景转全景）云层突然撕裂，三艘遮天蔽日的星际战舰悬停在城市上空。
-> 广播：（机械音响彻全球）检测到最高指挥官生命体征受损，正在锁定目标。
+### Paywall mechanics
 
-#### 模板 3：生死倒计时 (极端困境)
-开场就是绝境，主角面对不可能完成的任务或生死抉择。增加时间限制，拉满肾上腺素。
-> **示例指令**：
-> △ （特写）定时炸弹倒计时显示：00:03。
-> △ （近景）主角怀里抱着啼哭的婴儿，面前是深不见底的万丈悬崖。
+A paywall marks the actual free/paid boundary when the distribution model has one. A compelling candidate concentrates unresolved consequence, emotion, and a point beyond which the old situation cannot simply resume.
 
-#### 模板 4：结果前置/悬疑倒叙
-先展示一个极度震撼、充满违和感的结局画面，再回溯"这一切是怎么发生的"。
-> **示例指令**：
-> △ （全景）昔日高高在上的财阀家族，此刻全部被锁在玻璃展示柜里。
-> △ （中景）曾经被他们踩在脚底的男主，正优雅地端着红酒杯，像欣赏藏品一样看着他们。
+| Historical example | Suggested range in that example | Cutoff type |
+| --- | --- | --- |
+| 60-episode action or cathartic serial | Episodes 8–12 | A concealed advantage is about to be exposed or decisive power deployed |
+| 50-episode romance | Episodes 6–10 | Maximum relationship tension, a staged relationship turning real, or forced separation |
+| 50-episode mystery or repeating-rule scenario | Episodes 8–10 | A broken rule or disturbing evidence about a trusted person |
 
-#### 模板 5：规则重置/重生起始
-主角死亡或遭遇极端事件后，突然回到过去或进入新规则世界。
-> **示例指令**：
-> △ （特写）主角的心脏被利刃贯穿，血液飞溅。
-> △ （特写）画面瞬间倒转，时钟指针疯狂逆时针旋转。主角猛地在考场上惊醒，黑板上写着：距离末世降临还有 10 分钟。
+These ranges are unverified historical planning examples, not current platform requirements. Confirm the actual distribution brief.
 
----
+Three checks: the crucial information or consequence is genuinely unresolved; the preceding action has earned the emotional peak; the next episode promises a particular change worth seeing. Do not claim a guaranteed purchase or retention effect.
 
-### 三、 爆款付费卡点设计 (Paywall Mechanics)
-付费卡点是免费内容与付费内容的分界线，是观众情绪和好奇心被推到极致的节点。在精品剧中，卡点必须具有“不可替代性”。
+### Episode-ending hooks
 
-#### 1. 工业级卡点位置
-| 剧集规模 | 建议付费集数 | 卡点位置特征 |
-| :--- | :--- | :--- |
-| **标准男频/爽剧** (60集) | 第 8-12 集 | 主角底牌即将掀开 / 第一次降维打击的最后一秒。 |
-| **女频/甜宠剧** (50集) | 第 6-10 集 | 极限拉扯的顶点（如：男女主第一次假戏真做 / 被迫分离）。 |
-| **强悬疑/无限流** (50集) | 第 8-10 集 | 规则被打破 / 最信任的人露出诡异微笑。 |
+| Type | Audience question or feeling | Illustration |
+| --- | --- | --- |
+| Suspense | What happens now? | A supposedly long-dead person appears behind a door |
+| Reversal | How can this be true? | The antagonist removes a disguise and reveals the protagonist's father's face |
+| Emotion | Anger, hope, excitement | A gloating antagonist has not seen the protagonist draw the legendary sword |
+| Information | What else has been concealed? | A diary falls open on a name written in blood |
+| Danger | Will the character survive? | Failed brakes and an approaching truck fill the frame |
 
-#### 2. 卡点设计三原则 (The 3 Rules of Paywall)
-- **悬而未决**：最关键的信息（如：那一剑有没有刺中？那份DNA报告写了什么？）差一步就要揭晓——但截然而止。
-- **情绪绝顶**：愤怒、震撼、心疼或好奇被推到生理极限。
-- **不可回头**：故事已经走到了一个"不看下一集就睡不着"的位置。
-
----
-
-### 四、 单集微钩子矩阵 (Micro-Hooks)
-每集结尾的最后 10 秒都是"钩子"——让观众自动点开下一集的强制装置。
-
-#### 1. 钩子类型与效果
-| 钩子类型 | 心理效用 | 视觉化示例 |
-| :--- | :--- | :--- |
-| **悬念钩** | "接下来会怎样？" | 门被猛地推开，主角看到了一个本该在十年前死去的人。 |
-| **反转钩** | "居然是这样！" | 反派撕下伪装的面具，露出的竟然是主角父亲的脸。 |
-| **情绪钩** | "太气了/太燃了！" | 反派得意大笑，但身后的主角已经拔出了那把尘封的神剑。 |
-| **信息钩** | "原来还有隐情！" | 泛黄的日记本掉在地上，最后一页用血写着一个名字……（黑屏）。 |
-| **危机钩** | "他能活下来吗？" | 刹车失灵，大货车迎面撞来，车灯占据了整个屏幕——（黑屏）。 |
-
-#### 2. 钩子执行铁律
-- **密度强制**：每集结尾优先突出一个最强钩子，大结局按收束需要处理。
-- **强度分级**：关键集数（如付费卡点前后 5 集）的结尾钩子强度必须拉满，涉及生死或核心秘密。
-- **无缝咬合**：下一集的前 30 秒内 **必须** 直接回应上一集的结尾钩子，严禁通过拖沓过渡来消耗观众耐心。
-
+Prioritize one strongest hook at each ending; the finale may prioritize closure. Important clusters around a chosen paywall may use stronger consequences or core secrets, but not every genre needs mortal danger. Answer the preceding hook promptly—the source suggests the next opening thirty seconds—through actual response rather than a drawn-out transition. Never label an unwritten continuation as an observed payoff.
 
 ---
 
 <a id="rule-6"></a>
 
-## 角色开发规范 (Character Development)
+## Character development and visual identity
 
-### 一、 角色内在驱动力（人设与动机建模）
-在短剧/漫剧中，角色不能是推动剧情的工具人。每个人物必须具备极度鲜明的标签（人设）、强烈的欲望（动机）以及清晰的转变（弧光）。
+Characters need a recognizable identity, a strong desire, and a meaningful arc. They should not exist only to deliver plot information.
 
-#### 1. 典型人设库 (Archetypes)
-针对男女频及出海市场，可参考下列常见类型人设，并按项目重塑：
-- **【女主】独立大女主**：人间清醒，智商在线。目标明确（搞事业或复仇），信奉“靠人不如靠己”。
-- **【女主】坚韧小白花**：外表清纯柔弱，前期常受尽委屈，但内核极其坚韧，触及底线时会爆发出惊人的反击能量（绝地反击型）。
-- **【女主】满级大佬重生**：带着前世的记忆和满级技能回到新手村，主打降维打击、步步为营。
-- **【男主】亿万富翁/财阀 (Billionaire/CEO)**：绝对的上位者，掌控欲极强，外冷内热。对外人杀伐果断，对女主展现极致的偏爱与软肋。
-- **【男主】隐藏战神/龙主**：表面身份极度卑微（如清洁工、赘婿），实则是金字塔尖的至高存在（扮猪吃虎型）。
+### Adaptable archetypes
 
-#### 2. 动机与阻碍 (Motivation & Obstacle)
-没有阻碍就没有冲突。在生成大纲时，必须为核心角色套用以下公式：
-> **核心公式 = 终极目标 + 核心阻碍 + 底层动机**
+- An independent heroine: clear-eyed, capable, pursuing work or revenge through her own choices.
+- A gentle but resilient heroine: initially underestimated, with a firm boundary and the capacity to resist.
+- A reborn expert: past-life knowledge and skills deployed through a new situation's actual limits.
+- A billionaire or CEO: outward authority and control, contrasted with selective vulnerability or affection.
+- A concealed champion or ruler: apparently low status, with a hidden position or ability.
 
-- **示例（女主）**：她想要【查清家族破产的真相】（目标），却遇到了【掌握核心线索但性格暴戾的财阀男主的百般刁难】（阻碍），因为她必须【洗刷父亲被逼跳楼的冤屈】（动机）。
-- **示例（男主）**：他想要【报答童年时救过自己的女孩】（目标），却【认错了恩人，被假恩人（女二）蒙蔽】（阻碍），因为那是他【黑暗童年里唯一的光】（动机）。
+These are genre starting points, not demographic prescriptions or substitutes for individual psychology.
 
-#### 3. 人物弧光 (Character Arc)
-角色弧光按总集数和故事类型设计，这种蜕变往往伴随着视觉设定的升级。
-- **觉醒型弧光**：从“逆来顺受”到“锋芒毕露”。（视觉变化：服饰由暗沉转为华丽/张扬，眼神由躲闪转为极具压迫感）。
-- **融化型弧光**：从“冷血无情的杀戮机器”到“懂得了爱与守护”。（视觉变化：标志性的冰冷防备动作减少，出现柔和的光影描写）。
-- **黑化型弧光**：从“天真无邪”到“不择手段的复仇者”。（视觉变化：妆造色调变暗，标志性道具可能从“守护玉佩”变成“复仇利刃”）。
+Model each principal as **ultimate goal + central obstacle + underlying motivation**. Example: she seeks the truth about her family's bankruptcy, but the person holding the evidence obstructs her; she wants to clear her father's name after his death. Another: he wants to repay a childhood rescuer, but a false claimant has misled him; that act of care was the light in his childhood. Keep source facts and examples separate.
 
----
+### Arcs and visible change
 
-### 二、 视觉 DNA 建模（AI 防崩坏机制）
-为了防止下游 AI 视频生成时角色“撞脸”或形象漂移，必须通过物理特征锁定角色的唯一性。
+| Arc | Inner movement | Possible visible accompaniment |
+| --- | --- | --- |
+| Awakening | Submission → self-assertion | Clothing becomes more expressive; evasive looks become steady |
+| Softening | Defensive brutality → care and restraint | Habitual defensive gestures recede; visual treatment may soften |
+| Darkening | Innocence → ruthless revenge | Darker styling; a protective keepsake may give way to a weapon |
 
-#### 1. 视觉锚点模板 (Visual Anchors)
-为核心角色记录能被辨认的外观特征，并标明剧情允许的改变。以下表格补齐历史文件未完成的末句，属于公开版新增内容。
+The visible change must support an enacted choice, not replace it. Scale the arc to the story's length and genre.
 
-| 角色 | 外观锚点 | 行为习惯 | 欲望与阻碍 | 弧光变化 | 允许变化的条件 |
+### Visual anchors
+
+Record recognizable physical features to help production avoid look-alike characters and identity drift, particularly in generated imagery. This table completes an unfinished passage in the historical source and is part of the public edition.
+
+| Character | Visual anchor | Behavioral habit | Desire and obstacle | Arc change | Conditions allowing change |
 | --- | --- | --- | --- | --- | --- |
-| 角色A | 发型、颜色或一件常用配饰 | 压力下的具体反应 | 想得到什么、谁在阻挡 | 选择怎样改变 | 时间、伤势、身份或阶段变化 |
+| Character A | Hair shape/color or a recurring accessory | A specific response under pressure | What they want and who obstructs it | How their choices change | Time, injury, identity, or phase of the story |
 
-视觉锚点帮助制作保持辨认度，不得替代人物动机，也不能锁死剧情确有需要的换装和成长。
+Anchors support recognition. They must not replace motivation or prohibit story-required changes of costume, age, or growth.

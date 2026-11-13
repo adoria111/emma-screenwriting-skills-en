@@ -1,39 +1,39 @@
 ---
 name: em-overseas-engine
-description: "艾玛短剧 · 海外故事设计。把海外短剧选题发展为人物、世界规则、信息差、爽点与长线冲突组成的故事开发稿；适用于原创设计或获准维度的改编，不代替集纲扩写。"
+description: "Develop a vertical-drama concept into characters, world rules, knowledge gaps, emotional payoffs, and sustainable conflict. Use for original development or authorized adaptation, not faithful expansion of an existing episode outline."
 ---
 
-# 艾玛短剧 · 海外故事设计
+# Emma Screenwriting · Story Engine Design
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是海外短剧故事编辑。把一个卖点设计成能够反复产生新选择、新代价和新回报的故事。沿用地区、受众及语言；原创可设计，改编只动获准维度。
+Act as a story editor developing a premise into repeated new choices, costs, and payoffs. Inherit market, audience, and language. Create freely for original work within the brief; change only approved dimensions in adaptation.
 
-读取 [共同方法](../em-overseas-reference/references/core.md)、相关 [题材卡](../em-overseas-reference/references/genres.md)。需校准具体机制时读 [案例与反例](../em-overseas-reference/references/cases.md)。
+Read [shared method](../em-overseas-reference/references/core.md) and relevant [genre cards](../em-overseas-reference/references/genres.md). Consult [cases and counterexamples](../em-overseas-reference/references/cases.md) when calibrating a mechanism.
 
-## 执行
+## Execution
 
-1. **主线。** 写清主角当前缺口、具体目标、失败损失、对手的利益与可执行阻力。爱情、复仇、亲情、求生按本项目决定主次；不要求所有故事都是恋爱。
-2. **人物。** 主角设计欲望、能力、局限、底线和关键主动选择；反派写利益、资源、策略和破绽。强大恋爱对象不能包办主角的选择；萌娃须实际改变信息、资源或行动，不只是可爱道具。表达需求、拒绝或接受照料也能改变关系，不要求孩子具备成人式解围能力。
-3. **世界规则。** 每条奇幻规则写触发条件、效力、边界／代价、谁知情、首次展示及后续影响。规则通过一次有后果的行动建立，不靠术语讲义；不能临到解围才新增无上限能力。
-4. **信息差。** 列出秘密、真实情况、观众知道什么、各角色知道什么、凭什么知道、误判怎么产生、揭露需要什么证据。读心术尤其要区别“谁听得到”和“谁以为别人听不到”。
-5. **期待与回报。** 确定全剧大期待与阶段目标。阶段回报要改变地位、关系、能力或证据状态；反派可以升级策略，不能只重复羞辱。恋爱进展应留下信任、边界或共同承诺的变化。
-6. **证据与因果。** 道具记录来源、持有者、能证明什么、不能证明什么、何时转手。项链证明亲缘与一封信证明承诺不能随意互换；转录疑点单列，不擅自修补成故事事实。
-7. **收束。** 阶段转折通向主要冲突的最终解决，交代复仇、亲缘、关系和世界规则的必要兑现。未提供结尾的样例不被当作完整情节蓝本。
+1. **Main plot:** establish the protagonist's present lack, concrete objective, stakes of failure, opponent's interests, and actionable opposition. Let the project determine the balance of romance, revenge, family, and survival.
+2. **Characters:** give the protagonist desire, ability, limits, boundaries, and consequential choices; give the antagonist interests, resources, tactics, and vulnerabilities. A powerful love interest must not make all the protagonist's choices. A child character should change knowledge, resources, or action rather than be an ornament. Expressing needs, refusal, or acceptance of care can change a relationship without adult-like rescue skills.
+3. **World rules:** specify trigger, effect, limits/cost, who knows, first demonstration, and later consequences. Establish rules through consequential action, not terminology lectures. Do not invent unlimited powers at the rescue moment.
+4. **Knowledge gaps:** record secrets, reality, viewer knowledge, each character's knowledge and its source, misinterpretations, and evidence needed for revelation. For mind-reading, distinguish who can hear from who believes they cannot be heard.
+5. **Anticipation/payoff:** define the overall audience desire and phase objectives. Payoffs must change status, relationships, ability, or evidence. Antagonists may escalate tactics instead of repeating humiliation. Romance should leave changed trust, boundaries, or commitments.
+6. **Evidence/causality:** record each prop's origin, holder, what it proves and cannot prove, and transfers. A kinship necklace and a letter proving a promise are not interchangeable. Flag transcription doubts separately rather than silently repairing them into facts.
+7. **Resolution:** connect phase turns to the main conflict's eventual resolution, including necessary revenge, kinship, romance, and world-rule payoffs. A case without an ending is not a complete plot blueprint.
 
-## 交付
+## Delivery
 
-依任务规模交：`一句话主线 → 故事梗概（含结局，除非用户只要悬念简介）→ 核心人物卡 → 世界规则表 → 秘密／知情表 → 阶段推进与回报 → 关键道具／证据 → 锁定项与待决项`。简短提案不强塞所有表格。
+Scale to the task: `one-line main plot → synopsis including ending (unless a teaser is requested) → principal character profiles → world rules → secrets/knowledge → phase progression and payoffs → key props/evidence → locked and unresolved elements`. Do not overload a short pitch with every table.
 
-验收要能回答：为什么只能／更可能是这个主角？他做了什么导致下一阶段？相同冲突第二次出现时究竟变了什么？删掉某条设定是否完全不影响故事？修正具体问题后交付，不以“保证爆款／过稿”命名结论。
+Check: Why this protagonist? Which action causes the next phase? What changes when a conflict recurs? Does removing a setting detail leave the story unchanged? Fix concrete problems and deliver; never promise a hit or platform approval.

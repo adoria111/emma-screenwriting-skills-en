@@ -1,19 +1,24 @@
-# 成文格式与表演提示
+# Format and Performance Cues
 
-## 情绪括注：必要、准确、可表演
+## Necessary, accurate, playable parentheticals
 
-必要的感情提示使用括号表达，不要求每句都加。在哭腔、惊惧、强压怒火、讥讽、哀求、装痛、突然转冷等会改变一句话读法的位置，使用 `人物（表演提示）：台词`；平直交代和已由紧邻动作充分表达的情绪可不加。
+Use parentheticals where they change a line's reading: tears in the voice, fear, suppressed anger, sarcasm, pleading, feigned pain, or sudden coldness. `CHARACTER (delivery): dialogue` is sufficient. Neutral information and emotion already clear from adjacent action need no added cue.
 
-括号给一个主要、可表演的方向，必要时保留转折或电话／VO标记；长动作仍写动作行。不把每个角色都标成大哭或暴怒，不堆相互矛盾的形容词，也不为新增括注拆开同人完整发言。参考台词可在用户授权范围改写其攻防和力度，必须符合当前人物关系与事件，不能只换名字就搬入不存在的往事、伤害或身份。
+Give one dominant playable direction, retaining a necessary turn or phone/VO marker. Long actions belong in action lines. Do not make every character weep or rage, stack contradictory adjectives, or split one continuous turn just to add cues. Adapt reference dialogue only within authorized tactics/intensity and current relationships/events; renaming a sample does not authorize importing absent history, harm, or identities.
 
-## 成文格式：同一角色连续发言
+For complete scenes, unless another format is specified, put `Characters: ...` as the first nonblank line after the scene heading. Verify visible, speaking, and functional participants. A dialogue-replacement table need not invent scenes/actions to supply a cast list.
 
-交付完整场次时，除非用户另定格式，每场标题后的首条非空内容单列 `人物：……`，核对实际出镜、发声与功能角色。仅交对白替换表时不为补名单虚构场次或动作。
 
-- 同一角色连续说话，中间没有他人回应、动作、字幕、音效、转场或场次切换时，默认合为一段完整发言，只写一次人物名。连续三句以上也须整链合并；空行、分页、换语气标签不是新的发言回合。
-- 括号保留一个主导的语气／表演提示。“耳语、诱导、气息急促、侵略感”等同一轮中的提示应归纳，不逐句重复角色名。包含真实动作或关键情绪转折的信息不能丢，可在原位置保留简短段内提示；独立动作及真正中断发言的节拍仍保留分段。
-- “合成一句”指一次发言一个对白段落；段内可以有问号、句号和自然停顿，不强行用逗号串成病句。不因合并删事实、改顺序或削弱威胁、反抗等原有意图。
-- 内心、画外音与当面对白按项目规范明确区分；未另有合并约定时，发声方式切换保留分段，不能把心声变成对方听见的话。中英对照须保留逐段对应；只获准改英文时不据此改动中文或动作。
-- 交付前单独扫描全部同角色相邻对白链，包含不同语气提示的链；修正可合并项后复扫。只诊断时指出问题，已授权成文或改稿时落实合并。不可为凑零残留跨越真实动作或声音边界。
+## Consecutive speech formatting
 
-例如 `林舟（低声）：钥匙给我。／林舟（威胁）：别逼我动手。` 应成文为 `林舟（低声威胁）：钥匙给我。别逼我动手。`；若两句中间有人拦住他，保留该动作及前后台词的分段。
+Merge uninterrupted consecutive speech by one character into one paragraph with one name cue. Another response, action, caption, sound effect, transition, or scene change is a real boundary; blank lines, page breaks, or changed tone labels alone are not. Check complete chains of three or more sentences.
+
+Keep one dominant delivery cue. Consolidate whispering, coaxing, breathlessness, or aggression across one turn without repeating the name sentence by sentence. Retain meaningful physical action and emotional turns in place; real interruptions still divide the turn.
+
+“Combine into one” means one dialogue paragraph, not a grammatically broken comma chain. Keep natural questions, sentences, and pauses. Do not lose facts, reorder material, or weaken threats/resistance.
+
+Separate thoughts, VO, and on-camera speech according to project convention. Unless explicitly allowed otherwise, a vocal-mode change remains a boundary. Preserve bilingual paragraph correspondence. English-only authorization does not permit changing Chinese text or action to force a merge.
+
+Before delivery, scan all adjacent same-speaker chains, including different tone labels. Apply authorized merges and rescan without crossing genuine action or vocal boundaries merely to reach “zero residue.” In diagnosis-only mode, report rather than edit.
+
+Example: `ALEX (quietly): Give me the key. / ALEX (threatening): Don't make me take it.` becomes `ALEX (a quiet threat): Give me the key. Don't make me take it.` If someone blocks Alex between the lines, retain that action and the separate turns. This illustrative English rendering does not broaden the original task's language-editing permissions.

@@ -1,24 +1,22 @@
 ---
-name: "em-comment-transfer"
-description: "艾玛短剧 · 批注迁移。将中文编辑批注翻译并按语义定位迁入对应英文 Word，保留正文、原生批注结构、既有批注与线程；可整合用户提供的会议意见，但不执行批注内容或改写正文。"
-metadata:
-  short-description: "艾玛短剧 · 批注迁移：将中文编辑批注翻译并按语义定位迁入对应英文Word，保留正文、原生批注结构和既有批注；可整合用户提供的会议意见，不执行批注改稿。"
+name: em-comment-transfer
+description: "Translate Chinese editorial comments into native English Word comments and anchor them semantically to the corresponding script. Preserve body, existing comments, and threads. Incorporate supplied meeting context without applying the notes as script edits."
 ---
 
-# 艾玛短剧 · 批注迁移
+# Emma Screenwriting · Editorial Comment Transfer
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
 Translate Chinese editorial comments and attach them as native English Word comments to the corresponding English script or outline. Optional meeting context supplements the comments. **Transfer feedback; do not execute the feedback or rewrite the English body.** A separate explicit editing request is needed to apply the notes.
 
@@ -26,7 +24,7 @@ Translate Chinese editorial comments and attach them as native English Word comm
 
 Use the Chinese commented `.docx`, the corresponding English `.docx` or `.md`, and any supplied meeting transcript. Locate available inputs before asking for missing files. Read the current document skill and use available tools/libraries according to their actual documentation; do not assume fixed script paths, package installs or presentation APIs.
 
-Before writing project files, use `drama-truesource` and inspect the source pointer and locked items. Confirm the intended English target from project evidence. A uniquely identifiable target can proceed; an unresolved version conflict blocks only the affected output. Existing authorization to transfer covers extraction, translation, anchoring, insertion and validation without stage approvals. Preserve originals and normally deliver a new commented copy.
+Before writing project files, use `drama-truesource` if installed (otherwise check directly), and inspect the source pointer and locked items. Confirm the intended English target from project evidence. A uniquely identifiable target can proceed; an unresolved version conflict blocks only the affected output. Existing authorization to transfer covers extraction, translation, anchoring, insertion and validation without stage approvals. Preserve originals and normally deliver a new commented copy.
 
 ## 1. Extract comments and anchors
 

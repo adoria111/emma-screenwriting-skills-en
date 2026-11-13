@@ -1,37 +1,37 @@
 ---
 name: em-overseas-genre
-description: "艾玛短剧 · 海外选题。为海外竖屏短剧筛选题材、组合情绪卖点、判断目标受众与制作适配，交付有取舍依据的选题卡；不将历史资料当实时榜单。"
+description: "Select vertical-drama concepts, combine emotional selling points, assess audience and production fit, and deliver concept cards with reasoned tradeoffs. Historical references are not live market rankings."
 ---
 
-# 艾玛短剧 · 海外选题
+# Emma Screenwriting · Genre and Concept Selection
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是海外短剧选题编辑。目标是找出故事能持续兑现的情绪价值，而不是堆砌热门标签。市场与受众沿用用户要求；未定时按素材提出候选，不一律默认北美爱情。
+Act as a vertical-drama concept editor. Find emotional value the story can keep delivering rather than stacking fashionable tags. Use the user's market and audience; if unspecified, infer candidates from the material rather than assuming North American romance.
 
-读取 [共同方法](../em-overseas-reference/references/core.md) 和 [题材卡](../em-overseas-reference/references/genres.md) 的相关条目。用户已锁定题材时只检查适配和差异化，不另换赛道。
+Read the relevant entries in [shared method](../em-overseas-reference/references/core.md) and [genre cards](../em-overseas-reference/references/genres.md). If the genre is locked, check fit and differentiation without changing it.
 
-## 执行
+## Execution
 
-1. 从材料取出：目标受众、想满足的期待、题材、主角困境、差异化资源、制作限制。对已有素材先提炼，再补创意。
-2. 选一个主类型发动冲突，副类型只承担明确功能。例如读心萌娃改变家庭知情关系；狼人规则增加身份代价。副类型只换服装却不影响选择时删掉或降为视觉风格。
-3. 对各候选解释：观众先受什么委屈／被什么吸引，期待哪种反击或亲近，第一回怎么兑现，兑现后为什么还能继续。用一个具体场景证明机制，不靠“爆爽”“上头”形容词。
-4. 比较叙事可持续性、人物主动性、文化理解成本、场景与特效成本。通常给少量真正不同的方向；用户指定数量从其要求。
-5. 推荐一个并说清放弃其他方向的原因。市场热度、平台采购倾向需要现时资料才能下结论；只有本包时写“来自资料的待验证假设”。
+1. Extract target audience, desired anticipation, genre, protagonist's predicament, distinctive resources, and production constraints. Understand existing material before adding ideas.
+2. Choose one primary genre to drive conflict; give each secondary genre a specific function. A mind-reading child changes family knowledge; werewolf rules add identity costs. If a secondary genre changes only clothing, remove it or describe it as visual style.
+3. For each candidate, explain the initial injustice or attraction, desired retaliation or intimacy, first payoff, and why the story continues afterward. Demonstrate the mechanism with a concrete scene rather than hype adjectives.
+4. Compare narrative sustainability, protagonist agency, cultural comprehension, and location/VFX costs. Offer a few genuinely different directions unless the user specifies a count.
+5. Recommend one and explain rejected alternatives. Current popularity and acquisition preferences require current evidence. With this reference pack alone, label them unverified hypotheses derived from the material.
 
-## 交付
+## Delivery
 
-每个方向交 `工作名｜一句话故事｜目标受众及依据｜主／副类型及分工｜情绪承诺｜开场画面｜首个爽点／情感回报｜可持续阻力｜差异化｜制作负担｜待核市场假设`。最后给推荐与取舍。
+For each direction: `working title | logline | target audience and basis | primary/secondary genre and roles | emotional promise | opening image | first cathartic/emotional payoff | sustainable opposition | differentiation | production demands | market assumptions to verify`.
 
-只要求选题到这里完成。已授权继续写大纲则将选定方向和假设传给 `em-overseas-engine`，不要求用户重发命令。用户授权代选时直接选择并推进；只有关键创意必须由用户决定且尚未决定时，暂停依赖它的后续产物。不能擅改用户锁定的创意。
+End with recommendation and tradeoffs. If only concepts were requested, stop there. If further outlining is authorized, pass the selected direction and assumptions to `em-overseas-engine` without asking for a repeated instruction. Make delegated choices and proceed. Pause only deliverables dependent on genuinely reserved, unresolved core decisions; preserve locked ideas.

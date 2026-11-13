@@ -1,235 +1,177 @@
-# 艾玛短剧 · 编剧 Skills（公开版）
+# Emma Screenwriting Skills — English Edition
 
-一个统一入口，配套26个专业技能（24个常规模块＋2个进阶模块）。专业技能覆盖两个方向：读对标、做改编、迭代选题、设计期待、修复集尾、扩写集纲、诊断对白与删减冗余等**创作方法**；以及去 AI 味、剧本精修、中文对白打磨、英文对白打磨、中→美本地化、批注迁移与海外过稿等**润色与本地化工具**。可以按自己的问题选用，不要求每次跑完全部。
+**A practical AI-assisted writing toolkit for vertical-drama and short-form screenwriters.** Develop a premise, analyze a reference, map cause and effect, build anticipation, strengthen episode endings, draft from an approved outline, and refine dialogue while protecting the story you have already chosen.
 
-## 2026-11-12：新增逻辑链与双技能补充包
+Created by **Emma Wang**. This independent English edition is for writers working in North America, Europe, and other English-speaking contexts. Choose your actual audience, territory, variety of English, genre, and production format; the toolkit does not treat those markets as interchangeable.
 
-新增 [em-logic-chain · 逻辑链](skills/em-logic-chain/SKILL.md)：完整阅读剧本、逐场取证，从每一卡的终点倒推成立条件，解释人物情感转折与跨卡承接。默认输出可离线打开的交互 HTML，附进度条模板和完整输出规范。只分析，不默认改稿。
+**27 entries:** one main router, 24 regular specialist entries, and two advanced writing modules. The count includes `em-dialogue-efficiency`, a compatibility entry for the two-step dialogue workflow.
 
-[下载逻辑链＋世界观提取 ZIP](downloads/emma-logic-chain-worldbuilding-20261112.zip?raw=true)。包内包含两个完整技能目录、两份可分别上传的单技能安装ZIP及安装说明。需要单技能上传的工具，请先解压总包，再分别上传对应安装ZIP；不要把双技能总包当成一个技能上传。
+[Download the English repository ZIP](https://github.com/adoria111/emma-screenwriting-skills-en/archive/refs/heads/main.zip) · [Browse the skills](skills/) · [Advanced writing libraries](advanced/story-writing/README.md) · [MIT License](LICENSE)
 
-已有其他模块的学员只需补装 `em-logic-chain`、`em-worldbuilding`；不要覆盖其他技能或已有私人版本。当前统一入口也已加入两项路由，旧入口可按需比较更新。
+## Start with the problem you have
 
-> 使用 em-logic-chain 完整阅读这份剧本。先确认第一付费点与材料范围，再倒推每一卡的成立条件，串联人物情感变化和跨卡因果。只分析，不改稿，交付可离线查看的交互 HTML，逐集集纲与逐场证据可展开。
+| Your situation | Start here | What you get |
+| --- | --- | --- |
+| “I know the idea, but not the story yet.” | `em-story-architect` or `em-overseas-engine` | Characters, causality, a story engine, and an outline |
+| “Why does this reference work?” | `em-structure` | Evidence-based structural analysis |
+| “How does each turning point become possible?” | `em-logic-chain` | Causal prerequisites, emotional turns, and an offline interactive HTML report |
+| “What makes this world distinctive?” | `em-worldbuilding` | Sourced rules, occupations, bodies, props, settings, and visual traits |
+| “The audience has no reason to continue.” | `em-expectation` or `em-episode-hooks` | A clear promise, meaningful progress, and an ending that the next episode answers |
+| “My outline is ready; I need scenes.” | `em-outline-to-script` | Complete scenes faithful to approved episode events and endings |
+| “The English dialogue sounds translated.” | `em-english-polish` | Natural, playable English with consistent character voices |
+| “I want help deciding before you draft.” | A relevant module in guided mode | Up to three consequential creative questions per round, then a proposal based on your answers |
 
-公开版保留方法与模板，案例校准已改为通用参考；不包含课堂逐字稿、私人项目或第三方剧本摘录。已检查技能格式、资源引用及模板脚本，并用虚构片段核对分卡与证据边界；本环境未完成浏览器视觉验证及学员端安装实测。
+You do not have to run every module. The [main router](skills/emma-duanju-skill/SKILL.md) selects the smallest relevant workflow from modules the assistant can actually read.
 
-## 2026-11-12：补充世界观提取
+### A first conversation
 
-新增 [em-worldbuilding · 世界观属性提炼](skills/em-worldbuilding/SKILL.md)。从剧本、集纲或片段中提取世界规则、职业、身体、道具、场景与特效；输出“元素／桥段—来源位置—素材事实—分析判断／属性作用—可借鉴的表达”。兼顾剧情机制和纯视觉特色，分析时不改稿。
+After making the relevant files available to your assistant:
 
-**已有技能包的学员只需补装一个模块**，不用重新安装全部。把下面这段交给有 GitHub 访问与文件操作能力的 AI 助手：
+```text
+Use Emma Screenwriting Skills to analyze the attached episodes.
+My audience is [audience], the setting is [place], and the script is in [variety of English].
+Focus on what the protagonist wants, what changes, and why the ending makes us want the next episode.
+Analyze only. Do not rewrite or invent missing events.
+Cite the episode and scene for each important finding.
+```
 
-> 请从 https://github.com/adoria111/emma-screenwriting-skills 安装 skills/em-worldbuilding，保留整个目录及 references、agents 文件。已有同名版本先比较并备份，安装到当前工具支持的 Skills 目录。安装后实际读取 SKILL.md 和 references/cyberpunk.md，确认可用。只补装这个模块，不覆盖其他技能。
+For original English dialogue, you can use `em-english-polish` on the English draft itself. Without an earlier source-language draft, it cannot verify translation fidelity. Chinese dialogue modules retain their original language scope; translating their instructions has not turned them into a different workflow.
 
-只用上传式技能界面时，下载仓库后单独压缩完整的 `skills/em-worldbuilding/` 目录，再按当前工具的技能上传入口安装；仓库总ZIP不是单技能安装包。不能安装时，可读取技能正文和参考文件后连同本次素材交给聊天助手。
+## Installation
 
-装好后这样开始：
+### An assistant with repository and file access
 
-> 使用 em-worldbuilding，提取这份剧本的世界观规则、人物职业、特殊道具、场景和视觉特效。用表格区分素材事实与分析判断，标明来源和可借鉴之处，只分析，不改稿。
+Give it this instruction:
 
-公开版保留通用方法，赛博参考不包含私人项目或第三方剧本逐集摘录。当前仓库的统一入口已加入世界观路由；已安装旧版入口的学员可直接点名 `em-worldbuilding` 使用，需要自然语言自动路由时，再比较并更新 `skills/emma-duanju-skill/`。仅安装入口不会自动安装专业模块。
+```text
+Install Emma Screenwriting Skills — English Edition from:
+https://github.com/adoria111/emma-screenwriting-skills-en
 
-## 2026-11-11：台词两步版
+Use the 25 complete skill directories under skills/ and the two directories under
+advanced/story-writing/skills/ for the full set of 27 entries.
+Verify the skill directory supported by this host instead of guessing a path.
+Keep each module's SKILL.md, agents/, references/, assets/, and other bundled resources.
+Compare and back up existing same-name skills before replacing anything.
+Do not modify unrelated skills.
 
-`em-dialogue` 现在统一执行 **Step 1 场景、人物魅力与意图判断 → Step 2 逐句效率与精修**。`em-dialogue-efficiency` 保留为兼容入口，不再重复跑一套流程；原24个专业目录中包含此旧名入口。保留必要情绪、人物声音、信息差与同人连续发言格式。
+Verify that every installed SKILL.md and its referenced local files can be read.
+Then read the main router and one specialist module and perform a small exercise on material I supply.
+Report file installation, host discovery/loading, and actual execution separately.
+If a refresh or new session is needed, say so; do not call a file copy a verified successful load.
+```
 
-下载本仓库后，在仓库根目录运行（只更新这两个模块）：
+To download the files yourself:
+
+```sh
+git clone https://github.com/adoria111/emma-screenwriting-skills-en.git
+```
+
+Cloning downloads the repository; it does not install or activate skills in an assistant. Hosts differ in how they discover and load skills. The original slugs are retained, so compare before installing alongside an existing Chinese edition.
+
+### A host with single-skill ZIP upload
+
+Download and extract the repository. Package each desired **complete skill directory** according to that host's current upload requirements, then upload and enable it. Keep the references and assets with the skill. The repository ZIP contains many skills and is not a single-skill upload package. Installing only the router does not install the specialist modules.
+
+### Ordinary chat, including a chat without skill installation
+
+Open the desired `SKILL.md`, provide its method text and the relevant referenced files in the conversation, then add your material and task. If the assistant cannot read a GitHub link, paste or upload the actual content. Typing a skill name alone does not load its instructions. A chat's attachments or saved instructions are not automatically a native skill installation.
+
+State four things: **material, task, protected elements, and deliverable**.
+
+### Updating the two Chinese-dialogue entries only
+
+The included installer handles `em-dialogue` and its compatibility entry; it is not a full-library installer:
 
 ```sh
 python3 scripts/install-dialogue-skills.py --check
 python3 scripts/install-dialogue-skills.py
 ```
 
-脚本默认写入 `$CODEX_HOME/skills`（未设置时为 `~/.codex/skills`），保留已有技能目录符号链接，先备份再更新，逐文件核对；不删除其他模块或额外文件。可用 `--skills-dir` 指定当前宿主支持的目录。受限会话没有目标目录写权限时，应由用户在自己的终端运行；GitHub下载不会改变权限。脚本成功仅证明文件写入与校验成功，宿主是否加载仍需在新会话中实际读取核验。
+It defaults to `$CODEX_HOME/skills`, or `~/.codex/skills` if that variable is unset. Use `--skills-dir /your/verified/skill-directory` for a different destination. It backs up changed files, preserves an existing directory symlink, checks file contents, and leaves unrelated modules and extra files alone. A restricted environment may lack write permission; downloading from GitHub does not change permissions. Successful file verification does not prove host loading.
 
-本次公开的是通用方法与虚构校准例，不附私人项目反馈或聊天原文。延用MIT许可。合并流程已用四个虚构片段检查删重、萌宝魅力、隐藏恶意及无冲突手续场景的边界；这不是跨模型或观众效果验证。此前的0930参考与评估集保留，不能把旧评估结果视为本次新版本测试。
+## Complete catalog
 
-## 进阶补充：两份写作规则库
+### Analysis and story development
 
-已新增[故事架构师与主编剧公开包](advanced/story-writing/README.md)：对应历史 `02-story-architect` 与 `03-chief-writer`，含两个可独立安装的Skill、6章故事架构规则和14章主编剧规则。下载与安装口令见该目录说明。两个进阶模块位于 `advanced/story-writing/skills/`，与 `skills/` 下的24个专业模块分开安装。
-
-## 包含什么
-
-统一入口：[emma-duanju-skill](skills/emma-duanju-skill/SKILL.md)。说“艾玛短剧，帮我……”即可按目标选择已安装的方法；也可以直接使用下面的专业模块。
-
-### 组一：短剧创作方法
-
-| 标识 | 用在什么时候 | 主要产物 |
+| Entry | Purpose | Typical deliverable |
 | --- | --- | --- |
-| `em-structure` | 有原稿，想知道结构为什么有效或哪里不顺 | 有原文依据的结构判断 |
-| `em-logic-chain` | 拆解各卡成立条件、人物情感转折与跨卡因果 | 交互 HTML、逐集集纲与逐场证据 |
-| `em-worldbuilding` | 提取世界规则、职业、道具、身体与视觉特色 | 有来源的事实／推断分列表与可借鉴表达 |
-| `em-adaptation` | 要从对标机制设计新故事，或按指定维度改设定 | 新方案、事件链及连带影响检查 |
-| `em-iteration` | 有客户Brief、对标或核心梗，想发展多个创新方向 | 核心梗、人物关系、剧情引擎、桥段与阶段升级 |
-| `em-expectation` | 要贯通全剧目标、阶段任务与兑现链 | 观众盼头、阶段推进、承诺与兑现诊断 |
-| `em-episode-hooks` | 要诊断或修复具体集尾，或迁移对标钩子 | 核心期待、戏剧机制、可拍断点与下集回应 |
-| `em-outline-to-script` | 已经确定事件与集尾，需要完整场次 | 忠实集纲的正文 |
-| `em-dialogue` | 场景乏力、意图不清、人物无魅力或对白低效 | Step 1 场景与人物判断 → Step 2 逐句评分与精修 |
-| `em-script-trim` | 需要减少冗余，保护信息与情绪 | 删除依据、接法与精简稿 |
+| [emma-duanju-skill](skills/emma-duanju-skill/SKILL.md) | Route a task and preserve project state across stages | The requested work through the relevant installed methods |
+| [em-structure](skills/em-structure/SKILL.md) | Examine conflict, structure, pace, and emotional movement | Located structural findings; no automatic rewrite |
+| [em-logic-chain](skills/em-logic-chain/SKILL.md) | Work backward from phase endpoints and trace prerequisites | Interactive HTML, episode summaries, expandable scene evidence |
+| [em-worldbuilding](skills/em-worldbuilding/SKILL.md) | Extract world rules and visual identity from existing material | Fact/inference tables with source locations and reusable techniques |
+| [em-adaptation](skills/em-adaptation/SKILL.md) | Transfer a reference's function or change approved story dimensions | A new proposal and downstream causal checks |
+| [em-iteration](skills/em-iteration/SKILL.md) | Develop distinctive options from a brief, premise, or reference | Concepts, relationships, engines, scene ideas, and escalation |
+| [em-expectation](skills/em-expectation/SKILL.md) | Connect series goals, phase tasks, and earned payoffs | Audience anticipation and promise/payoff analysis |
+| [em-episode-hooks](skills/em-episode-hooks/SKILL.md) | Diagnose, design, or repair specific episode endings | Audience desire, mechanism, filmable cutoff, and next response |
+| [em-outline-to-script](skills/em-outline-to-script/SKILL.md) | Expand an approved episode outline | Full scenes preserving core events and endings |
+| [em-script-trim](skills/em-script-trim/SKILL.md) | Remove redundant material | A leaner draft with necessary causality and emotion intact |
 
-### 组二：润色与本地化
+### Dialogue, refinement, and localization
 
-| 标识 | 用在什么时候 | 主要产物 |
+| Entry | Purpose | Language or scope boundary |
 | --- | --- | --- |
-| `drama-humanizer` | 终稿读起来有 AI 味、书面腔，需锁住剧情只改措辞 | 新文件＋变更日志 |
-| `drama-script-refiner` | 有初稿或客户反馈，要精修节奏、对白与人物表现 | 授权范围内的删改与调整 |
-| `em-dialogue-efficiency` | 沿用旧的台词效率名称 | 转入 em-dialogue 两步流程；与主模块一起安装 |
-| `em-english-polish` | 已有本地化英文对白，要打磨语义、自然度与人物声音 | 二次打磨后的英文对白 |
-| `drama-localization-loop` | 打磨本地化英文对白的意图、口语与跨集一致性 | 打磨后的英文对白 |
-| `drama-dialogue-localizer` | 只把中文短剧对白落成北美英语、动作线不动 | 中文原文＋英文对白 |
-| `em-us-localization` | 首次把中文稿落成美国文化语境与英文成品 | 名字/符号/台词本地化成品 |
-| `em-comment-transfer` | 中文编辑批注要翻译并迁入对应英文 Word | 带批注的英文 Word |
-| `em-overseas-genre` | 为海外竖屏短剧筛选题材、组合情绪卖点 | 有取舍依据的选题卡 |
-| `em-overseas-engine` | 把海外选题发展为故事开发稿 | 人物、规则、信息差与冲突设计 |
-| `em-overseas-beats` | 拆海外故事框架为逐集目标与钩子兑现 | 分集节奏与付费断点诊断 |
-| `em-overseas-reference` | 需要过稿指南、题材案例与分集参考 | 按需直达对应模块的参考 |
-| `em-overseas-review` | 按过稿指南检查卖点、主动性与节奏 | 可定位的问题清单 |
-| `em-overseas-pitch` | 把海外项目整理成可审阅投稿包 | 卖点、梗概、人设、分集与样稿 |
+| [em-dialogue](skills/em-dialogue/SKILL.md) | Step 1: scene, character appeal, and intent; Step 2: line efficiency and refinement | Chinese dialogue; English instructions and teaching glosses |
+| [em-dialogue-efficiency](skills/em-dialogue-efficiency/SKILL.md) | Compatibility route into the same two-step process | Install with `em-dialogue`; not a second independent pass |
+| [drama-humanizer](skills/drama-humanizer/SKILL.md) | Reduce formulaic or literary wording while locking story beats | Chinese working drafts; full chained workflow requires external `humanizer-zh` |
+| [drama-script-refiner](skills/drama-script-refiner/SKILL.md) | Apply draft or client-note refinement | Edit only the authorized elements |
+| [em-english-polish](skills/em-english-polish/SKILL.md) | Refine meaning, natural speech, performance, and voice | Existing English dialogue; preserve action and source text |
+| [drama-localization-loop](skills/drama-localization-loop/SKILL.md) | Review localized English across episodes | An alternative English-polish entry; do not duplicate the same pass |
+| [drama-dialogue-localizer](skills/drama-dialogue-localizer/SKILL.md) | Localize dialogue only into North American English | Chinese dialogue input; preserve action and Chinese source |
+| [em-us-localization](skills/em-us-localization/SKILL.md) | Establish a first US cultural and English version | Chinese-to-US adaptation within approved changes |
+| [em-comment-transfer](skills/em-comment-transfer/SKILL.md) | Translate and place editorial comments in corresponding English Word text | Preserve body text and native comment structure; do not execute the comments |
 
-每个目录内的 `SKILL.md` 是方法入口，`agents/openai.yaml` 是界面配置。带 `references/` 的技能另附方法、校准与案例参考，安装时保留整个技能目录。所有技能均不依赖私人素材库；海外过稿参考为已整理的方法归纳，不构成实时市场数据或平台标准。普通聊天使用带参考文件的技能时，可按需一并复制对应参考。
+### Market-specific development and submission preparation
 
-## 学员安装与使用
+“Overseas” is retained in the original identifiers. Set the actual territory and audience for each project.
 
-### 已有24技能：只补装统一入口
+| Entry | Purpose | Typical deliverable |
+| --- | --- | --- |
+| [em-overseas-genre](skills/em-overseas-genre/SKILL.md) | Compare genres and emotional selling points | Concept cards with reasons for the tradeoffs |
+| [em-overseas-engine](skills/em-overseas-engine/SKILL.md) | Develop a sustained story | Characters, rules, information gaps, conflict, and payoff |
+| [em-overseas-beats](skills/em-overseas-beats/SKILL.md) | Build episode progression | Goals, actions, payoffs, hooks, and candidate cutoff analysis |
+| [em-overseas-reference](skills/em-overseas-reference/SKILL.md) | Use the collected genre, case, and development methods | Relevant reference guidance with evidence limits |
+| [em-overseas-review](skills/em-overseas-review/SKILL.md) | Review against the supplied or verified brief | Located issues; no promise of acceptance |
+| [em-overseas-pitch](skills/em-overseas-pitch/SKILL.md) | Prepare an existing project for review | Positioning, synopsis, characters, outline, and sample package |
 
-下载 [统一入口安装包（2026-11-11，含提问引导模式）](downloads/emma-duanju-skill-20261111.zip?raw=true)。这个历史版本包只新增 `emma-duanju-skill`，不包含或替换原24个专业技能，也不含11月12日新增的世界观路由；最新入口从 `skills/emma-duanju-skill/` 获取，世界观模块需另外补装。
+### Advanced writing modules
 
-Claude聊天界面安装：
+| Entry | Purpose | Included library |
+| --- | --- | --- |
+| [em-story-architect](advanced/story-writing/skills/em-story-architect/SKILL.md) | Build the core outline, character profiles, and episode outline | Six chapters on opening blocks, emotion, pacing, conflict, hooks, and character development |
+| [em-chief-writer](advanced/story-writing/skills/em-chief-writer/SKILL.md) | Write specified episodes from an approved outline | Fourteen chapters, including dialogue, format, live action/AI/animation, reveal boundaries, agency, and delivery review |
 
-1. 打开 **Customize → Skills**，添加/创建技能后选择 **Upload a skill**，上传入口ZIP并启用。
-2. 确认所需的原有专业技能也已启用，设置中的代码执行和文件创建能力已开启。界面名称如有变化，以当前Claude界面为准。
-3. 回到项目聊天，附上一段短剧本，进行一次读取与执行核验：
+## Ask first, then develop the choices
 
-> 使用 emma-duanju-skill。请确认能实际读取统一入口与 em-structure 的技能正文，再用结构拆解分析我附上的一场戏，只分析，不改稿。读不到时明确说明缺什么。
-
-核对回答有没有原文依据、是否遵守“只分析”的范围。只回复“已调用”不足以证明执行正确。不要仅把ZIP放进项目资料就当成技能安装；入口和专业模块必须在当前工具里可读取。
-
-[Claude官方安装说明](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
-
-### 第一次安装
-
-- **Claude聊天界面**：先下载仓库，按所需模块分别将完整技能目录压成ZIP并上传启用，保留 `references/` 等资源；统一入口可直接使用上面的单独ZIP。仓库总ZIP不是单技能安装包。
-- **Codex / Claude Code等支持文件操作的工具**：使用下方安装口令，由工具核实其支持的技能目录。安装24个常规模块和统一入口时，来源为 `skills/` 下25个目录；需要完整26专业技能时，再安装 `advanced/story-writing/skills/` 下两个进阶模块。
-- 已有同名技能先比较并备份；个人完整版入口可能覆盖更多能力，不用此公开版静默替换它。
-
-### 日常怎么说
-
-> 艾玛短剧，帮我对照这两份剧本，找出11—15集冲突和情绪兑现不足的地方。先只分析，不改正文。
-
-> 艾玛短剧，按刚才确认的修改改11—15集。其他内容保留，解说采用女主口吻，输出Word。
-
-> 艾玛短剧，这份是我手动删改后的第23集完整底稿。只改批注，不恢复删掉的内容。
-
-说明素材、目标、范围和重要限制即可，不需要背英文技能名或每轮先生成提示词。需要阶段审阅时，明确说“先交节拍，等我确认再写正文”。Codex等支持显式技能调用的工具也可使用 `$emma-duanju-skill`。
-
-### 想先想清楚，再写方案
-
-所有编剧模块及统一入口均支持“提问引导模式”。普通任务直接执行；说“带我想”“先问我几个问题”时，先读材料和已有决定，每轮最多问三个关键问题，解释不同方向的影响，等你回答后再把选择落成方案。直接点名专业技能也可使用；不必额外安装新的技能。
-
-> 请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。
-
-例如：“用 em-adaptation 带我想这部剧的主角关系，先问我关键问题，暂时不要写大纲。”需要恢复直接执行时，说“接下来按你的判断直接做”。
-
-### 入口负责什么
-
-- 按当前任务选择并实际读取必要方法，区分对标分析、故事改编、集纲扩写和局部精修。
-- 沿用当前底稿、已确认设定和修改范围，多轮任务记录废弃方案及受影响的后续内容。
-- 将“利索”“主动”“多回合”等反馈落实到具体效果，避免机械短句、强加回合或擅自恢复删稿。
-- 按解说剧或其他已约定格式交付，检查因果、人物知情、逐集篇幅和上下集承接。
-- 兼容本公开包的精修旧名：`em-script-refine` 指向实际模块 `drama-script-refiner`；缺少 `drama-truesource` 时直接核对底稿、版本与锁定项。
-
-入口是协调规则，不替代26个专业技能，也不保证模型每次执行正确。未安装的模块不能靠输入名称自动获得；没有文件访问能力时，见下方“只用普通聊天”。
-
-## 安装口令（支持文件操作的工具）
-
-把下面这段发给有 GitHub 访问和文件操作能力的 AI 编程助手：
-
-> 帮我安装「艾玛短剧 编剧 Skills 公开版」：从 GitHub 克隆 adoria111/emma-screenwriting-skills 仓库，将 skills/ 下的25个目录（统一入口＋24个专业技能）以及 advanced/story-writing/skills/ 下的2个进阶技能安装到当前工具支持的 Skills 目录，保留各模块的 references 等资源；已有同名技能先比较并备份，不要直接覆盖。核对文件和引用，并实际读取入口与一个专业技能完成一次小练习，分别说明文件安装、宿主加载和实际执行是否成功。
-
-仓库：<https://github.com/adoria111/emma-screenwriting-skills>
-
-仓库的 `skills/` 目录就是安装来源，内含统一入口和下面24个专业技能，共25个目录：
+Ordinary work requests are executed directly. To enter guided decision mode, say:
 
 ```text
-emma-duanju-skill
-em-structure
-em-logic-chain
-em-worldbuilding
-em-adaptation
-em-iteration
-em-expectation
-em-episode-hooks
-em-outline-to-script
-em-dialogue
-em-script-trim
-drama-humanizer
-drama-script-refiner
-em-dialogue-efficiency
-em-english-polish
-drama-localization-loop
-drama-dialogue-localizer
-em-us-localization
-em-comment-transfer
-em-overseas-genre
-em-overseas-engine
-em-overseas-beats
-em-overseas-reference
-em-overseas-review
-em-overseas-pitch
+Use [skill name] to walk me through this step.
+Read my material first and identify the creative decisions that most affect the result but that I have not made yet.
+Ask at most three key questions per round and explain how the options affect the characters and plot.
+Do not repeat questions I have already answered.
+Wait for my answers before developing the proposal.
 ```
 
-不同工具识别的项目级目录可能不同，让当前工具按自己的规则安装。不要仅把文件放进一个任意名为 `skills` 的目录，就声称已成功加载。
+For example: “Use em-adaptation to help me rethink the two leads' relationship. Ask the important questions first; do not write the outline yet.” To delegate the remaining decisions, say so explicitly.
 
-## 只用普通聊天，也可以用方法
+## What is preserved
 
-不会安装时，打开想用的 `SKILL.md`，复制其中的方法正文，粘贴到聊天框，再附上这次的要求和原文。普通聊天里只输入英文技能名，不代表已经读取了方法。
+The methods distinguish analysis, adaptation, outline expansion, and local refinement. They preserve approved facts, motivations, character knowledge, props, clues, deleted material, and endings unless a change is authorized. They separate source facts from interpretation and new proposals. They treat repeated wording differently when performance, strategy, or relationship changes make the repetition meaningful.
 
-每次说明四件事：材料、做什么、哪些不能改、想拿到什么。
+The router coordinates methods; it cannot supply missing modules or guarantee model behavior. `drama-truesource` is not bundled: where appropriate, the modules perform direct authoritative-draft checks instead. `humanizer-zh` is an external dependency for the full humanizer chain; its absence must be disclosed. No private project directory is needed for the bundled general methods.
 
-例如使用“中文对白诊断”时，在方法后面接上：
+## Edition and validation
 
-```text
-请修改下面这一场的对白。
-目标：减少同一个理由、同样力度的重复争论。
-范围：只改对白，保留动作、人物关系和原集尾。
-必须保留：女主第一次公开反抗，以及对手对此的回应。
-交付：说明关键取舍，再交完整修订场次。
+English edition date: **2026-11-13**. Based on the source repository's latest `main` at preparation time: [`82057b23bfcd1c375f525d16c8e834631185e2ca`](https://github.com/adoria111/emma-screenwriting-skills/commit/82057b23bfcd1c375f525d16c8e834631185e2ca).
 
-【在这里粘贴自己的原文】
-```
+The source includes the November 12 logic-chain and worldbuilding additions, the November 11 two-step dialogue workflow, guided decision mode, and the advanced writing libraries. This edition translates the current instructions, references, interface metadata, teaching examples, and logic-chain template into English. Slugs remain stable. Chinese working-script examples are explained in English; character counts are not silently treated as English word counts.
 
-拿到回答后，再看：根据哪句原文、具体改了哪里、有没有碰到不能改的内容。安装和复制方法是两种使用途径，后续仍需要提供本次任务与素材。
+Historical Chinese ZIPs are not carried into the English working tree. Use this repository's ZIP for current English files. Historical evaluation records are translated and explicitly labeled; their old hashes and pass statuses do not certify the current English files. See [VALIDATION.md](VALIDATION.md) for the checks actually completed for this edition.
 
-## 版本来源
+The collected references are editorial methods and case summaries, not current market rankings, platform policies, or guaranteed production capabilities. Complete third-party scripts, course recordings, private projects, and missing source images are not bundled. Analysis of a script does not establish viewer behavior or commercial success.
 
-### 2026-11-07 更新：统一入口与学员说明
+[Original Chinese repository](https://github.com/adoria111/emma-screenwriting-skills) · [Edition notes](EDITION.md)
 
-新增适配公开版24专业技能的统一入口，包含实际读取、任务阶段识别、底稿与删改范围保护、解说剧协作及交付检查。学员安装和使用说明合并在本README；未改写原24个专业技能。入口由本地完整版裁剪适配，不附私人模块、资料或路径。单独安装包位于 `downloads/`，随附MIT许可。
+## License
 
-已完成入口格式、24个路由名称与安装包内容检查；尚未在学员Claude账户完成安装和完整创作实测。结构检查不等于创作效果验证。
-
-
-版本日期：2026-10-13。
-
-本次另安装用户提供的 `em-iteration-skill.zip`：保留选题迭代方法与五个案例参考，只补充技能名称、触发描述和界面配置。已检查安装结构、引用和源文件一致性，选题迭代的实际使用测试尚未进行。
-
-同日更新期待设计，并新增逐集钩子：将“语义（观众期待）→戏剧机制→可拍呈现→有依据的诊断与修复”落实为操作方法，检查下一集必须回应什么。分数是可选编辑工具，不作为强制改稿门槛，也不代表真实留存表现。逐集钩子为通用公开版，不包含私人项目反馈、聊天记录或第三方剧本节选。
-
-结构拆解、期待设计、集纲扩写、中文对白诊断、剧本删减五项的初始公开版选自用户已有的 2026-09-30「Alpha/Beta均衡版」中的 Beta精编专业版，包含各自的界面配置。
-
-故事改编于2026-10-06作为独立公开版加入：依据用户已安装的 `em-adaptation` 方法提炼，保留功能迁移、改动范围与连带影响检查，移除对私人参考材料的依赖。它不是原包中已有同名Beta文件的原样副本。
-
-### 2026-10-26 更新：新增润色与本地化技能
-
-新增 14 项润色与本地化技能（`drama-humanizer`、`drama-script-refiner`、`em-dialogue-efficiency`、`em-english-polish`、`drama-localization-loop`、`drama-dialogue-localizer`、`em-us-localization`、`em-comment-transfer`、`em-overseas-*` 六项），并将中文对白诊断更新为本地完整版（新增 `references/course-0930.md` 方法整理与 `evals/` 评估集）。公开版已移除本地文件绝对路径；`em-dialogue-efficiency` 的校准参考仅保留方法、不包含私人项目反馈记录。海外过稿参考中的指南、题材与案例均为用户收集资料的编辑性归纳，未独立核验其市场结论；案例文件中的对标剧名仅作方法示例，不附带完整第三方剧本原文。
-
-Beta在此表示方法版本与内容取向，不代表经过统一模型基准测试。期待设计与逐集钩子的更新检查了技能结构、引用与材料边界，并以虚构片段验证局部诊断、受限修复和反向兑现；不声称已完成全部技能的跨模型实测或观众效果验证。
-
-## 开放许可
-
-本包技能正文、界面配置与本说明按 MIT License 提供，见 `LICENSE`。可使用、修改和再分发，须保留版权与许可声明。
-
-许可仅适用于本目录所含文件，不改变原有完整Beta包或其他技能的许可，不包含课程HTML、教案、第三方剧本、案例节选、图片和私人项目资料。课程与本包分别交付，ZIP中不附带原剧本。
-
-故事改编补齐“分析之后怎样写出新故事”的环节。逻辑链已于2026-11-12加入；全本整理仍未包含在本包中。
+The files included here are available under the [MIT License](LICENSE): use, modify, and redistribute them while retaining the copyright and permission notice. The license does not extend to unbundled private material, third-party scripts, source images, or an unrelated course or skill package. “Beta” in some module titles describes their historical method edition, not a shared benchmark certification.

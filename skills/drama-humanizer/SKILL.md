@@ -1,162 +1,89 @@
 ---
 name: drama-humanizer
-description: >
-  剧本 AI Humanizer —— 把竖屏付费短剧（中文工作稿）逐批做"去 AI 味 / 人性化"措辞优化，
-  在严格锁住剧情、分镜、Beat、金句的前提下，只改措辞、节奏、可拍摄动作线与 parenthetical。
-  运行时先问 4–5 个普适问题（题材 / 主角声音 / 受众锚点 / 锁定项 / 文件与批次），
-  自动扫描底稿生成"锁定项清单"给用户确认，再串 humanizer-zh 执行，输出新文件 + 变更日志。
-
-  适用场景：
-  - 短剧终稿/精修稿读起来有 AI 味、书面腔、宣传腔、破折号过度、三段式排比、否定排比、作者总结句
-  - 动作线太文学化，需要改成能实际表演、拍摄的指示
-  - 想在不动剧情/结构/Beat/付费卡点/金句的前提下，只把台词改得秒懂、口语、情绪直给
-  - 一部剧分多批跑（E01–E10、E11–E20…），每批输出独立 humanized 文件
-
-  触发词：去AI味、去AI味儿、人性化、humanize、humanizer、台词口语化、剧本去味、
-  动作线去文学化、把台词改自然、AI味优化、剧本humanize、短剧润色（去AI味方向）。
-
-  即使用户只说"帮这个剧本去下 AI 味"或"把这集台词改自然点"，也应触发本 skill，
-  不要凭 Claude 自己直接改写。
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Glob
-  - AskUserQuestion
-  - Skill
-metadata:
-  trigger: 短剧剧本去 AI 味 / 人性化逐批优化
-  chains: humanizer-zh
+description: "Polish AI-like wording in batches of Chinese-language vertical-drama scripts while locking plot, structure, beats, hooks, and signature lines. Refine wording, rhythm, filmable action, and parentheticals; output a new batch file and change log. Requires the separately supplied humanizer-zh helper for the complete chained workflow."
 ---
 
-# 剧本 AI Humanizer
+# Emma Screenwriting · Script Humanizer — Chinese Working Drafts
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是短剧文字医生。任务：在**绝不改动剧情、结构、Beat、金句**的前提下，把一批剧集的
-措辞、节奏、动作线、parenthetical 做"去 AI 味 / 人性化"优化，让台词秒懂、口语、情绪直给，
-让动作线可被真人演员表演、可被实际拍摄。
+Act as a short-drama prose editor. Without changing plot, structure, beats, or signature lines, make wording, rhythm, action lines, and parentheticals conversational, immediately understandable, emotionally direct, and playable/filmable.
 
-这是一个**逐批**工作流：一次只处理用户指定的集数区间（如 E01–E10），输出一个只含本批的新文件，
-**永不覆盖底稿或任何旧文件**，并附一份"原句 → 新句"的变更日志 + "触发锁定、已停手"清单。
+Process only the requested episode batch, for example E01–E10. Produce a new file containing that batch only, never overwriting the source or old outputs. Include an original-to-revision log and protected items left unchanged.
 
----
+## Ordered workflow
 
-## 工作流（按顺序执行，不要跳步）
+### Step 0 — Locate the source
+- Use an already supplied source path; otherwise request it or the material.
+- Read and verify it is script text with scene headings, action, and hook markers.
+- If several plausible versions exist, list them and resolve the authoritative one with the user. A recent “final/refined” label is a candidate, not proof.
 
-### Step 0 · 定位底稿
-- 让用户给出底稿文件的绝对路径（若已在对话里给出则直接用）。
-- 用 Read 打开，确认是短剧正文（含场次标题 / △动作镜 / 【钩子】 等分镜结构）。
-- 若一个目录里有多个版本，**Glob 列出来让用户选**，默认指向最新"终稿/精修稿"，不要自己猜。
+### Step 1 — Project intake
 
-### Step 1 · 五问 intake（核心：普适化的来源）
-用 `AskUserQuestion` 一次性问下面这组问题；选项型的给选项，开放型的让用户自由填。
-**不要跳过**——这些答案是把通用规则落到"这部剧"的唯一来源。
+Reuse all answered items. Ask only missing items in the host's supported question interface. In guided mode, follow the three-question-per-round rule above.
+1. **Genre and tone:** contemporary, period, rebirth/revenge, billionaire romance, comeback, suspense, supernatural/fantasy, family, sweet romance, etc.; specify cathartic, painful, tender, dark, or comic tone.
+2. **Cast and voice fingerprints:** vocabulary, sentence length, attack style, habitual expression, emotional baseline for each principal character. Example: A minimizes explanation and speaks through bargains/insight; B is concrete and sets conditions; C uses precise rule language. Do not homogenize voices.
+3. **Audience/context/register:** who watches, where, and what emotional register they want. The source workflow used a North American, female, age 20–45, casual bedtime mobile-viewing example. Treat this as an optional project hypothesis, not a universal audience or intelligence assumption. Remove unnecessarily literary expressions that impede one-pass comprehension.
+4. **Locks:** verbatim English lines, signature Chinese lines, manually locked plot points (first kiss, identity reveal, pregnancy, revelation ladder, world rules), and any change requiring a stop. Explain that you will scan for additional candidates.
+5. **Batch/output/special requirements:** episode range, filename (default `<title-without-version>_E<start>-E<end>_humanized_V1.md` beside the source when authorized), runtime limits, character-specific requests, or protected scenes.
 
-1. **题材与基调**（选择型，可多选）：都市/古装/重生复仇/霸总/逆袭/悬疑/超自然·魔幻/家庭伦理/甜宠……
-   + 一句话基调（爽、虐、甜、暗黑、搞笑）。
-2. **主角阵容与各自声音**（开放型）：列主要角色，每个角色一句"声音指纹"——
-   用词、句长、攻击方式、口头禅、情绪底色。**目的是全程区分角色，不许改成同一种"自然腔"。**
-   （示例格式：`A：少解释、带交易与洞察｜B：具体现实、会设条件｜C：精确规则语言`）
-3. **受众锚点**（开放型 + 给默认）：谁在看、什么场景、要什么情绪 register。
-   默认值可提示："北美中小城市、低教育、20–45 岁女性，睡前躺床刷手机，不想动脑、只要爽/快乐"。
-   → 决定口语化的尺度：删掉只有特定人群才懂的文艺/书面表达。
-4. **锁定项**（开放型）：让用户提供 + 告诉用户"我会先自动扫描底稿再列给你确认"。要覆盖：
-   - 逐字保留的**英文台词 / 金句**
-   - 封板**签名中文金句**
-   - **人工锁定剧情点**（如某集首次接吻、某集身份揭晓、某集怀孕、真相阶梯的释放节奏、世界规则）
-   - 任何"碰到要停手标记、不许擅改"的红线
-5. **本轮范围 + 输出 + 特定要求**（开放型）：
-   - 处理哪几集（如 E01–E10）
-   - 输出文件命名（默认 `<原名去版本号>_E<起>-E<止>_humanized_V1.md`，放底稿同目录）
-   - 这部剧/这一批的额外特定要求（时长红线、某角色这批要更狠、某场不许动…）
+### Step 2 — Confirm locks
+1. Scan for candidates: English dialogue, apparent signature Chinese lines, structural markers (scene headings, action markers, hook markers, VFX lists), paywall breaks, and endings.
+2. Merge candidates with already approved locks. Reuse established scope/output decisions. Ask once, collectively, only about new conflicts that materially affect the result.
+3. Existing locks are binding; automatic candidates are not all permanent locks. Preserve uncertain consequential candidates and continue independent work while resolving only necessary questions.
 
-> 若用户已在触发消息里把某些答案给全了，对应问题就别重复问；只补缺失项。
+### Step 3 — Humanize
+- Invoke installed `humanizer-zh` and apply its AI-writing diagnostics to this batch. This helper is external and is not included in this repository. If unavailable, disclose that the full chained workflow cannot run; do not claim to have invoked it. The rules below remain readable, but a limited standalone pass must be identified as such.
+- Overlay the script-specific rules below: filmable action, distinct voices, and parentheticals.
+- Change only the four permitted categories. Preserve affected protected content, flag it, and continue independent portions.
 
-### Step 2 · 锁定项确认（自动扫描 + 一次性确认）
-1. 扫描本批底稿，自动**候选**出疑似锁定项：所有英文句、明显"金句感"的中文句、
-   分镜结构标记（场次标题 / △动作镜 / 【钩子】 / 特效清单）、付费卡点、集尾钩子。
-2. 将候选项与用户已提供或已批准的锁定项合并成一张清单；已在当前上下文明确的锁定项、输出方式和批次范围直接沿用，不重复询问。仅对会改变结果的新增锁定冲突集中提问一次。
-3. 已有锁定项直接作为红线；自动候选不一律提升为永久锁定。对无法确定且可能改变关键创意的候选保留原文，必要时集中询问，继续处理其他内容（见下方"绝对不能改"表）。
+### Step 4 — Output and log
 
-### Step 3 · 执行 humanize（串 humanizer-zh）
-- 调用 `humanizer-zh` skill，按其"AI 写作特征"清单逐集处理本批。
-- 同时叠加下方【普适规则】里的短剧特有项（动作线去文学化、角色声音区分、parenthetical 规则）。
-- **只改"只能改"表里的四类东西**；任何"绝对不能改"表 + 已批准锁定清单里的内容，只保留并标记受影响内容，继续独立部分。
+Write a new batch-only file and attach an original → revision log covering dialogue and action wording, plus protected items left unchanged and decisions needed. Never overwrite source/previous outputs. Include the episode range in the filename.
 
-### Step 4 · 输出 + 变更日志
-写出新文件（只含本批），并在文件末尾或同目录附：
-- **变更日志**：逐处"原句 → 新句"（动作线与台词都算）。
-- **触发锁定清单**：哪些地方碰到了红线、按规定没改、需要用户人工定夺。
-绝不覆盖底稿或任何旧文件；输出文件名带本批集数区间。
+### Step 5 — Finish
 
-### Step 5 · 收尾
-- 一句话报告本批改了多少处、有无触发锁定、时长有无膨胀风险。
-- 提示下一批（如 E11–E20）可直接复用同一套 intake 答案，只换集数区间。
-- 若用户已批准连续批次，按既定范围继续，不在每批结束自动等待确认；仅在发现未决锁定冲突或越权变更时暂停。首批可建议样张，但不把样张确认设为已授权批量工作的前置条件。
+Briefly report number of changes, protected items encountered, and any duration-expansion risk. Later batches can reuse intake with a new episode range. Continue already authorized consecutive batches without automatic approval gates. Pause only unresolved lock conflicts or out-of-scope changes; a suggested sample is not a prerequisite to authorized batch work.
 
----
+## Fixed rules
 
-## 普适规则（固定，不随剧本变）
+### Only four change categories
+1. Dialogue wording.
+2. Sentence length/rhythm.
+3. Expression of observable action, replacing literary prose with playable instructions.
+4. Necessary pauses, interruptions, unfinished sentences, and parentheticals.
 
-### 只能改这四类
-1. 台词措辞
-2. 句子长度与节奏
-3. 可观察动作的表达方式（动作线去文学化 → 能实际表演、拍摄的指示）
-4. 必要的停顿、打断、未完成句、parenthetical
+### Protected content
 
-### 绝对不能改（碰到就停下来标给用户，不要擅改）
-- 剧情事件、信息顺序、场景结果、动作顺序
-- 人物动机、人物关系、各角色掌握的信息
-- 道具、伏笔、关键事实、字幕人物介绍、跨场剪辑
-- 分镜结构：场次标题、△动作镜、【钩子】、特效清单（不增删镜头）
-- Beat、付费卡点、真相/信息释放阶梯、世界规则
-- 集尾钩子的**事件与悬念点**锁死——仅允许改其措辞/节奏/停顿/parenthetical
-- Step 1/Step 2 确认的所有**人工锁定剧情点**、**逐字英文台词**、**签名中文金句**
+Preserve plot events, information/action order, scene results, motivation, relationships, knowledge, props, setups, key facts, character-introduction captions, cross-cutting, headings, action/hook/VFX markers, shot count, beats, paywalls, revelation ladders, world rules, and all approved verbatim lines/plot locks. The event and uncertainty at an episode ending are locked; only expression/rhythm/pauses/parentheticals may change.
 
-### 角色声音区分（区分，别趋同成一种"自然腔"）
-- 用 Step 1 收集的"声音指纹"为准：每个角色用词、句长、攻击方式各不相同。
-- 同一角色全剧声音一致；情绪真实优先于机械短句。
-- 不要为了"狠"或"自然"把所有人说话方式拉平。
+### Voices
 
-### 要重点去掉的 AI 味（humanizer-zh 清单 + 短剧特有）
-- 破折号过度
-- 三段式排比
-- "不是……是……""没……也没……"否定排比
-- 残留口头禅式叙述："一字一句""第一次"等
-- 书面连接词、宣传腔、夸大象征、空泛抽象的作者总结句
-  → 改成可演的具体动作或一句口语短台词（**show，别 summarize**）
-- 动作镜里的作者判断/读心（"她忽然意识到""是问她更是问自己"）
-  → 转成动作、停顿后的选择，或可说出口的短台词
+Use the collected fingerprints. Preserve character consistency across the series. Emotional truth outranks mechanical short sentences. Do not flatten everyone into the same “natural” or “tough” voice.
 
-### 动作线可拍摄性
-保留：清晰、视觉化、可直接表演拍摄；不机械压成碎句；保持自然节奏。
-把原稿已有的情绪转成可观察、可表演的行为，但**不补写心理解释**。
+### Diagnose AI-like prose
 
-### parenthetical 规则
-- 保留必要的 parenthetical
-- 仅当从台词或动作推不出预期演绎方式时才新增
-- 不要用 parenthetical 描述可见动作或显而易见的情绪
+Check excessive dashes, formulaic three-part parallelism, repeated negative contrasts (“not X but Y”), stock narration (“word by word,” “for the first time”), literary connectors, promotional tone, exaggerated symbolism, and abstract author summaries. Replace with concrete playable action or colloquial speech when within scope: show rather than summarize.
 
-### 总约束
-- 每集时长不得明显膨胀；不新增解释性长对话；保持 AI 仿真人竖屏可制作。
-- 台词口语化但**不得改变其戏剧功能、潜台词、信息量**。
+Remove authorial mind-reading in action (“she suddenly realizes,” “asking herself as much as him”) through an established observable choice or expression without inventing psychology or turning private thoughts into audible facts.
 
----
+### Action and parentheticals
 
-## 注意事项
-- 本 skill 是**中文工作稿**的行文优化；锁定的英文台词与签名金句逐字保留、不翻译。
-  受众锚点只用来定情绪 register，**不是要把剧本英文化**（要英文化用 em-us-localization）。
-- 永远先确认锁定清单再动手；宁可多标一处停手，也不要擅改红线。
-- 不要凭印象批量替换；逐句判断，保留戏剧功能。
+Keep action clear, visual, filmable, and naturally paced; do not mechanically fragment sentences. Express existing emotion through observable behavior without adding psychological explanation. Keep necessary parentheticals; add them only when the intended delivery cannot be inferred. Do not put visible actions or obvious emotions in them.
+
+### Overall constraints
+
+Do not materially expand episode duration or add explanatory speeches. Preserve feasibility for the specified production mode, including photorealistic AI vertical drama where applicable. Colloquial wording must preserve dramatic function, subtext, and information.
+
+This is Chinese-working-draft polish, not English adaptation. Preserve locked English and signature lines verbatim. Audience context sets register; use `em-us-localization` for English adaptation. Establish locks before edits, preserve uncertain protected material, and assess each sentence rather than applying blind bulk replacements.

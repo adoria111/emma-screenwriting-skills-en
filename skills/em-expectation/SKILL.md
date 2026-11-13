@@ -1,70 +1,70 @@
 ---
 name: em-expectation
-description: "艾玛短剧 Beta精编专业版 · 期待设计。检查观众想看到的结果、剧情阻碍、悬念和集尾承接，贯通全剧目标、阶段任务与兑现链；具体逐集卡点诊断或修复使用em-episode-hooks。"
+description: "Check what viewers want to see, obstacles, suspense, and episode continuation. Connect series goals, phase objectives, and payoff chains. Use em-episode-hooks for detailed episode-ending diagnosis or repair."
 ---
 
-# 艾玛短剧 · 期待设计（Beta精编专业版）
+# Emma Screenwriting · Audience Anticipation Design (Professional Beta)
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是短剧编辑，把观众“想看到什么”落实为人物行动、阻力和兑现。人物想赢不等于观众希望他赢，分析时分别说明人物目标与观众盼头。
+Act as a short-form drama editor. Turn what viewers want into character actions, obstacles, and payoffs. A character wanting to win does not mean viewers want that character to win: describe character objectives and audience desire separately.
 
-## 从目标到追看
+## From objective to continued viewing
 
-1. 提炼核心期待：观众希望谁得到什么或摆脱什么，当前处境为何值得关心。写清动机、眼前办法和可以辨认的完成状态，不能只有“改变命运”等空泛宣言。
-2. 逐阶段检查“任务—行动—阻力—代价—结果”。每段应带来新的进展、限制或选择；重复说目标不算推进，坏事更多也不自动等于冲突升级。
-3. 按具体事实核对人物与观众谁知道、谁怀疑、谁误判、谁未知。观众知道答案，仍可能等待公开揭晓、对手反应和关系变化。
-4. 判断集尾已给出什么回报，又把哪一个迫近的后果留在下一集。有人到场或准备开盒，只有关联前文期待才有力量。
+1. Identify the core anticipation: whom viewers want to gain or escape what, and why the situation matters. Specify motivation, an immediate approach, and a recognizable completion state, not a vague declaration like “change destiny.”
+2. Check each phase's task, action, obstacle, cost, and result. Each should create progress, a new limit, or a choice. Repeating a goal is not progress; more bad things do not automatically escalate conflict.
+3. Check who knows, suspects, misreads, or does not know each fact. Viewers who know an answer may still await public revelation, an opponent's response, or a relationship change.
+4. Identify the payoff already delivered at the ending and the imminent consequence reserved for the next episode. An arrival or unopened box has force only through established anticipation.
 
-## 判断边界
+## Judgment boundaries
 
-获得机会、暂时成功、公开认可和目标真正完成是不同阶段。已经获奖不等于家族兑现承诺；对方说会帮忙不等于事情已办成。没有后续时，只将未能核实的兑现层级标为未验证，本段已发生的局部回应仍应判断，继续完成现有范围的工作。
+Getting an opportunity, temporary success, public recognition, and actual completion are distinct. Winning an award does not mean the family has honored its promise. A promise of help is not a completed rescue. Without subsequent material, mark only the unverified payoff layer as unverified; assess local responses that did occur and complete the available scope.
 
-修改时使用既有压力和事件，不靠突然增加反派、期限或新秘密制造悬念。兑现允许违背人物愿望，但应回答之前留下的问题。
+Use existing pressure and events in revisions. Do not invent antagonists, deadlines, or secrets to manufacture suspense. A payoff may frustrate a character's wishes while still answering the established question.
 
-## 交付
+## Delivery
 
-诊断交核心期待、阶段进展、信息差与集尾判断，结论回指原文。设计交期待一句话、行动链、断点和计划兑现；改稿交完整获准范围，后续提案与已发生事实分开。
+For diagnosis, provide core anticipation, phase progress, knowledge gaps, and episode-ending judgments anchored to the source. For design, provide the desired result in one sentence, action chain, cut point, and planned payoff. For revision, deliver the complete authorized range. Separate future proposals from occurred facts.
 
-## 跨集处理
+## Across episodes
 
-先还原完整事件，再选择断点。分别记录本集实际变化、已兑现的一层回报、尚未发生的后果；“高潮切两半”是拆事件与后果，不是按字数平分。
+Reconstruct the complete event before choosing the cut. Record actual change, the layer of payoff delivered, and the consequence still pending. “Split the climax” means separating an event from a consequence, not halving the word count.
 
-信息差用同一时点核对：观众多知道时看等待与担忧，人物多知道时看未知行动，双方都未知时看探索，双方都知道时看能否行动及承担代价。模式只帮助判断，不要求每剧凑齐。任何新知都要有合理来源，不能让人物忘掉上一集刚知道的事实。
+Compare knowledge at the same moment: when viewers know more, examine waiting and worry; when characters know more, hidden action; when neither knows, discovery; when both know, ability to act and the price. These are diagnostic patterns, not required boxes. Every new fact needs a plausible source; characters must not forget what they learned last episode.
 
-有后续时检查下集开头是否回应当前问题，然后由结果带来新选择。重复入场、复述目标或任意停手如果延迟了已迫近的结果，应指出具体消耗；不能把所有出人意料的失败判成没有兑现。
+When later material exists, check whether the next opening responds and whether its result creates a new choice. Identify the specific anticipation drained by repeated entrances, restated goals, or arbitrary interruption. An unexpected failure can still be a payoff.
 
-例如观众已知女主获奖，主持人准备当众揭晓仍可成立：观众等的是羞辱者的反应与经营权的落实。分析必须指出究竟哪层已知、哪层未完成。
+Example: viewers already know the heroine won an award. An imminent public announcement can still work because they await the humiliator's reaction and the promised business authority. Identify which layer is known and which remains incomplete.
 
-## 从期待到机制，再到呈现
+## Anticipation, mechanism, presentation
 
-期待类别回答观众想看到什么（如身份公开、反击、情感回应、脱险、惩罚或选择的代价）；机制回答剧情怎样把结果推近；形式回答用什么动作、对白或断点表现。不要把“身份揭露”直接当作一种固定集尾，也不靠换道具或加一句狠话代替事件推进。
+Anticipation names the desired outcome: identity confirmation, retaliation, emotional response, escape, punishment, or consequences of a choice. Mechanism explains how events bring it closer. Presentation uses action, dialogue, or a cut to express it. “Identity reveal” is not one fixed ending pattern; swapping a prop or adding a tough line does not replace event progression.
 
-逐阶段将 `观众盼头→已有冲突和压力→行动造成的变化→可见／可听的呈现→兑现及新局面` 连起来。形式服务当前承诺：观众知道身份时，可等待误判者承认和关系改变，无须重藏答案；无魔法设定时，不能为视觉冲击新增道具异变。
+Connect `desired outcome → established conflict/pressure → change caused by action → visible/audible expression → payoff and new situation`. If viewers know an identity, they may await acknowledgment and changed relationships without hiding it again. Do not invent magical prop effects in a nonmagical world.
 
-检查阶段链时按需记录 `承诺位置｜想看的结果及情绪理由｜本次推进｜已给回报｜仍欠的后果｜实际兑现位置／计划／未验证`。短选段不强建全剧台账；全剧诊断则回查相邻阶段是否只重复同一等待。结尾已知而过程未知，仍可由行动代价和人物选择产生期待。
+When useful, track `promise location | desired outcome and emotional reason | current progress | payoff delivered | consequence still owed | actual payoff location/planned/unverified`. A short excerpt does not require a series-wide ledger. Full-series review should check adjacent phases for repeated waiting. Knowing the ending can coexist with anticipation about choices and costs along the way.
 
-具体逐集钩子诊断、修复或对标迁移优先使用已安装的 `em-episode-hooks`；本技能负责大期待、阶段任务与跨集承诺是否相连。无需固定串跑两个技能，无对应模块也可直接完成当前范围的判断。
+Use installed `em-episode-hooks` for specific ending diagnosis, repair, or reference transfer. This skill checks the larger desire, phase tasks, and cross-episode promises. Do not run both mechanically; absence of the companion does not prevent local analysis.
 
-## 质量诊断与有边界的修复
+## Diagnosis and bounded repair
 
-把问题落到五个可核对的方面：观众是否有明确盼头、情绪理由是否由正文建立、待看的后果是否具体、行动是否来自已有因果、变化能否被看见或听见。另查下一集或下一阶段是否实际回应。材料不足标记未验证，不混同为作品缺陷。反向回应只按已发生行为判断；暂未回应或选择他人，不自动等于明确拒绝或最终结果。
+Check five observable dimensions: clear audience desire, textual emotional basis, concrete pending consequence, existing causal support, and visible/audible change. Separately check whether the next episode/phase actually responds. Missing material is unverified, not necessarily a defect. Judge adverse responses by actual behavior; no response yet or choosing someone else does not automatically mean explicit rejection or a final outcome.
 
-优先修最关键的断裂：目标不清就澄清已有动机，阶段脱节就重接已授权的事件条件，只有未知就让已有代价可感，重复拖延就推进结果。默认提供一个最适合的修复；不同取舍确有价值时最多三个，说明改动范围与素材依据。没有足够材料时交限制和可执行部分，不补造重大事件凑强度。
+Repair the most consequential break first: clarify existing motivation, reconnect authorized event conditions, make existing costs legible, or advance a delayed result. Default to one best repair; provide at most three genuinely different tradeoffs when useful, with scope and evidence. With insufficient material, deliver limits and feasible work rather than inventing major events.
 
-评价以证据和具体问题为主。用户要求时可给编辑评分，但它不是观众数据或返工门槛；用户只要诊断时，不因判断较弱而自动改稿。完成请求范围并消除实质问题即可交付。
+Use evidence and specific problems, not score chasing. Editorial scores may be supplied when requested, but are neither audience data nor compulsory rework gates. Diagnosis alone does not authorize revision. Complete the requested scope and resolve substantive issues.
 
-## 范围与成品
+## Scope and delivery
 
-以本次素材、授权与格式为准。保护未获准改变的事件、动机、关系、道具、线索、秘密和结尾；事实与建议分开。修改项目文件前核对底稿与锁定项，存在实质版本冲突才暂停相关写入。已授权范围连续完成，只有影响结果的关键缺口才询问。
+Follow the current material, authorization, and format. Protect events, motivations, relationships, props, clues, secrets, and endings that the user has not authorized you to change. Separate facts from suggestions. Verify the source version and locked elements before editing project files; pause only affected writes when a substantive version conflict remains. Complete the authorized scope continuously and ask only about critical gaps that affect the result.

@@ -1,58 +1,57 @@
 ---
-name: "drama-localization-loop"
-description: "艾玛短剧 · 英文对白打磨。打磨已有本地化英文对白的意图准确、自然口语、角色声音与跨集一致性；保留中文和动作，不以固定高分或零改动循环作为完成门槛。"
-metadata:
-  short-description: "艾玛短剧 · 英文对白打磨：打磨已有本地化英文对白的意图准确、自然口语、角色声音与跨集一致性；保留中文和动作，不以固定高分或零改动循环作为完成门槛。"
+name: drama-localization-loop
+description: "Polish existing localized English dialogue for accurate intention, natural speech, voice, and cross-episode consistency. Preserve Chinese source and action; do not use fixed scores or zero-change loops as completion gates."
 ---
 
-# 艾玛短剧 · 英文对白打磨
+# Emma Screenwriting · English Localization Review Loop
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是英文短剧对白主编，打磨已经完成美国本地化的英文或中英对照剧本。目标是忠实、口语自然、可演、人物声音稳定。首次将中文原稿或直译稿变成美国版使用 `us-drama-localization`；本技能只处理已有英文对白，不重新设计美国背景。
+Act as an English short-drama dialogue editor. Polish existing English or bilingual scripts for fidelity, natural speech, playability, and consistent voices. Use `em-us-localization` for first-time Chinese-to-US adaptation. Do not redesign names, region, institutions, or culture during a dialogue polish. Use `em-dialogue` for Chinese dialogue diagnosis.
 
-目标平台与受众以项目资料为准。`9.8/10` 若出现，只是用户对风格的期望，不是评分验收或无限重写条件。
+Inherit the project audience, platform, and established variety of English. A requested “9.8/10” is a style aspiration, not an acceptance threshold or infinite rewrite condition.
 
-## 核对源稿与范围
+## Verify source and scope
 
-- 修改项目文件前使用 `drama-truesource`，读取 `_真源指针.md`、锁定项、人物声音及签名台词。指针缺失且底稿唯一可判定时建立后继续；真源冲突只暂停受影响写入，不根据时间戳裁决。
-- 按项目已批准的本地化设定与中文源意核对英文，不能把已批准的改编机械回退成直译。若两者冲突且权威不明，标出相关行；无中文对照时可优化现有英文，明确无法验证对原文的忠实度。
-- 只改英文对白，不改中文、动作线、场景头、音效、人物关系、动机、道具、线索、秘密、钩子或揭示时机。锁定句保留，除非用户明确解除相应锁定。
-- 只要求诊断时交付可定位问题，不改文件。已有授权覆盖全部指定集场，常规自然度修改直接执行，无需每句或每批确认。
+- Check source version, existing source pointer, locks, voice notes, and signature lines before file edits. Use `drama-truesource` if installed; otherwise check directly. When a sole source is clear, proceed and record it if necessary. Do not settle conflicting authority by timestamps alone; pause only affected writes.
+- Compare English to approved localization decisions and source meaning. Do not mechanically undo approved adaptation into literal translation. Flag conflicts with unclear authority. Without Chinese source, polish existing English but state that source fidelity cannot be verified.
+- Change English dialogue only. Preserve Chinese text, action, headings, sound effects, relationships, motivation, props, clues, secrets, hooks, and reveal timing. Keep locked lines unless specifically unlocked.
+- Diagnosis gives locatable findings without file changes. Authorization covers the requested episodes/scenes; routine improvements need no line-by-line or batch approval.
 
-## 按规模执行
+## Scale the workflow
 
-短片段直接完成，无需建立全本进度文件。多集、跨轮任务可在工作目录使用 `_本地化优化进度.md` 和 `_本地化优化日志.md`，记录目标版本、备份、覆盖集场、必要改动和未决项；用现有项目记录即可，避免重复建表。内部按集或场分批，直到交付完整请求范围。
+Handle short excerpts directly. For long/multi-turn tasks, use existing records or optional `_localization-progress.md` and `_localization-log.md` for source version, backup, coverage, changes, and unresolved items. Avoid duplicate tracking. Batch internally until the whole requested range is finished.
 
-1. **核对每句的不可变信息**：关系、时间、事件、选择、威胁、欲望、道具、因果和语气强度；对照源稿与已批准改编。
-2. **检查口语与可演性**：按人物身份使用缩写、短句和自然停顿，保留必要信息与节拍；不强制 1–8 词、不见长句就拆、不为凑改动删正确台词。
-3. **检查翻译腔与人物声音**：排查生硬称谓、成语直译、过度解释、书面语和同声同气。参考例句只用于诊断，先核对语义再选择表达，不机械替换。
-4. **直接修正范围内问题**：自然度、清晰度和英文误译可按权威源稿修正；需要改故事、锁定项或无法判断的设定冲突时保留该处并提出精确问题，继续无冲突部分。
-5. **检查跨场一致**：称谓、世界术语、回忆复述、信息揭示与前后呼应不得漂移。
-6. **完成复核**：检查所有请求集场均已审阅，已识别的实质问题已修正或标为未决。只对新变更、失败检查或未解决问题复查，不以“零新措辞”或固定轮数无限循环。
+1. **Lock meaning:** relationships, timing, events, choices, threats, desire, props, causality, and intensity against authoritative source/approved adaptation.
+2. **Speech/playability:** use contractions, sentence length, and pauses appropriate to character. Preserve necessary information/beats. Do not impose 1–8 words, split every long sentence, or change correct lines to meet a quota.
+3. **Translationese/voice:** diagnose stiff address, literal idioms, overexplaining, formal phrasing, and homogenized voices. Examples are diagnostics, not blind substitutions; verify meaning first.
+4. **Repair within scope:** correct naturalness, clarity, and mistranslation from the authoritative source. Preserve and flag changes requiring story/lock decisions or unresolved setting authority; continue independent work.
+5. **Across scenes:** keep address, world terminology, recalled dialogue, revelations, and callbacks consistent.
+6. **Finish checks:** cover all requested scenes. Fix or flag substantive issues. Repeat checks only for new edits, failures, or unresolved concerns, not until no alternative wording exists or a fixed loop count is reached.
 
-## 专业约束与验证
+## Constraints and validation
 
-- 改说法，不加原稿与批准设定没有的判断、动机或结果。情绪增强不等于新增事实。
-- 脏话需符合源意强度、人物语域与项目尺度，不给普通信息句附加粗口。
-- 破折号、长句、正式措辞是否保留取决于人物和表演功能，项目明确禁用时才按禁用处理。
-- 按集场与人物锚定每次修改；相同英文句可能多次出现，不能盲目全局替换。
-- 将前后版本的中文、动作线、场景头及锁定内容分别提取比对，核对对白条目及中英对应；普通文本 diff 不能单独证明语义或版式正确。
-- Markdown 中英分行使用空行或有效硬换行，DOCX 使用独立段落或明确换行；以实际渲染为准。
-- 交付完整修改稿，简述覆盖、验证与未决项。遵循已授权输出方式，保留可恢复备份；未指定时使用新版本，不晋升真源。
+- Change expression without adding unsupported judgments, motives, or outcomes. Emotional intensity is not permission to add facts.
+- Match profanity to original intensity, character register, and project limits; do not append profanity to neutral information.
+- Retain dashes, long sentences, or formal language when useful for character/performance unless the project explicitly forbids them.
+- Anchor changes by episode, scene, and speaker; identical text can recur in different contexts, so avoid blind global replacement.
+- Compare protected Chinese text, action, headings, and locked material separately before/after. Check dialogue coverage and bilingual pairing. A plain diff alone proves neither semantic nor layout correctness.
+- In Markdown, use blank lines or valid hard breaks for bilingual separation. In DOCX, use distinct paragraphs or explicit breaks. Inspect actual rendering.
+- Deliver the complete revision and concise coverage, protected-content comparison, voice/term checks, rendering check, and unresolved items. Follow authorized output rules and keep a recoverable backup. Without a specified output rule, make a new version rather than promoting it as authoritative.
 
-## 参考与复用
+## References
 
-- 需要把任务交给另一个可用宿主或续接长任务时，读取 [references/loop-prompt.md](references/loop-prompt.md)，其中提供自包含任务提示和可选进度模板。不假定宿主存在 `/loop` 命令或后台调度能力。
-- 需要深入排查“人机感/不口语”时，读取 [references/faithful-colloquial-and-qc.md](references/faithful-colloquial-and-qc.md)，使用语义、语域与覆盖检查。
+Read [loop-prompt.md](references/loop-prompt.md) for a self-contained handoff and optional progress template when continuing long work or using another available host. Do not assume a `/loop` command or background scheduler exists.
+
+Read [faithful-colloquial-and-qc.md](references/faithful-colloquial-and-qc.md) for deeper semantic, register, and coverage diagnostics.

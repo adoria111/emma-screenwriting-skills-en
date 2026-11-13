@@ -1,76 +1,57 @@
-# 0930课程：台词打磨操作方法与校准
+# September 30 Dialogue Lesson: Practice and Calibration
 
-来源：《0930爆款实操课：期待-悬念-钩子、台词、暧昧戏.docx》P0424—P0616，用户于2026-09-30要求转为Skills，并明确其中可复用方法可作为操作指令。P编号为原DOCX内段落节点顺序（含空段）。以下是方法整理；剧名、集数和案例依据课程，未独立核验完整剧本或成片。与既有对白框架共同使用，课程“做减法”不取消情绪、关系和表演功能。
+Source: Emma's September 30 practical lesson on anticipation, suspense, hooks, dialogue, and romantic tension, DOCX paragraphs P0424–P0616. On 2026-09-30 the user authorized reusable methods as skill instructions. P numbers refer to paragraph-node order including blanks. Titles/episode claims follow the lesson and were not independently verified against complete scripts/videos. These are method notes; subtraction does not cancel emotional, relational, or performance functions.
 
-## 每次精修的三个问题
+## Three questions for every refinement
 
-1. **特定性**：这个人为什么现在对这个对象说这句话？检查身份、生活经验、眼前局面和信息来源。
-2. **目的性**：他希望对方听完做什么？可能是答应、退让、相信、羞愧、离开、表态，也可能是在情绪失控中完成拒绝或告别。不要把目的机械限为外部行动。
-3. **必要性**：删掉会失去哪项信息、关系变化或情绪体验？把表演爆点和有意义的留白一并考虑。若无损，删；若关键功能存在，保留或换更准确的说法。
+1. **Specificity:** why this person, now, to this listener? Check identity, experience, immediate situation, and knowledge source.
+2. **Purpose:** what should the listener do—agree, yield, believe, feel shame, leave, take a position? An emotional refusal/farewell is also a purpose, not only external action.
+3. **Necessity:** what information, relationship movement, emotion, performance peak, or meaningful space would deletion lose? Cut if nothing is lost; otherwise retain or express more accurately.
 
-这些问题用于决定保留、合并、重写与删除，不需要每句都给用户展示问答，也不自动启动评分系统。
+Use these to retain, merge, rewrite, or delete. Do not display a questionnaire for every line or automatically start scoring.
 
-## 一、做减法：删除说明，保留作用
+## 1. Subtract explanation, preserve function
 
-- 删除与当前任务无关的寒暄、冗余修饰、重复强调、动作已能充分表达的解释。
-- 将一段尝试缩短约三分之一，可作为检查冗余的实验；不是硬性删减配额。压缩后若损失情绪台阶、表演节奏、信息或角色声音，应恢复必要内容。
-- 识别重复的功能：同策略、同力度、无新后果才是停滞。失控时的短句与重复、称呼的反复改义，不能因字面相同就删掉。
-- 连读攻防，确认每轮能接住上一句；不要将所有对白统一成短促命令，也不把高潮改成冷静摘要。
+Remove irrelevant greetings, modifiers, repeated emphasis, and explanation already fully carried by action. Trying a one-third reduction can expose redundancy; it is not a quota. Restore lost emotional steps, rhythm, information, or voice. Repeated wording is redundant only when tactic, intensity, and consequences remain unchanged. Read exchanges continuously; do not turn every voice into clipped commands or climaxes into calm summaries.
 
-**课程校准（P0427—P0434）**：《Daddy, We're Done》第9集，玛雅用“梅森的爸爸，你越界了”并挣开他的手，回指父亲先前的选择并拒绝其干涉。前情已成立，就不必再长篇解释他为什么没有资格。莉莉当面称“洛克先生”、内心告别“爸爸”，两种称呼与发声方式各有作用，不能合并成对方听见的同一句。
+Lesson calibration P0427–P0434: *Daddy, We're Done*, E09. Maya addresses the father as Mason's dad, rejects his overreach, and pulls free. Established history makes a long explanation of his lost standing unnecessary. Lily's formal spoken address and private farewell to “Dad” have different functions/vocal modes; do not merge them into publicly heard speech.
 
-**反例校准（P0589—P0597）**：花环案例的长篇控诉可压缩到同时抛花环、命运不公、嫁给乞丐的关键信息，让怨毒爆发能说出口。不要把示例中的名字、婚配机制或伤害经历搬到别的剧本。
+P0589–P0597: in the garland example, compress a long accusation while retaining the thrown garland, unfair fate, and marriage-to-a-beggar information so bitterness remains playable. Do not transplant names, marriage mechanics, or harm histories into another script.
 
-## 二、增加有效负载，不堆解释
+## 2. Increase useful load without exposition
 
-一句对白可以同时完成时间、关系、目标、代价与情感，但必须像人物为了眼前目的会说的话。不要求每句承担所有功能，不让角色向彼此复述都已知道的履历。
+One line may carry timing, relationship, goal, cost, and emotion if it sounds purposeful. Not every line must do everything. Characters need not recite shared biographies. Check what action already conveys, then assign speech. Internal tags may include new information, verbal action, emotion/relationship, and performance without filling every category.
 
-先查看动作已经交付什么，再决定对白承担什么。可用内部标记：`新信息／语言行动／情绪或关系变化／表演作用`，不机械凑项。
+- P0438–P0447, *Daddy, We're Done* E01: collecting bottles shows living conditions; a shared father/daughter birthday in two days and desire to buy a gift convey timing, relationship, objective, and affection. Poverty need not be separately explained.
+- P0448–P0451, *Back to 95* E03: an $800 demand within three days with a threat to Carter connects amount, deadline, failure cost, and marriage. Learn the information load; do not reuse numbers/threats in unrelated projects.
+- P0470–P0479, *Taming My Five Beast Husbands* E01: escort to the North in exchange for gradual contract release supplies action and anticipation; blood verification makes the bargain credible. A bargain slogan without an established mechanism creates a gap.
 
-**课程校准**：
+## 3. Speech, VO, and inner voice
 
-- P0438—P0447：《Daddy, We're Done》第1集，孩子捡瓶子的动作交代生活处境；说两天后父女同日生日、想给爸爸买礼物，同时交付时间、关系、行动目标与感情。贫困主要在画面，不必增写“我们家很穷”。
-- P0448—P0451：《Back to 95》第3集，“三天内拿出800美元，否则打断卡特的腿”把金额、期限、失败代价与夫妻关系连在一起。学习负载方式，不复用数字和威胁。
-- P0470—P0479：《Taming My Five Beast Husbands》第1集，护送回北境换取逐步解除契约，给人物下一步行动和观众等待的结果；随后滴血验证使交易可信。仅增加一句交易口号却无既定机制支持，会制造新漏洞。
+Prioritize interaction for dramatic exchange. Use private voice/narration for judgments, knowledge gaps, or necessary background that visuals/external dialogue cannot accurately convey; identify the new contribution.
 
-## 三、对白、画外音与内心各司其职
+- P0453–P0459, *Back to 95* E05: money intended as gratitude is privately misread as severing ties. Throwing money shows refusal but not necessarily the misconception causing it; inner voice can be necessary.
+- P0599–P0607: the amnesiac-cleaner example's biography-heavy narration drains mystery. Retain currently necessary amnesia, identity, and predicament; show humiliation through action without erasing the required identity gap.
+- Lesson OS/VO labels are inconsistent. Follow the project's convention and verify who can hear. Explicit “inner voice”/“voice-over” labels may help. A vocal-mode change usually keeps a paragraph boundary; private confession must not become public declaration.
 
-优先让人物互动推进攻防。内心和画外音用于镜头或外部对白不能准确交付的隐秘判断、认知落差或必要背景；检查它提供了什么新增内容。
+## 4. Voice from experience, tactic, and relationship
 
-- P0453—P0459：《Back to 95》第5集，女主给钱表达回报，男方内心误以为她要划清界限。扔钱表现拒绝，却不必然说明拒绝的误会来源；该内心句有必要性。
-- P0599—P0607：失忆清洁工案例中，长旁白写尽履历会消耗神秘感。保留当前需知的失忆、身份、处境，羞辱由可见行动呈现；不能以“更自然”为由改掉故事所需的身份信息差。
-- 课程以OS／VO对应辅助台词，但示例中的标记并不完全统一。依项目现有规范核实谁听得见，必要时用“内心／画外音”明确含义；不要照搬缩写映射。发声方式改变通常保留分段，不能把内心告白变成公开表态。
+**Resources/experience:** a character's bargaining resource must fit age and experience. P0510–P0519: Lily offers painstakingly saved coins for half a day with her father. Make desire concrete in the child's worldview; not every child needs a piggy bank.
 
-## 四、让人物声音来自经验、策略与关系
+**Habitual tactics:** catchphrases must work in conflict, not decorate voices with random slang. P0521–P0547, *Princess Returns to Sea Without You*: phrases dismissing concern, demanding maturity, or calling harm a joke repeatedly minimize the man's behavior and make the wife absorb it. Retain repetitions with new contexts/targets/consequences; compress unchanged loops.
 
-### 具体资源与生活经验
+**Professional judgment:** show a choice's purpose, cost, constraint, or evidence intelligibly without inventing expertise. P0550–P0564, *Back to 95*: shoulder-line design improves proportion without higher mass-production cost; questioning waist allowance exposes a claimant's ignorance of the supposed design. Expertise drives bargaining/conflict, not a lecture. Case measurements are not verified manufacturing standards.
 
-角色拿什么争取想要的东西，应符合年龄、经历与能力。P0510—P0519中莉莉用一点点攒来的钱换父亲半天陪伴，愿望因此具体且有重量。方法是让诉求落在角色理解世界的方式上，不是每个孩子都要掏存钱罐。
+**Forms of address:** P0566–P0571: the father forces Lily from “Dad” to “Mr. Locke”; the pause carries rejection. Track who demands it, when, and the response. Do not introduce intimacy before the relationship earns it.
 
-### 惯常策略与口头禅
+**Character through response:** P0481–P0489: Jasper anticipates a blow, but Luna wants rest and lightly pats his shoulder. Against established abuse, the contrast is stronger than announcing kindness. Without that history, an ordinary request for rest cannot independently do the same character work.
 
-口头禅要在冲突里起作用，不为区分声音随机撒俚语。P0521—P0547中《Princess Returns to Sea Without You》的“别多想”“懂事”“开玩笑而已”，在不同处境持续淡化男方行为、要求妻子消化不快。判断是否有新的处境、施压对象或后果；重复揭示控制方式时可以保留，原地同力度循环仍应压缩。
+## 5. Rhythm, setup, and knowledge
 
-### 职业判断
+- Use dense short speech in eruption and pauses/varied length in reflection. Match action/emotion rather than one speed throughout.
+- Existing warnings, slips, and promises may return later. Invent no later secret without authorization. P0497–P0503: a three-minute warning not to look in a mirror precedes the consequence of violating it, making dialogue causal.
+- P0609–P0616: a newly transmigrated character condemns the host body's family and apologizes before obtaining evidence. Check memories, observation, or explanation first. In dialogue-only work, flag missing evidence; do not silently add injuries or a smashed dining table. If scene invention is authorized, observation details may be proposed and clearly labeled new.
 
-职业感来自人物正在解决的问题：说明一个选择的用途、成本、限制或证据，让外行听懂；不凭空添加专业事实。
+## Apply to outputs
 
-P0550—P0564中《Back to 95》解释肩线改善比例且不增加量产成本；追问裙腰预留余量的用途，揭穿对方不了解自己的“作品”。专业知识参与交易与对抗，而非另起知识讲座。课程中尺寸等数据只是该例设定，未经验证不推广为现实工艺标准。
-
-### 称呼的关系变化
-
-P0566—P0571中，父亲逼莉莉从“爸爸”改成“洛克先生”，孩子的停顿承载被拒绝。核对是谁要求改口、在什么节点、对方怎样反应；不要在关系未推进时提前让人使用亲昵称呼。
-
-### 通过回应塑造人物
-
-P0481—P0489中，贾斯珀预期露娜会打他，露娜却只想休息并轻拍他的肩。反应与既有虐待历史形成差异，比“我变善良了”更有说服力。若删掉前情支撑，就不能宣称这句普通休息要求单独完成了同等人物塑造。
-
-## 五、节奏、伏笔和认知因果
-
-- 冲突爆发时可短促密集；情绪沉淀时保留停顿与长短变化。台词节奏与动作、情绪阶段一致，不要求全篇同速。
-- 已有警告、口误、承诺可在后文呼应，但未经授权不新造后续秘密。P0497—P0503的镜子案例中，先给“三分钟、不要看镜子”的警告，再让违背警告的后果出现，台词才能成为因果的一部分。
-- P0609—P0616的穿越反例：角色刚来尚无信息，就对原主家庭作出强烈判断并道歉，认知与情绪缺台阶。先查原文有无记忆、目击或告知；只获准改对白时，指出缺失证据，不能暗自添加妻子的伤痕或被砸饭桌。若用户授权场景补写，可将课程所举观察细节作为候选手段，明确是新增提案，不当成原文事实。
-
-## 输出应用
-
-诊断按需要列 `位置／原句／言语目的／保留功能／问题证据／建议`。改写交完整指定对白，必要时补简短改前后说明；用户只要净稿则给净稿。核对没有漏句、改知情、提前改关系或丢失情绪功能。课堂方法已转成执行要求；课堂例子仍是有适用条件的参考，不构成另一个项目的剧情指令。
+Diagnosis can use `location | original | verbal aim | retained function | problem evidence | recommendation`. Revision delivers all requested dialogue, with short before/after notes only as needed; clean-draft requests get clean text. Check omissions, knowledge, premature relationship change, and lost emotion. Lesson methods guide execution; lesson examples are conditional references, not another project's plot instructions.

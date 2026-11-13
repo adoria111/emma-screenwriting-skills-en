@@ -2,89 +2,90 @@
   "skill": "em-dialogue",
   "behavior_contract": {
     "must": [
-      "以信息、策略、力度和后果的变化识别车轱辘话",
-      "区分无效重复与有表演或意义变化的必要复沓",
-      "分别判断叙事效率、情绪效率和表演效率，不把短剧明情绪或夸张台词自动判坏",
-      "区分有效爆发、纯宣泄和无效空喊，并为纯宣泄寻找关系或行动落地",
-      "诊断时指出具体重复链，改写时保留事实、人物关系和情绪台阶",
-      "根据用户请求选择解释、只诊断或诊断并改写"
+      "Identify circular dialogue through changes in information, strategy, intensity, and consequences.",
+      "Distinguish ineffective repetition from repetition with meaningful performance or semantic development.",
+      "Evaluate narrative, emotional, and performance efficiency separately; do not automatically reject explicit emotion or heightened short-drama dialogue.",
+      "Distinguish effective outbursts, pure venting, and empty repetition; seek a relationship or action consequence for venting.",
+      "Locate the specific repetition chain during diagnosis; preserve facts, relationships, and emotional steps when revising.",
+      "Follow the requested mode: explanation, diagnosis only, or diagnosis with revision."
     ],
     "must_not": [
-      "把所有字面重复机械删除",
-      "因为台词直白、绝对、喊满或缺少潜台词就自动降调、文学化或判为空洞",
-      "为了金句虚构背景或把人物声音写成一样",
-      "用户只要求诊断时擅自重写",
-      "把整剧结构或跨语言本地化冒充成对白精修"
+      "Mechanically remove all repeated wording.",
+      "Automatically soften, literary-polish, or dismiss a line because it is direct, absolute, shouted, or lacks subtext.",
+      "Invent backstory for a memorable line or give every character the same voice.",
+      "Rewrite when the user requested diagnosis only.",
+      "Claim that whole-series restructuring or cross-language localization is dialogue refinement."
     ]
   },
   "cases": [
     {
       "id": "normal-01",
       "type": "normal",
-      "prompt": "只诊断下面对白有没有车轱辘话，不要改写：母：这钱你必须出。女：我没钱。母：你怎么能不出？女：我真的没钱。母：反正你必须拿出来。",
+      "prompt": "Diagnose circular dialogue only; do not rewrite. Mother: You must pay this money. Daughter: I have no money. Mother: How can you refuse to pay? Daughter: I really have no money. Mother: You have to come up with it anyway.",
       "input_files": [],
       "expected_behavior": [
-        "识别要钱与拒绝的同功能重复链",
-        "指出信息、策略、后果没有推进",
-        "不提供完整改写稿"
+        "Identify the repeated demand/refusal functions.",
+        "Explain the lack of progress in information, strategy, or consequence.",
+        "Do not provide a complete rewrite."
       ]
     },
     {
       "id": "boundary-01",
       "type": "boundary",
-      "prompt": "精简：孩子连续说三次‘不是我’，中间警察放下带血书包，母亲碰他时他躲开，最后一次他说‘妈，真的不是我’。",
+      "prompt": "Tighten this: a child says “It wasn’t me” three times. Between the lines, an officer puts down a bloodstained backpack; when his mother touches him, he pulls away. The last time he says, “Mom, it really wasn’t me.”",
       "input_files": [],
       "expected_behavior": [
-        "识别字面重复背后的表演状态和关系变化",
-        "不机械压缩成一次否认",
-        "说明可微调但应保留否认阶梯"
+        "Identify changed performance and relationship behind repeated wording.",
+        "Do not mechanically reduce the denials to one.",
+        "Allow small adjustments while preserving the denial progression."
       ]
     },
     {
       "id": "concept-01",
       "type": "normal",
-      "prompt": "什么是车轱辘话？好台词怎么判断？请给我一个能审稿的标准。",
+      "prompt": "What is circular dialogue? How do you judge good dialogue? Give me a usable review standard.",
       "input_files": [],
       "expected_behavior": [
-        "定义车轱辘话为戏剧状态停滞而非字面重复",
-        "说明言语行动、潜台词、人物声音、攻防、三轨效率与可表演性",
-        "给出可执行检查卡"
+        "Define circular dialogue as a stalled dramatic state, not merely repeated words.",
+        "Explain speech actions, subtext, voice, attack/defense, three-track efficiency, and performability.",
+        "Provide an actionable review card."
       ]
     },
     {
       "id": "nearby-01",
       "type": "nearby_negative",
-      "prompt": "请把这部八十集短剧的主线重构成三条时间线，并设计每集卡点。",
+      "prompt": "Restructure this eighty-episode short drama into three timelines and design every episode ending.",
       "input_files": [],
       "expected_behavior": [
-        "识别任务属于整剧结构而非对白诊断",
-        "不冒充完成整剧结构工作",
-        "建议使用对应结构或改编能力"
+        "Recognize whole-series structure rather than dialogue diagnosis.",
+        "Do not claim to have completed structural work.",
+        "Route to an appropriate structure or adaptation workflow."
       ]
     },
     {
       "id": "holdout-01",
       "type": "holdout",
-      "prompt": "审并改这段：妻：你昨晚去哪了？夫：我在公司。妻：公司？夫：对，公司。妻：你确定是公司？夫：我都说了在公司。妻把酒店账单推过去。",
+      "prompt": "Review and revise: Wife: Where were you last night? Husband: At the office. Wife: The office? Husband: Yes, the office. Wife: Are you sure it was the office? Husband: I told you I was at the office. The wife slides a hotel bill toward him.",
       "input_files": [],
       "expected_behavior": [
-        "区分盘问式复沓和无效同义重复",
-        "保留账单出现前逐步收紧的试探功能",
-        "通过策略和反应变化精修而非只删短"
+        "Distinguish purposeful interrogation from redundant paraphrase.",
+        "Preserve tightening pressure before the bill appears.",
+        "Refine through strategy and reaction changes, not shortening alone."
       ]
     },
     {
       "id": "genre-boundary-01",
       "type": "regression",
-      "prompt": "比较同一句台词的两种用法。A：复仇爽剧高潮，父母长期逼女儿替弟弟牺牲，女儿第一次当众爆发：‘你们简直是世界上最恶毒的父母！我恨死你们了！’随后决定断绝关系。B：没有铺垫，女儿已经连续三次骂父母恶毒，这次说完双方仍继续原来的争吵。分别判断是否空洞，并提出优化方向。",
+      "prompt": "Compare two uses of the same line. A: At the climax of a revenge drama, parents have long forced their daughter to sacrifice for her brother. For the first time she erupts publicly: “You’re the cruelest parents in the world! I hate you!” She then severs ties. B: Without buildup, she has already called them cruel three times; after this line they continue the same argument. Judge whether each use is empty and suggest an improvement direction.",
       "input_files": [],
       "expected_behavior": [
-        "不因直白、绝对或缺少潜台词就判坏",
-        "识别它可能承担情绪结算、观众代偿、公开站队和演员爆点",
-        "把 A 结合长期蓄压、第一次公开爆发和断绝关系判断为有效情绪结算",
-        "把 B 识别为没有新情绪阶段、反应或后果的无效空喊",
-        "优化方向优先补关系宣判、对手反应或行动落地，而不是强制改成含蓄文学表达"
+        "Do not reject directness, absolutes, or a lack of subtext automatically.",
+        "Recognize emotional settlement, vicarious vindication, a public stand, and a performance peak.",
+        "Treat A as earned emotional release in the context of accumulated pressure, a first public outburst, and severed ties.",
+        "Treat B as empty repetition without a new emotional stage, response, or consequence.",
+        "Prefer a relationship verdict, opponent response, or concrete action over forced literary understatement."
       ]
     }
-  ]
+  ],
+  "edition_note": "English translations of historical Chinese-dialogue evaluation prompts and expectations. They document the original behavior contract; translation is not a new test run. The module remains scoped to Chinese dialogue."
 }

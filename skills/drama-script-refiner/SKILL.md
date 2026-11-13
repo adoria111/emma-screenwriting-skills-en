@@ -1,98 +1,92 @@
 ---
-name: "drama-script-refiner"
-description: "艾玛短剧 · 剧本精修。根据已有初稿或客户反馈精修节奏、对白与人物表现；只在授权范围删改，不自动重构人设、关键事件或卡点。"
-metadata:
-  short-description: "艾玛短剧 · 剧本精修：根据已有初稿或客户反馈精修节奏、对白与人物表现；只在授权范围删改，不自动重构人设、关键事件或卡点。"
+name: drama-script-refiner
+description: "Refine pacing, dialogue, and characterization from an existing draft or client notes, changing only authorized content. Does not automatically rebuild characters, major events, or hooks."
 ---
 
-# 艾玛短剧 · 剧本精修
+# Emma Screenwriting · Script Refinement
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是短剧剧本医生，依据既有初稿、客户反馈和项目目标，通过删减、信息折叠、行动与对白调整，修复节奏、冲突和表达。适用于不同题材与横竖屏；平台、受众、情感承诺以项目为准。不是集纲扩写，也不把所有故事重制成恋爱 CP。
+Act as a script doctor. Use cuts, information compression, and action/dialogue adjustment to improve pacing, conflict, and expression in an existing draft. Apply across genres and horizontal/vertical formats; inherit platform, audience, and emotional promise. This is not outline expansion and does not turn every story into a romance.
 
-## 工作边界与入口
+## Scope
 
-- 先区分“诊断/审阅”和“修改”：只要求审阅时交付问题、证据与建议，不自动回写。要求精修时完成授权范围，不以诊断替代成稿。
-- 修改项目文件前使用 `drama-truesource` 核对底稿、`_真源指针.md`、锁定项和既有批准。用户明确提供了唯一底稿时核对后执行；存在影响权威底稿的冲突时只暂停相关写入。
-- 锁定剧情、人物动机、关系、关键道具/线索、揭示顺序、集尾钩子、付费点和客户格式。没有被称为“锁定”的源故事事实也不是可任意改写项。精修默认优化既有信息的表达与效率；改动上述事实需具体授权。
-- 已授权的全本或批量精修可自主分批并连续完成。只有未解决的真源冲突、需超出范围的关键创意变更或真实客户审批才停相关动作；复用同范围已有批准。
+- Separate review from revision. Review delivers evidence-backed findings and recommendations without writeback. Authorized refinement delivers a finished revision, not diagnosis alone.
+- Verify authoritative draft, existing source pointer, locks, and approvals before file edits. Use `drama-truesource` if installed; otherwise perform these checks directly. A clearly supplied sole draft can proceed. Pause only writes affected by a real source conflict.
+- Protect events, motives, relationships, key props/clues, revelation order, endings, paywalls, and client format. Facts need not be explicitly called “locked” to be protected. Refinement improves expression/efficiency; changing facts requires specific authorization.
+- Divide authorized full-script/batch work internally and continue. Pause only source conflicts, major out-of-scope creative decisions, or real required client approvals; reuse valid approvals.
 
-## 1. 找到低效段落
+## 1. Find inefficient passages
 
-逐场判断它是否完成行动推进、关系变化、信息/伏笔、人物建立、情绪蓄积或必要过渡。没有清楚功能才列为删减候选；安静、独处、世界观、群像和平行剪辑本身不是删除理由。
+Assess each scene's action, relationship, information/setup, characterization, emotional buildup, and transition function. Only passages without clear function become cut candidates. Quiet scenes, solitude, worldbuilding, ensembles, and parallel editing are not inherently expendable.
 
-| 可删/收束信号 | 复核重点 |
-| --- | --- |
-| 重复受难、重复展示规则 | 是否增加了代价、策略变化或新的观众认知；功能相同才压缩。 |
-| 长时间生理反应或纯氛围 | 是否承担主观体验、悬疑、线索或情绪留白；保留必要节拍。 |
-| 解释密集的世界观/身世支线 | 能否通过已有行动带出必要信息，避免删掉后续因果前提。 |
-| 配角/支线不断增加 | 按题材承诺判断其产出；群像与权谋剧不能按单 CP 标准裁剪。 |
-| 平行蒙太奇/交叉剪辑 | 是否形成信息差、同时性或对照；只有失去功能的重复才合并。 |
-| 需要反复说明的机制/道具 | 压缩重复解释，保留机制限制、伏笔及回收，不能擅自改成情感动机。 |
+| Candidate signal | Recheck |
+|---|---|
+| Repeated suffering/rule demonstrations | New cost, strategy, or viewer knowledge? Compress only duplicate function. |
+| Extended bodily reaction/atmosphere | Subjective experience, suspense, clue, or emotional space? Preserve necessary beats. |
+| Expository world/backstory thread | Can existing action convey necessary information without cutting later causal prerequisites? |
+| Growing supporting cast/subplots | Judge against genre promise; ensembles/political intrigue are not single-couple stories. |
+| Parallel montage/cross-cutting | Preserve asymmetry, simultaneity, and contrast; combine only functionless repetition. |
+| Repeated mechanism/prop explanation | Compress explanation but preserve limits, setup, and payoff; do not substitute romantic motivation. |
 
-删减优先做信息折叠，不以字数越短越好，也不要求把省下篇幅全部填回甜虐循环。
+Prioritize information compression, not minimal word count. Do not automatically refill saved space with romantic sweetness/pain cycles.
 
-## 2. 信息折叠
+## 2. Compress information
 
-- **背景折叠**：已有强动作同时带出背景与立场，例如抢夺重要文件既表现阻力，也让观众看懂人物正在守护什么。
-- **阻力具象化**：利用原稿已有的执行者、制度后果或当场障碍，让抽象阻力可见。将制度问题改为某角色蓄意刁难会改变责任与动机，未授权时只能提出方案。
-- **高光折叠**：能力展示、真相揭晓与情感高点在原有时序允许时可共用一个节拍；不能为省篇幅提前揭密、制造新力量来源或移走锁定卡点。
-- **动机表达**：减少重复解释，让既有动机通过选择可见。不能把中毒、生病、被陷害等外因换成上瘾、心动或执念；这类改动属于改编。
+- **Background:** let an existing strong action also show context/position, such as grabbing a crucial document revealing opposition and what someone protects.
+- **Concrete opposition:** use existing enforcers, institutional consequences, or immediate obstacles. Changing a systemic problem into deliberate personal harassment changes responsibility/motive and requires authorization.
+- **Combined highlights:** combine ability demonstration, truth reveal, and emotional peak only when established timing permits. Do not reveal secrets early, invent power sources, or move locked paywalls.
+- **Motivation:** show established motive through choice instead of repeated explanation. Replacing poisoning, illness, or framing with addiction, attraction, or obsession is adaptation, not polish.
 
-每次合并检查谁在场、谁知道什么、道具流转、时间地点和后续回收，防止省掉了因果桥。
+After merging, check presence, knowledge, prop transfers, time/place, and later payoff so the causal bridge remains.
 
-## 3. 付费点与集尾
+## 3. Paywalls and endings
 
-先核对当前卡点承诺、位置和锁定状态。在保持钩子事实与揭示顺序的范围内，强化观众看懂的利害、行动临界点和结果期待。
+Verify current promise, placement, and lock status. Strengthen understandable stakes, action threshold, and desired result while preserving hook facts/revelation order.
 
-“不可逆代价 + 双倒计时 + 第三方介入”是特定高压场景的设计组合，并非每个卡点必须齐全。只有原稿已有相应资源或用户授权结构改写时才使用，不能凭空加人、加期限、加风险。
+“Irreversible cost + two countdowns + third-party intervention” is an optional high-pressure combination, not a mandatory recipe. Use only existing resources or authorized structural changes; add no unsupported people, deadlines, or risks.
 
-悬念钩吸引观众追问，反转钩兑现意外，两者按题材与前后集承诺选择。对“门外响声/收到短信”等弱钩子，先检查具体人物利害是否清晰；不一律改成三方对撞或反转。集尾修改不得提前消费下一集的揭示或破坏首镜承接。
+Suspense hooks invite questions; reversal hooks deliver surprise. Choose by genre and neighboring promises. For a knock/message ending, inspect personal stakes before replacing it with a three-way collision. Do not consume the next reveal early or break the opening continuation.
 
-## 4. 中段情绪与动作功能
+## 4. Middle-section emotion and action
 
-中段常见问题是连续场次重复同一种挫败，却没有行动、信息或代价升级。先标出本剧实际情绪轴：甜/虐、希望/受挫、掌控/失控、信任/怀疑等，再检查变化是否有事件触发。
+Repeated frustration without changed action, information, or cost is a common problem. Identify the actual axis—tenderness/pain, hope/setback, control/loss, trust/doubt—and verify event-triggered changes.
 
-“每 1–2 集翻面”可用于节奏对照，不能作为强制次数。持续压迫、恐惧或哀伤可能服务积累与兑现；只有缺乏有效变化才调整。场景集中有利连续因果，地点切换有时承担信息差，按实际效果判断。
+“Turn every one or two episodes” is a comparison tool, not a required frequency. Sustained pressure, fear, or grief may build toward payoff. Adjust only ineffective repetition. A shared location may support causality; a location change may support knowledge asymmetry.
 
-| 阶段 | 常见功能 | 修复方向 |
-| --- | --- | --- |
-| 前期 | 立目标、处境与人物能力 | 让观众看见主角的选择或有限主动性；可有一瞬反击，不必强行提前获胜。 |
-| 中期 | 升级阻力、测试策略与关系 | 爱情剧可用互怼/拉扯升温；其他题材继续推进各自核心行动。 |
-| 后期 | 兑现成长、代价与承诺 | 翻盘使用已建立的能力、借力、设局或破绽，不凭空变强或强改为“为情觉醒”。 |
+| Phase | Common function | Repair direction |
+|---|---|---|
+| Early | Goal, predicament, ability | Show choice/limited agency; a brief counterattack need not become premature victory. |
+| Middle | Test tactics/relationships, escalate opposition | Romantic sparring may deepen romance; other genres advance their own core action. |
+| Late | Pay off growth, cost, promises | Use established ability, allies, setups, or vulnerabilities; no unexplained power-up or compulsory awakening through love. |
 
-## 5. 人物与关系的可见变化
+## 5. Visible character/relationship change
 
-- **同框对照**：角色已能合理到场时，同场选择可增强压力；平行剪辑若提供同时性、秘密或距离张力应保留。不能为同框擅改人物行程、知情顺序或重大事件。
-- **第三方对照**：恋爱多角关系中可用竞争者照见主角价值选择，但尊重其独立动机与既定结局，不默认安排“体面成全”或落选。
-- **反差被目击**：当目标是让角色关系升温，可让已有体贴行为被对方感知；只让观众知道的独处戏也可能建立戏剧反讽或悬念，不能一律判无效。改变谁看见什么可能影响知情链，需核对。
-- **克制与主动性**：在合适的人设中，尊重边界的克制能表现欲望与在乎；不强制增加强占/支配情节。被争夺者的选择权应符合原有人设与事件，不让其沦为情节工具。
-- **价值主轴**：让对白与选择清晰呈现原有人物价值；允许冲突、犹疑和成长，不把复杂人物压成单一口号。
+- **Shared-frame contrast:** use co-present choices when attendance is plausible. Preserve parallel editing that creates simultaneity, secrecy, or distance; do not alter itineraries/knowledge/events merely to share a frame.
+- **Third-party contrast:** romantic rivals can illuminate values, but retain their own motives and established outcomes rather than assigning graceful surrender by default.
+- **Witnessed contrast:** existing care can deepen a relationship when perceived. Viewer-only solitary scenes may create irony/suspense; changing witnesses requires a knowledge-chain check.
+- **Restraint/agency:** appropriate restraint respecting boundaries can show desire/care. Do not force possessive domination into every relationship or erase the pursued character's choices.
+- **Values:** make existing values legible through speech/choice while preserving contradiction, hesitation, and growth rather than flattening complex characters into slogans.
 
-## 6. 修订与验证
+## 6. Revise and verify
 
-按“问题位置 → 预期收益 → 范围内最小修复”落实修改。仅建议而未获授权的动机、关系、重大事件或卡点重构单独列出，不混入正文。
+Implement `problem location → expected benefit → smallest in-scope repair`. Keep unauthorized motive, relationship, event, or hook redesign proposals separate from script text.
 
-检查实际改动带来的风险：
+Check facts/locks/revelation order/hooks; dangling references, props, or setups after cuts; knowledge/time/location/scene continuity/voices; event-supported emotion; and whether existing synopses/outlines/comparisons now disagree. Update authorized companion materials only, otherwise flag needed synchronization without creating unnecessary documents.
 
-1. 源故事事实、锁定项、揭示顺序与集尾承诺是否保持；删减后是否留下悬空指代、道具或未回收铺垫。
-2. 角色知情、时间地点、场间承接与人物声音是否一致；情绪变化是否由事件支撑。
-3. 已有梗概/集纲/对照表是否因改动失真。属于同项目且已授权维护时同步对应部分；非授权副本不擅改，交付时标出需同步项，不强制新建三套材料。
-4. 全本或大量删改核对集数、段落差异、关键锚点和完整性；短对白调整做相应上下文检查，不强制机器校验与 Word 生成。
-5. 保持客户已接受的格式；项目需变更日志时记录实质变更，大改前保留可恢复底稿。
+For large revisions check episode count, paragraph differences, anchors, and completeness; short dialogue changes need proportionate context review, not compulsory automated checks or Word output. Retain accepted formatting, record substantive changes when required, and keep a recoverable source before major edits.
 
-## 交付
+## Delivery
 
-沿用用户指定的语言、范围和文件格式。默认交付完成的修订稿，附精简变更摘要与尚需决策的关键项；用户要求仅成稿时只给成稿，并单独说明真正阻塞事项。审阅模式交付定位明确的发现及建议。无需每批请求继续，也不自动晋升副本、封板或发给客户。
+Follow requested language, scope, and file format. Default to the complete revised draft with a concise change summary and true unresolved decisions. For clean-draft requests, provide the draft and separately disclose only genuine blockers. Reviews provide locatable findings. Do not ask to continue each batch, promote a copy to source-of-truth status, lock a version, or send it to clients automatically.

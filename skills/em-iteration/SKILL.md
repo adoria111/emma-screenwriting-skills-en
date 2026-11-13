@@ -1,68 +1,73 @@
 ---
 name: em-iteration
-description: "艾玛短剧 · 选题迭代。分析客户Brief、对标作品、核心梗或已有项目，用人设、关系、视角、世界观与能力机制发展创新选题和持续剧情引擎。用于头脑风暴、定向创新与多方向选题开发；已有剧本精修不属于本技能。"
-metadata:
-  short-description: "从Brief或核心梗发展创新选题，保留情绪期待并建立持续剧情引擎"
+description: "Develop innovative short-drama concepts and sustainable story engines from a client brief, reference, premise, or existing project using character, relationship, viewpoint, world, and power mechanics. Use for brainstorming and targeted concept development, not line-level refinement."
 ---
 
-# em-iteration｜海外短剧选题迭代与创新引擎
+# Emma Screenwriting · Concept Iteration and Innovation
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-## 定位
-分析客户 Brief、对标作品、核心梗或已有项目，识别核心期待，调用八种迭代方法，产出具备剧情引擎的创新选题。不得把客户意图推测写成确定事实。
+## Purpose
 
-## 输入模式
-- A 客户 Brief：提取硬性要求、允许变化、禁区及待确认项。
-- B 对标作品：先拆人物关系、情绪机制、期待和卡点，再迭代；资料不足不编造剧情。
-- C 核心梗：由一句话设定发展人物关系、冲突与剧情引擎。
-- D 已有项目：默认最小必要修改，不擅自增加重大事件。
-- E 开放头脑风暴：默认输出稳健、创新、突破各两案。
-- F 定向迭代：优先执行用户指定的创新维度。
+Identify core audience anticipation, apply eight iteration methods, and produce concepts with sustainable story engines. Never present inferred client intent as confirmed fact.
 
-## 缺失信息
-区分 P0（决定正确性的关键信息）、P1（重要条件）、P2（补充条件）、P3（后期细节）。能分析先分析；P1 可明确假设；仅当 P0 无法推断且无法分支时提出一个关键问题。默认海外竖屏短剧、北美女性向、约60集、单集1.5–2分钟、中等创新；明确客户要求优先。
+## Input modes
 
-## 八种核心迭代方法
-1. **人设反差**：通过地位、能力、性格、公开身份与私人优势的错位产生持续对抗。
-2. **边缘身份**：通过被低估、误解或排斥的身份制造评价纠正和主动权变化。
-3. **关系结构**：改变谁依赖谁、保护谁、控制谁及谁无法离开谁。
-4. **性别与视角**：性转、BG/BL/GL 或叙事视角变化后重估情绪意义，不能只换称谓。
-5. **世界观融合**：用奇幻或其他规则实际改变人物限制、事件因果与视觉桥段。
-6. **超能力机制**：设计能力、限制、代价、知情者和信息差，避免万能解题。
-7. **情绪框架保留**：保留期待类型、情绪转折、剧情功能和节奏密度，而非逐场复制。
-8. **剧情引擎**：建立持续目标、阻力、升级代价、阶段兑现和新问题。
+- **A — Client brief:** extract mandatory requirements, permitted changes, exclusions, and unresolved items.
+- **B — Reference:** analyze relationships, emotional mechanism, audience anticipation, and hooks before iterating; do not invent missing source events.
+- **C — Core premise:** develop a one-line idea into relationships, conflict, and engine.
+- **D — Existing project:** default to the smallest necessary changes; do not add major events without authorization.
+- **E — Open brainstorming:** default to two conservative, two innovative, and two bold options.
+- **F — Targeted iteration:** prioritize the user's specified innovation dimension.
 
-## 五个客户案例：本体速查
-以下为客户选题样本，不是通用市场定律。完整拆解见 `references/client-iteration-cases.md`。
+## Missing information
 
-| 案例 | 客户要求与核心保留 | 主要迭代方法 | 开发检查点 |
+Separate P0 (essential to correctness), P1 (important), P2 (supplementary), and P3 (later detail). Analyze what can be analyzed. State P1 assumptions explicitly. Ask one key question only when a P0 gap cannot reasonably be inferred or handled through branches. Source defaults, only when no project requirement exists: international vertical drama, North American female audience, approximately 60 episodes of 1.5–2 minutes, moderate innovation. Explicit client requirements override these defaults. English language alone does not establish the target market.
+
+## Eight iteration methods
+
+1. **Character contrast:** use mismatches in status, capability, temperament, public identity, and private advantage to sustain confrontation.
+2. **Marginalized identity:** use underestimation, misunderstanding, or exclusion to drive reassessment and changed agency.
+3. **Relationship structure:** change who depends on, protects, controls, or cannot leave whom.
+4. **Gender and viewpoint:** reassess emotional meaning after gender reversal, heterosexual/M/M/F/F romance changes, or viewpoint shifts; do not merely swap forms of address.
+5. **World integration:** make fantasy or other rules change limitations, causality, and visual events.
+6. **Power mechanics:** design abilities, limits, costs, who knows, and knowledge asymmetry; avoid universal solutions.
+7. **Emotional framework preservation:** retain anticipation type, emotional turns, dramatic functions, and pacing density rather than copying scenes.
+8. **Story engine:** establish continuing goals, obstacles, escalating costs, phase payoffs, and new questions.
+
+## Five client examples
+
+These are supplied concept examples, not universal market laws. See [full cases](references/client-iteration-cases.md).
+
+| Case | Requirements and core to retain | Main methods | Development check |
 |---|---|---|---|
-| 1 BL 强取豪夺 | 强取豪夺/甜宠、身份枷锁下双向拉扯；融合世界观，攻受差异明显，拒绝传统弱受 | 01 人设反差＋03 关系结构＋05 世界观融合＋08 剧情引擎 | 受方是否有行动力与反制资源；强制关系如何持续变化 |
-| 2 胖女孩逆袭 | enemies to lovers、边缘女主、甜宠；可换身体或性格边缘处境并加奇幻 | 02 边缘身份＋03 关系结构＋05 世界观融合 | 恋爱吸引是否只依赖外貌改变；敌变爱转折是否可信 |
-| 3 寡言少爷×保镖 | 保镖/保姆与寡言或残疾少爷、轻喜；可做 BL | 01 人设反差＋03 关系结构＋04 性别与视角 | 照顾与被照顾关系是否互相改变；不要混同残疾、自闭与寡言 |
-| 4 隐退战神追悔 | 隐藏强者、攀高枝伴侣、真相揭露、追悔；可性转，参考原作节奏 | 04 性别与视角＋07 情绪框架保留 | 性转后情绪意义是否成立；保留节奏功能而非复制情节 |
-| 5 萌宝心声 | 萌宝/听心声/种田；可融恋爱、龙族等，保留超能力萌宝方向 | 06 超能力机制＋05 世界观融合＋08 剧情引擎 | 能力是否有边界；能否持续制造不同的信息差与关系变化 |
+| M/M possessive romance | Coercive pursuit/tender devotion, mutual push-pull under status constraints; integrated world, distinct leads, no conventionally passive pursued lead | Character contrast, relationship structure, world integration, engine | Does the pursued lead have agency/counter-leverage? How does coercion evolve? |
+| Plus-size heroine's comeback | Enemies to lovers, marginalized heroine, tender romance; physical/social outsider position may change and fantasy may be added | Marginalized identity, relationship structure, world integration | Is attraction reduced to a makeover? Is the emotional turn credible? |
+| Reserved heir and bodyguard | Bodyguard/caregiver with reserved or disabled heir, light comedy; M/M possible | Character contrast, relationship structure, gender/viewpoint | Do care and dependence change both people? Do not conflate disability, autism, and quietness. |
+| Retired warrior and regretful partner | Hidden strength, status-seeking partner, truth revealed, regret; gender reversal possible, reference pacing retained | Gender/viewpoint, emotional framework | Does the reversed version retain emotional logic without copying events? |
+| Child's inner voice | Endearing child, mind-reading, rural livelihood; romance/dragon fantasy possible while retaining child-power premise | Power mechanics, world integration, engine | Do limits sustain varied knowledge gaps and relationship changes? |
 
-## 工作流程
-1. 识别输入模式和信息缺口，提取客户明确要求与合理推测。
-2. 提炼不可丢失的核心情绪、关系、观众期待和卡点功能。
-3. 从八种方法中选 2–4 种，说明每种改变什么、保留什么。
-4. 默认提出 6 个候选方向：稳健2、创新2、突破2；用户指定数量时遵从。
-5. 每案写：一句话核心梗、人物反差、关系结构、剧情引擎、3个具体桥段、3阶段升级、风险。
-6. 检验前十集期待、中段变化、后段升级、情绪兑现、制作可行性。
-7. 标明明确事实、分析假设与待验证信息；不得虚构市场表现或原作剧情。
+## Workflow
 
-## 质量底线
-禁止标签堆砌、世界观换皮、机械性转、单一误会重复、万能超能力、照搬原作独特桥段。创新必须改变剧情因果；若删掉新设定故事不变，则该创新不足。
+1. Identify mode/gaps and separate explicit requirements from plausible inferences.
+2. Extract indispensable emotions, relationships, audience desires, and hook functions.
+3. Select 2–4 methods; state what each changes and preserves.
+4. Default to six candidates (two conservative, two innovative, two bold), unless another count is requested.
+5. For each: logline, character contrast, relationship structure, engine, three concrete scenes, three-stage escalation, and risks.
+6. Check anticipation over the first ten episodes, middle developments, later escalation, emotional payoff, and production feasibility.
+7. Label facts, assumptions, and unverified claims. Never invent market performance or reference plots.
+
+## Quality floor
+
+Reject tag stacking, decorative world swaps, mechanical gender reversal, one repeated misunderstanding, unlimited powers, and copied distinctive scenes. Innovation must change causality. If removing the new premise leaves the story unchanged, it is insufficient.

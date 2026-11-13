@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
   "date": "2026-10-06",
-  "edition": "public-adapted",
+  "edition": "public-adapted-english",
   "modules": [
     {
       "slug": "em-story-architect",
-      "title": "故事架构师",
+      "title": "Story Architect",
       "legacy": "02-story-architect",
       "sections": 6,
       "files": [
@@ -19,7 +19,7 @@
     },
     {
       "slug": "em-chief-writer",
-      "title": "主编剧",
+      "title": "Chief Writer",
       "legacy": "03-chief-writer",
       "sections": 14,
       "files": [
@@ -111,12 +111,19 @@
     }
   ],
   "changes": [
-    "将旧角色封装成两个自包含Skill，合并必要参考正文",
-    "按用户现行授权习惯调整固定一卡、批次和人工断点",
-    "移除历史市场价格、付款建议及未核实的厂商能力参数",
-    "替换长篇项目格式示例，泛化案例名称，去除私人依赖",
-    "补齐角色开发源文件末尾未完成段落，并在正文说明",
-    "统一逐场人物行、同人连续发言与必要情绪括注",
-    "保留类型方法，数字和强度规则改作按题材使用的参考"
+    "Package the historical roles as two self-contained skills with necessary reference text.",
+    "Align opening-block, batch, and human review stops with the user’s current authorization.",
+    "Remove historical market prices, payment advice, and unverified vendor capability parameters.",
+    "Replace long private-project format examples, generalize case names, and remove private dependencies.",
+    "Complete the unfinished ending of the character-development source and identify that addition in the text.",
+    "Standardize per-scene participant lines, consecutive speech, and necessary playable parentheticals.",
+    "Preserve genre methods while treating numerical and intensity patterns as context-dependent references."
+  ],
+  "english_edition_date": "2026-11-13",
+  "english_edition_notes": [
+    "Translate all public-edition chapters and interfaces into English; keep original skill identifiers.",
+    "Render examples and tables for English readers; distinguish historical Chinese character counts from English word counts.",
+    "Historical source paths and hashes below describe unbundled originals, not current translated files.",
+    "The legacy files lists identify source chapters now consolidated into each module’s references/writing-rules.md; they are not separate bundled file paths."
   ]
 }

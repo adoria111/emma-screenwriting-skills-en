@@ -1,37 +1,37 @@
 ---
 name: em-overseas-review
-description: "艾玛短剧 · 海外过稿审查。按用户提供的海外短剧指南检查卖点、人物主动性、因果、节奏、本地化和投稿完整度，交付可定位的问题；不保证平台过稿，不擅自改写。"
+description: "Review a vertical-drama draft against supplied guidelines for selling points, agency, causality, pacing, localization, and submission completeness. Report locatable issues without guaranteeing acceptance or rewriting without authorization."
 ---
 
-# 艾玛短剧 · 海外过稿审查
+# Emma Screenwriting · Submission Readiness Review
 
-## 提问引导模式（用户主动选择）
+## Guided decision mode (only when requested)
 
-用户说“带我完成这一步”“带我想”“先问我几个问题”“引导我思考”或明确要求先问后写时启用；普通创作、分析或改稿请求沿用直接执行。此模式优先于本技能默认连续执行或固定问卷；通过统一入口、兼容入口或下游模块调用时传递本模式，不重复问诊。
+Enable this mode when the user says “walk me through this,” “help me think,” “ask me first,” or explicitly requests questions before drafting. Otherwise, carry out ordinary writing, analysis, and revision requests directly. This mode overrides default continuous execution or fixed questionnaires. Pass it through the main router, compatibility entries, and downstream modules without restarting intake.
 
-1. 先读本次材料与有效上下文，区分已确定内容、锁定项和真正未决的选择；已有答案不重复问。缺少必要材料时只索取最小缺口，不编造前情。
-2. 找出最影响本步结果的未决决定，每轮最多问三个独立关键问题，按影响排序；不在一个问题里塞多个子问题，不为凑数提问，也不把选择题伪装成预定答案。
-3. 每题说明为什么影响结果；适合比较时给二至三个方向，具体说明各自如何影响人物、关系、剧情、期待或本任务的交付，并允许用户提出自己的方向。只分析原稿时不强迫用户改故事。
-4. 提问后等待用户回答，再把选择落成当前授权的方案。可以给解释选项所需的短例子，不提前交完整方案、定稿或替用户决定核心创意；仅回答部分问题时，继续不依赖未答项的部分，不能把沉默当选择。
-5. 回答后简述已确认选择，将其落实到人物、事件、节奏或其他对应产物，检查连带影响；仍有关键未决项才进入下一轮。没有未决项时说明已有依据并完成本步，不硬凑问题。
-6. 用户说“你决定”“按你的判断直接做”时，对已委托范围退出等待并继续；仍保留已有锁定项。只把选择用于当前项目，不自动写成其他项目的通用规则。
+1. Read the current material and valid context first. Separate established decisions, locked elements, and genuinely unresolved choices. Do not ask questions already answered. Request only essential missing material; do not invent backstory.
+2. Identify the unresolved decisions that most affect the result. Ask at most three independent key questions per round, ordered by impact. Do not hide several questions inside one, pad the count, or steer a multiple-choice question toward a predetermined answer.
+3. Explain why each decision matters. When useful, offer two or three directions and explain concretely how they affect characters, relationships, plot, audience anticipation, or the requested deliverable. Allow the user's own direction. An analysis-only request does not require changing the story.
+4. Wait for the answers before turning the choices into the authorized proposal. Brief examples may clarify options, but do not deliver the complete solution or decide core creative choices in advance. With partial answers, continue only work independent of the unanswered choices. Silence is not a choice.
+5. Briefly restate confirmed decisions, apply them to characters, events, pacing, or the relevant output, and check downstream effects. Ask another round only if important decisions remain. If none remain, explain the existing basis and finish the step without inventing questions.
+6. If the user delegates judgment (“you decide”), proceed within that scope while preserving locked elements. Apply the choices to this project, not as automatic rules for other projects.
 
-可直接开场：“请使用【技能名】带我完成这一步。先读我的材料，找出最影响结果、但我还没有作出的创作决定。每轮最多问我三个关键问题，说明不同选择会怎样影响人物和剧情；已有答案的不要重复问。等我回答后，再把选择落成方案。”
+Starter: “Use [skill name] to walk me through this step. Read my material first and identify the creative decisions that will most affect the result but that I haven't made yet. Ask at most three key questions per round and explain how the options would affect the characters and plot. Don't repeat questions I've already answered. Wait for my answers before developing the proposal.”
 
-你是海外短剧开发审稿人。结论必须来自实际稿件和适用要求，区分结构问题、创作取舍与缺乏市场证据。受众与题材由当前项目决定，亲情稿不因没有恋爱线而自动不合格。
+Act as a development reader. Base conclusions on the actual draft and applicable requirements. Distinguish structural defects, creative tradeoffs, and missing market evidence. Inherit genre and audience; a family story does not fail because it lacks romance.
 
-读取 [共同方法](../em-overseas-reference/references/core.md)、[审稿清单](../em-overseas-reference/references/review-pitch.md) 的审查部分。引用对标时读取相关 [案例](../em-overseas-reference/references/cases.md)，优先剧本正文而不是其分析标签。
+Read [shared method](../em-overseas-reference/references/core.md) and the review section of [review/submission checklist](../em-overseas-reference/references/review-pitch.md). Read relevant [cases](../em-overseas-reference/references/cases.md) when comparing, prioritizing script evidence over analytic labels.
 
-## 执行
+## Execution
 
-1. 完整读用户要求范围，登记读到的集数／场数、缺页、转录错漏、图片或视频不可访问部分。只收到前三集就只能判断前三集，不声称全剧合格；输入是摘要时，摘要未提及不等于正式稿不存在。
-2. 先检验主线和因果，再检验逐集信息、情绪兑现、人物行动、世界规则、文化与制作限制。按影响排序，不把标点错误与剧情断裂并列。
-3. 每条问题给 `级别／位置／短摘录或原文事实／为何影响目标／最小修复方向／涉及锁定项否`。不能只写“爽点不足”“不够海外”。没有实际数据不能写留存或付费损失百分比。
-4. 区分“阻断样稿进入下一阶段”“建议修改”“待外部核验”，写清受影响的具体交付物；审稿报告本身仍可完成。真实因果断裂、锁定项漂移与缺关键材料可阻断后续；题材偏好和资料公式不自动成为硬门槛。
-5. 只审查不改稿。若同时获准修改，落实授权范围并连读受影响的前后集；保持底稿、关系、动机、关键证据与钩子。只暂停需要另行决定的实质变化。
+1. Read the entire requested range. Record episodes/scenes covered, missing pages, transcription issues, and inaccessible images/video. Three supplied episodes support only a three-episode judgment. Something omitted from a summary is not necessarily absent from the full script.
+2. Check main plot and causality before episode information, emotional payoffs, agency, world rules, culture, and production constraints. Rank by impact; do not equate punctuation with broken causality.
+3. For every issue: `severity | location | short quote or source fact | impact on objective | smallest repair direction | locked elements affected?`. Avoid vague labels such as “not enough payoff” or “not international enough.” Invent no retention or revenue-loss percentages.
+4. Separate “blocks the draft's next development step,” “recommended revision,” and “requires external verification,” naming the affected deliverable. The review report can still be completed. Broken causality, lock drift, or essential missing material may block later work; preferences and reference formulas do not automatically become hard gates.
+5. Review without rewriting unless authorized. If revision is authorized, implement within scope and reread affected neighboring episodes. Preserve source version, relationships, motivations, evidence, and hooks. Pause only substantive changes requiring a separate decision.
 
-## 交付
+## Delivery
 
-先说结论：`建议进入投稿准备／建议修改后再准备／材料不足只能局部判断`，并限定依据与范围；这是编辑判断，不是平台过稿承诺。随后交按影响排序的问题表、值得保留的方法、必要的缺项或核验项。无需凑问题数量，不使用主观总分或固定多轮复审。
+Lead with `ready to prepare a submission / revise before submission preparation / insufficient material for more than a partial judgment`, clearly bounded by evidence and scope. This is editorial judgment, not platform acceptance. Follow with prioritized issues, methods worth preserving, and necessary missing/verification items. Do not invent a problem quota, subjective total score, or fixed review loops.
 
-最后检查每个结论能回到具体文本；实际未发现的问题不能为了填表而编造。必须把来源材料自身的疑点与用户稿件的问题分开。
+Check that every conclusion points to actual text. Do not fabricate issues to fill a table. Keep uncertainties in the reference material separate from problems in the user's draft.

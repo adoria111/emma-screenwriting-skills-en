@@ -1,34 +1,34 @@
-# 逻辑链方法校准
+# Logic-Chain Method Calibration
 
-本文件将 Emma 已有逻辑链方法整理为公开参考，不包含课堂逐字稿或具体作品摘录。下面的原则用于检查分析过程，不作为任何待分析作品的剧情证据。
+Public reference distilled from Emma's existing method. No classroom transcript or specific-work excerpt is included. These principles check analysis; they are not evidence about the current story.
 
-## 从阶段回报倒推
+## Work backward from the payoff
 
-1. 先确认本卡实际停点、已经发生的回报以及尚未兑现的承诺。不要把后续获胜、复合或相认提前算入本卡。
-2. 写清角色想得到什么、观众可能盼什么、本卡实际兑现什么。观众期待属于结构判断，不冒充真实观众数据。
-3. 找出成立该终点的关键前提与促成因素。每项条件都要追到具体动机、处境、机会、行动和来源场次。
-4. 多项条件可以并行汇合。拥有资源、获得信息、形成行动意愿不必互为因果；不能为了画一条箭头把它们伪连起来。
-5. 找不到铺垫时保留缺口，不用新增事件或人物内心解释替原稿补证据。
+1. Confirm actual phase stop, occurred payoff, and pending promises. Do not count later victory, reunion, or recognition early.
+2. Separate character objective, inferred viewer desire, and actual payoff. Audience anticipation is structural judgment, not measured audience data.
+3. Identify prerequisites and contributing factors. Trace each to motive, situation, opportunity, action, and source scene.
+4. Allow parallel convergence. Resources, knowledge, and willingness need not cause one another; do not force a false arrow chain.
+5. Keep missing setup as a gap; do not invent events or inner explanations as evidence.
 
-## 人物任务与情感变化
+## Tasks and emotional change
 
-- 先看处境和阻力使人物意识到什么任务，再看其为何采用某种办法。
-- 同时追踪重要关系双方的认知、需要和选择，区分吸引、信任、依赖、责任、爱意与控制。
-- 角色盼望的结果可以和观众盼望的结果不同。分析这种背离怎样推动后续选择，不强行统一。
-- 任务升级要看新方法、新资源、新代价和情感承诺，不只看坏事次数或金额增加。
-- 前史揭露改变当下选择时，标清过去发生、角色何时知道、观众何时知道，避免知识提前。
+- Identify what situation/opposition makes the character recognize a task, then why they choose a method.
+- Track both parties' knowledge, needs, and choices. Distinguish attraction, trust, dependence, duty, love, and control.
+- Character and viewer wishes may diverge. Explain the resulting drive without forcing agreement.
+- Escalation requires changed methods, resources, costs, or promises, not merely more bad events or larger sums.
+- When past revelations alter current choices, separate event time, character knowledge time, and viewer knowledge time.
 
-## 场、集与卡的关系
+## Scene, episode, phase
 
-- 逐场记录用于证明发生了什么；逐集集纲提炼本集任务；分卡说明阶段目标与状态怎样变化。三层不能互相代替。
-- 有效场次可以改变信息、处境、资源、风险、关系或下一步选择，也可以加强情感积累。
-- 支线可以作为持续施压或支持主线的功能线，不要求每条支线都独立构成完整故事。
-- 一卡遵从已确认的边界和正文付费标注。后续用约 7—10 集作为观察窗口，按实际重大转折划分，不机械切成等长阶段。
-- 集尾停点与下一集兑现分开记录；跨卡解释同一个回报单元时，不重复计算集／场覆盖。
-- 删除检验同时考虑因果损失和情感损失。事件还能接上，不足以证明某场戏无效；分析不自动授权删稿。
+- Scene records prove occurrence; episode summaries state the task; phases explain changed goals/state. None replaces the others.
+- Effective scenes may alter information, circumstances, resources, risk, relationships, choices, or emotional buildup.
+- Supporting threads may sustain pressure/support without independently forming a complete story.
+- Phase 1 follows confirmed boundaries and explicit source paywall labels. Later phases use roughly 7–10-episode observation windows and actual major turns, not equal fixed cuts.
+- Record ending stop and later payoff separately. Do not double-count episodes/scenes when explaining a payoff across phases.
+- Deletion tests include causal and emotional loss. Event continuity alone does not prove a scene useless. Analysis does not authorize deletion.
 
-## 证据与表达
+## Evidence and display
 
-口述、既有拆解和人物小传只作辅助材料。具体人物、动作、集号与实施者以本次正文为准；不把口误固化为规则，也不借辅助报告声称完整读过正文。
+Oral accounts, prior breakdowns, and profiles are auxiliary. Current script text governs people, actions, episode IDs, and actors. Do not preserve verbal slips as rules or imply full reading from an auxiliary report.
 
-首层呈现阶段回报与状态进度；第二层解释必要条件如何汇合；第三层保留逐集集纲和逐场证据。简洁展示不能减少阅读覆盖。使用随附模板，不依赖私人示例文件。
+Layer 1 shows phase payoffs/state progression. Layer 2 shows converging prerequisites. Layer 3 retains episode summaries and scene evidence. Compact display does not reduce reading coverage. Use the bundled template, not private example files.

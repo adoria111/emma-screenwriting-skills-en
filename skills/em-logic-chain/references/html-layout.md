@@ -1,38 +1,38 @@
-# HTML 展示规范
+# HTML Layout
 
-默认生成单个可离线打开的 HTML，内嵌样式、数据和必要脚本，不依赖 CDN、在线字体或服务。使用语义 HTML 和可键盘操作的按钮/展开控件；优先清晰呈现故事。
+Create one offline HTML file with embedded styles, data, and needed scripts. No CDNs, online fonts, or services. Use semantic HTML and keyboard-operable buttons/expansion controls; prioritize story clarity.
 
-## 默认呈现
+## Default appearance
 
-默认复用 [进度条模板](../assets/progress-template.html)，按 [填充说明](template-data.md)生成完成文件。模板独立可用，不依赖用户电脑上的旧示例。
+Reuse [progress-template.html](../assets/progress-template.html) with [data instructions](template-data.md). It is self-contained and needs no old local example.
 
-- 剧名与简短主驱动后，紧接细横向分段进度条：已过段浅蓝、当前段深蓝、其余淡灰蓝。每段只放集数、短标题、状态差。
-- 同时显示一张选中卡详情，含上一段／下一段。状态差之后，以淡蓝横条突出“这一卡的回报”，角色目标与观看期待简短并列。
-- 条件链桌面横向分行：左边条件名称，右边通常3—4个短动作节点，以箭头连接；行下一句说明机制。通常三条并行链即可，必要时再增加或拆进细节。
-- 条件链之后接一小段“感情为什么改变”，再用浅绿区域解释下一卡承接；终卡解释收束。
-- 完整因果、双方情感细目、逐集集纲、场次证据与原稿异常放进折叠层。首层不铺满场号、行号、证据标签、条件分类与大段核验说明。
+- After title and brief main driver, show a thin horizontal segmented bar: past light blue, current dark blue, future pale gray-blue. Each segment has only range, short title, and state change.
+- Show one selected phase with Previous/Next. Highlight its payoff in a pale-blue strip after the state change. Briefly pair character goal and viewer anticipation.
+- On desktop, use horizontal condition rows: name at left, usually 3–4 short action nodes joined by arrows at right; one mechanism sentence below. Roughly three parallel chains usually suffice; add more only as needed or move detail below.
+- Follow with a short emotional-change explanation and pale-green next-phase bridge; final phase explains resolution.
+- Collapse complete causal argument, both parties' emotion details, episode summaries, scene evidence, and source anomalies. Do not cover the first view in scene IDs, labels, condition taxonomy, or long verification notes.
 
-全剧、局部放大、断点检查共用这一外观。局部进度可显示大循环内的“步骤”；诊断在相应短节点上用浅棕底与编号提示，问题正文和建议折叠，不把主页面改成连续的大问题卡。
+Whole-series, close-up, and gap-check reports share this appearance. Local progress may show steps inside a larger cycle. For a problem, use a pale-brown node with an issue ID; fold explanation/suggestion below rather than replacing the page with large problem cards.
 
-普通新剧测试不另创一套视觉布局；用户明确另定样式时从其要求。前后因果与证据仍完整保留，不能把界面简洁当成省读理由。
+Do not redesign the layout for each ordinary test. Follow an explicit user style request when given. Compact UI never justifies reduced evidence or reading coverage.
 
-## 三层阅读
+## Three reading levels
 
-1. **全剧一眼看懂**：剧名、一句话主驱动，以及一条横向阶段进度条。每一卡显示集数范围、阶段任务/状态的短标题。较多阶段在小屏可横向滚动，当前选择始终可见。这里的进度是故事阶段，不是工作完成度或情感百分比。
-2. **点击看本卡怎样成立**：先显示阶段回报和角色状态差；再按必要条件展开几条短链，最后汇合到同一结果。链节点用简短具体动作，连接写因果作用，必要时增加一句解释。主线、爱情/事业、反派、前史可以分行，并注明汇入节点，避免塞进一条冗长箭头。
-3. **按需核验**：逐集核心任务、集纲、关键信息、场次证据和缺口折叠展示。证据存在时在展开层保留可点击的位置标记；材料仅为集纲/拆解时注明二手材料，不能生成“全文已读”的场次表。完整正文分析必须有真实逐场覆盖记录，不能拿简洁 UI 当作省读理由。
+1. **Series at a glance:** title, one-line driver, horizontal phase bar with ranges and short goal/state labels. On small screens, allow bar scrolling and keep current selection visible. This is story progression, not work completion or emotional percentage.
+2. **Why the phase works:** payoff/state change, short prerequisite chains converging on the result, concrete action nodes, causal links, brief explanations. Main, relationship/career, opposition, and backstory paths may use separate rows with convergence labels.
+3. **Evidence on demand:** episode task, summary, key information, scene evidence, and gaps. Preserve clickable locations where available. Label outlines/prior breakdowns as secondary material; do not fabricate a “full script read” scene table. Complete script analysis requires genuine scene coverage.
 
-卡间连接用短句点明“完成了什么 → 还留下什么/引来什么 → 所以下一卡要做什么”。不能只有五块色条而没有逻辑关系。
+Transitions state what was completed → what remains/was triggered → why the next phase follows. Colored bars alone are not a causal account.
 
-## 显示约束
+## Display constraints
 
-- 默认每个节点一句短语，长解释放展开层；不把桌面宽表原样缩到手机。小屏允许行内节点纵向排，整页不横向溢出。
-- 阶段/线路有清楚文字标签，颜色只作辅助；不虚构“爱意80%”等测量。
-- 一卡显示正文付费标注边界，后续卡标明分析分段及转折依据；7—10 集是观察窗口，不是等长进度要求。
-- 明确实际停点与后续兑现集；节点标“待兑现”时不显示成已发生。
-- 观众期待、结构作用和条件必要性属于分析判断。来源与未核实项可集中在简短的资料说明中，不反复遮挡主体。
-- 卡数、线路数依实际故事，允许某阶段没有新信息或没有独立反派线。时长相同或颜色相同不表示情感变化量相同。
+- Short phrases per node; long explanation below. Do not shrink desktop-wide tables to phone width. Stack nodes within rows on small screens without page-wide horizontal overflow.
+- Label phases/threads in text, with color only supplementary. No invented “80% love” metrics.
+- Identify Phase 1's source paywall label and later analytical boundaries/turn evidence. A 7–10-episode observation window does not imply equal-length progress segments.
+- Separate actual stops and later payoff episodes. Pending nodes must not look completed.
+- Audience desire, structural role, and prerequisite necessity are interpretations. Keep source/uncertainty notes concise and unobtrusive.
+- Use actual phase/thread counts. A phase may lack new information or an independent villain thread. Equal duration/color does not imply equal emotional change.
 
-## 交付检查
+## Delivery check
 
-打开本地页面，实际切换阶段、展开集纲/证据；检查窄屏、键盘焦点、长标题与正文溢出。浏览器不可用时声明视觉未验证，并完成可做的结构检查。打印样式应包含所有阶段，或提供明确的“展开全部”模式；禁用脚本时提供可阅读的静态内容。用户只要求本地文件，不自动发布网站。
+Open locally, switch phases, expand summaries/evidence, and check narrow screens, focus, long titles, and overflow. If browser testing is unavailable, say visual validation was not performed and complete possible structural checks. Print/all-expanded mode must expose every phase. Supply readable no-script content. A local-file request does not authorize website publication.

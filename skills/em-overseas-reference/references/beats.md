@@ -1,41 +1,21 @@
-# 分集、期待与兑现
+# Episode rhythm and hook response
 
-## 先搭骨架
+Build the chain: **series goal → phase condition → episode action → obstacle or change → payoff → next question**.
 
-来自 G04、G07 的提炼：全剧大目标 → 阶段必须取得的东西 → 本集具体行动 → 行动遇阻或改变 → 本集回报 → 新未决问题。阶段末应改变条件，例如找到亲人线索、建立契约、获得证据、公开身份；不是只加大吵架音量。
+For each episode record the opening state, immediate goal, chosen action, new information, ending state, payoff, pending promise, and the next response. Mark the response as **observed in supplied material**, **planned**, or **unknown**.
 
-用下面一行检验每集：
+| Hook family | What should follow | Failure to avoid |
+| --- | --- | --- |
+| Action at a threshold | Show what the action causes | Replaying the buildup without advancing |
+| Identity or evidence | Interpret the evidence at the permitted reveal level | Treating known information as a mystery or revealing too early |
+| Crisis | A specific response and cost | An unexplained rescue or a danger quietly disappearing |
+| Relationship choice | A choice, reaction, and changed relationship | Only restating attraction or conflict |
+| Power and price | Demonstrate the consequence and limitation | A new unlimited ability that removes the problem |
 
-`集号｜开始状态｜主角本集想要｜行动与阻力｜新证据/筹码及谁知情｜结束状态｜观众得到的回报｜集尾具体未决事件｜计划兑现集/实际兑现位置`
+Pay smaller promises while the large question remains. A continuing mystery is not permission to withhold every result.
 
-已有稿件只记录真实内容；原创集纲可以设计后续，标为计划，不假装实际兑现。单集末尾超出提供范围时写“后续未提供，无法核验”。
+G04 includes a historical sixty-second sketch: 0–3 attention, 3–15 conflict, 15–30 change, 30–50 payoff, 50–60 a continuation question. It is not a measured timing rule. G05's possible 30–60-second backstory montage serves another purpose; do not force both examples into one opening or assume either fits the project.
 
-## 五类可用钩子
+C02's commentary says “every 30 minutes.” This may be a transcription or editorial error. Flag it; do not silently convert it into a sourced “every 30 seconds” rule.
 
-| 类型 | 具体形式 | 下集至少要回应 | 失效方式 |
-| --- | --- | --- | --- |
-| 行动临界点 | 证据将被公开、门将打开、选择即将生效 | 行动是否发生以及后果 | 下集完全换事／用旁枝拖延 |
-| 身份或证据 | 观众发现某人知道不该知道的信息 | 来源、验证或新的质疑 | 反复差一秒认亲，没有新条件 |
-| 危机 | 主角既有策略被破坏 | 如何应对、付什么代价 | 无铺垫的万能救援 |
-| 关系选择 | 为谁站队、是否承认、是否接受条件 | 选择结果及关系变化 | 下一集毫无原因复位 |
-| 能力与代价 | 觉醒、失效、规则反噬 | 能力边界、旁人反应与新难题 | 特效结束后故事不变 |
-
-这些分类是本包编辑归纳。对应案例：C03戒指落地是证据；C01爱上人类导致受伤是代价；C02觉醒被远方察觉是能力产生新风险。
-
-## 小兑现与大悬念并行
-
-认亲悬念没有立刻解决时，仍可让亲子建立一次真实合作、排除一种错误身份、拿到一条可靠证据。复仇未完成时先夺回一项资源。爱情未确立时先改变一次信任或公开站队。主角应因这些收获获得下一阶段行动的条件。
-
-压迫戏逐场检查：此次新增什么损失或信息？主角试过什么？失败是否改变策略？如果答案都与上一场相同，优先合并或改策略，不继续叠加伤害。对已有锁定稿先指出，不擅改关键事件。
-
-## 秒数是预设，不是证据
-
-G04给过60秒示例：0—3秒吸引、3—15秒冲突、15—30秒变化、30—50秒情绪回报、50—60秒新问题。仅当项目适合一分钟单集时可作草图；不要求每阶段精确踩点，更不能把全稿未计时的动作标为实测秒数。G05的30—60秒前史蒙太奇同样是可选工具，不与三秒开场同时强塞。
-
-估时区分对白朗读、沉默反应、动作完成、场景转换和特效展示；已有成片以实际时间为准。C02分析中“每30分钟小冲击”与其短剧语境不合，保留为疑似错误，不擅改数字再引用。
-
-## 候选付费点
-
-`候选集/位置｜此前积累的期待｜停在何种临界事件｜付费后具体回报｜预计兑现位置｜尚未核验的平台条件`
-
-付费前需要建立可信期待，不能通过剪掉因果制造困惑；付费后兑现至少一项关键承诺，再自然打开更大的问题。情节分卡、集尾钩子和真实平台付费点是不同概念。样稿不提供数据时不推断首付费集、完播率、收入或ROI。
+For a **candidate paywall**, record the preceding investment, immediate unresolved consequence, next episode's actual or planned response, and evidence gaps. Distinguish a proposed cutoff from a verified platform paywall. Do not infer conversion, revenue, or retention from a script alone.

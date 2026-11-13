@@ -1,4 +1,4 @@
 interface:
-  display_name: "艾玛短剧 · 海外过稿审查"
-  short_description: "依据文本检查海外短剧主线、因果、节奏、本地化和投稿材料完整性"
-  default_prompt: "请用 $em-overseas-review 审查这份海外短剧稿，只提问题不改稿。"
+  display_name: "Emma · Submission Readiness Review"
+  short_description: "Review a submission against the supplied brief"
+  default_prompt: "Use $em-overseas-review to review my script against the supplied submission guide and locate the most consequential issues."

@@ -1,47 +1,50 @@
-# 艾玛短剧 · 故事架构师与主编剧（写作规则库公开版）
+# Emma Screenwriting — Story Architect and Chief Writer
 
-这两个角色来自历史调用链 `ai-drama-showrunner → 02-story-architect → 03-chief-writer → 对应写作规则库`。现在整理成可独立安装的两个Skill；每个都附带完整的公开版规则正文，不需要旧版总控或私人目录。
+Two independently usable modules, adapted from the historical chain `ai-drama-showrunner → 02-story-architect → 03-chief-writer → writing references`. Each includes its complete public-edition method library in English; neither requires the historical coordinator or a private directory.
 
-| 历史角色 | 公开安装标识 | 交付与规则 |
+| Historical role | Public entry | Deliverable and references |
 | --- | --- | --- |
-| 02-story-architect | [em-story-architect](skills/em-story-architect/SKILL.md) | 大纲、人物、集纲；6个规则章节 |
-| 03-chief-writer | [em-chief-writer](skills/em-chief-writer/SKILL.md) | 指定集数正文；14个规则章节，含真人/AI/漫剧适配 |
+| `02-story-architect` | [em-story-architect](skills/em-story-architect/SKILL.md) | Core outline, characters, episode outline; six method chapters |
+| `03-chief-writer` | [em-chief-writer](skills/em-chief-writer/SKILL.md) | Complete scenes for the requested episodes; fourteen chapters covering live action, AI photorealistic, and animated work |
 
-它们是历史角色的公开整理版，不等于现行完整版 `em-ai-story`、`em-ai-script` 的原样导出。原有Beta六技能仍位于仓库根目录的 `skills/`，两套可以并存。
+These are public adaptations of the historical roles, not verbatim exports of private `em-ai-story` or `em-ai-script` versions. They can coexist with the regular modules under the repository's root `skills/` directory.
 
-## 下载
+## Get the complete files
 
-- [两个Skill及完整规则库合包](https://github.com/adoria111/emma-screenwriting-skills/releases/download/writing-rules-v1.0.0/emma-story-writing-v1.0.0.zip)
-- [故事架构师单独下载](https://github.com/adoria111/emma-screenwriting-skills/releases/download/writing-rules-v1.0.0/em-story-architect-v1.0.0.zip)
-- [主编剧单独下载](https://github.com/adoria111/emma-screenwriting-skills/releases/download/writing-rules-v1.0.0/em-chief-writer-v1.0.0.zip)
-- [故事架构规则正文](skills/em-story-architect/references/writing-rules.md)
-- [主编剧规则正文](skills/em-chief-writer/references/writing-rules.md)
+[Download the English repository ZIP](https://github.com/adoria111/emma-screenwriting-skills-en/archive/refs/heads/main.zip), then use the two complete directories under `advanced/story-writing/skills/`.
 
-## 下载与安装提示词
+- [Story Architect writing library](skills/em-story-architect/references/writing-rules.md)
+- [Chief Writer writing library](skills/em-chief-writer/references/writing-rules.md)
+
+Do not use historical Chinese-edition release archives expecting English files.
+
+## Installation instruction
 
 ```text
-请帮我下载并安装「艾玛短剧·故事架构师与主编剧」公开版。
-仓库：https://github.com/adoria111/emma-screenwriting-skills
-固定版本：writing-rules-v1.0.0
-安装来源：advanced/story-writing/skills/ 下的 em-story-architect 和 em-chief-writer 两个目录。
-请完整保留每个目录里的 SKILL.md、agents/ 和 references/，按当前工具支持的项目级Skills位置安装；已有同名目录先比较并备份，不直接覆盖，不修改其他技能。
-安装后核对两个SKILL及其写作规则文件都存在、引用可读取，并列出用途、调用方法和实际安装路径。目录已复制与宿主已加载要分别说明；需要刷新或重启时如实告诉我，不要把未验证的加载状态说成成功。
+Install the English public editions of em-story-architect and em-chief-writer from:
+https://github.com/adoria111/emma-screenwriting-skills-en
+Source directories: advanced/story-writing/skills/em-story-architect and em-chief-writer.
+Preserve SKILL.md, agents/, references/, and all bundled files.
+Verify the host's supported skill location; compare and back up any existing same-name directory.
+Do not replace unrelated skills.
+Read both SKILL.md files and their writing-rules.md references after copying.
+Report actual paths, file verification, and host loading separately.
 ```
 
-## 普通聊天怎么用
+## Using the methods in ordinary chat
 
-不安装也可以：打开上方规则正文，连同对应SKILL的方法一起粘贴到普通聊天，再附材料和任务。只输入技能名称不代表模型读过方法。
+Provide the relevant SKILL.md and writing library, along with your material and request. A name alone does not make an assistant read a method.
 
-故事架构示例：使用故事架构师，把以下想法整理成我指定集数的核心大纲、人物档案和分集纲；保留这些设定与结局，不写正文。
+**Story Architect:** “Turn this idea into a core outline, character profiles, and an outline for the specified number of episodes. Preserve these settings and the ending. Do not write scenes yet.”
 
-主编剧示例：使用主编剧，根据我给出的第1—5集集纲写出完整中文分场正文；保留已锁定人物关系、信息揭晓顺序和每集钩子。
+**Chief Writer:** “Write complete English scenes from my approved outlines for Episodes 1–5. Preserve the relationships, reveal order, and each episode's ending. Use the supplied production format.”
 
-## 内容与版本边界
+## Edition boundaries
 
-公开版保留卡点、情绪升级、节奏、冲突、人物、台词、格式、信息边界和可见行动等专业方法。将旧版固定审批、模型能力断言、私人项目路径与部分示例改为可移植规则；逐项类型见[来源与公开版说明](来源与公开版说明.json)。角色开发原文件末段不完整，公开版补了明确的视觉锚点表。
+The public library preserves methods for opening blocks, emotional escalation, pacing, conflict, characters, dialogue, format, knowledge boundaries, and visible choices. Historical fixed approval stops, private paths, and unverified capability assertions were made portable. An unfinished historical character-development passage was completed with an explicit visual-anchor table. [Source and edition notes](source-and-edition-notes.json) preserve the original provenance hashes and change categories.
 
-目录中的两份规则库是完整的公开整理版，不是历史文件的逐字备份，不含课程录音、第三方完整剧本或私人案例。经验数字不代表最新市场数据；不承诺过稿或市场效果。检查覆盖结构、依赖、安装包完整性，不声称已经做过跨模型创作效果评测。
+The English edition retains all six and fourteen method chapters, renders teaching examples in English, and qualifies historical counts and production heuristics. It does not include course recordings, complete third-party scripts, or private cases. No chapter promises approval or commercial results. Repository-level validation is described in [VALIDATION.md](../../VALIDATION.md).
 
-## 许可
+## License
 
-本目录新增Skill、规则库与说明使用仓库[MIT License](LICENSE)。不扩展到原始私人资料或其他未收录材料。
+The included modules and references use the [MIT License](LICENSE). This does not grant rights to private originals or unbundled source material.

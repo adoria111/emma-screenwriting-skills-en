@@ -1,190 +1,100 @@
-# 对白判断框架
+# Dialogue Judgment Framework
 
-需要解释理论来源、校准边界或处理争议性重复时读取。本文件把经典写作理论转成可观察的对白判断，不要求在日常输出中罗列作者姓名。
+Read for theoretical context, boundary calibration, or disputed repetition. This translates classic writing concepts into observable tests; routine outputs need not list theorists. The summaries below are practical interpretations, not quotations or a claim that every author endorses every rule.
 
-## 理论到动作
+## Theory into action
 
-### 罗伯特·麦基：《对白：文字、舞台、银幕的言语行为艺术》
+### Robert McKee — Dialogue
 
-核心机制：对白不是日常谈话的照录，而是人物为了欲望，以语言实施行动。每句台词下面应能找到意图与策略。文本是说出的内容，潜台词是人物真正实施的动作、回避的事实或没有明说的欲望。
+Treat speech as action pursuing desire, not a transcript of ordinary conversation. Identify intention and tactic beneath wording; subtext may be an action, avoided fact, or unstated desire.
 
-转成判断：
+Use verbs: request, induce, probe, conceal, humiliate, delay, threaten, soothe, interrogate, sever. A line that merely “explains again” is a candidate for compression. Subtext does not require obscurity; directness can be powerful action.
 
-- 先写动词：请求、诱导、试探、遮掩、羞辱、拖延、威胁、安抚、逼供、切割。
-- 找不到动作，只能写“说明了一遍”，通常是解释或重复候选。
-- 不把“有潜台词”误解为故弄玄虚；直接表达也可以是有力行动。
+Limits: urgent commands, necessary confirmation, procedure, and final decisions can rely on literal meaning. A verdict, public accusation, declaration of hatred, or severed relationship may need everyone to understand the explicit position. Subtext is not a universal quality gate.
 
-失效边界：紧急命令、必要确认、程序性沟通和最终决定可以主要依靠字面意义。
+### Lajos Egri — The Art of Dramatic Writing
 
-补充边界：言语行动可以是直接宣判、公开控诉、喊出恨意或切断关系。潜台词不是好台词的硬性指标；当人物需要让对手、旁观者和观众同时听懂其立场时，明说本身就是行动。
+Motivation, relationship, and conflict give dialogue/action direction. Derive each line from the current objective, character pressure, and relationship. Different people expressing the same view should use different values/tactics. Ask why now and why this listener. A personality label does not replace current motivation; invent no backstory to explain it.
 
-### 拉约什·埃格里：《戏剧写作艺术》
+### John Truby — The Anatomy of Story
 
-核心机制：人物动机、关系与冲突推动戏剧；缺乏方向会产生无目的的对白和行动。
+Desire drives action; new information prompts decisions and changed direction. An effective exchange may change knowledge, decision, tactic, or route. Repeated pursuit of one goal should change method/cost. Subtle emotional scenes need not alter external plot every line, but can alter understanding, closeness, trust, or performance state.
 
-转成判断：
+### David Mamet — Three Uses of the Knife and dramatic action
 
-- 台词必须来自人物此刻的目标、性格压力和双方关系。
-- 同一观点由不同人物说出时，应表现出不同价值判断和手段。
-- 判断“为什么现在说”和“为什么对这个人这样说”。
+Define who wants what, why now, and the cost of failure. Speech attempts to overcome resistance rather than explain the author's theme. Escalation needs a concrete cost or changed conflict. Do not turn every exchange into an argument: restraint, silence, and changing subject can be strong tactics.
 
-失效边界：不能用性格标签替代具体的当前动机，也不能为解释动机虚构背景。
+### Syd Field — Screenplay
 
-### 约翰·特鲁比：《故事写作大师班》
+Images, dialogue, and description work together within dramatic structure. Beautiful lines cannot replace an effective scene. Do not verbally repeat clearly visible information unless the repetition itself deceives, pressures, conceals, or performs a relationship.
 
-核心机制：欲望驱动行动；人物获得新信息后作决定并改变行动方向。
+### Linda Seger — Making a Good Script Great
 
-转成判断：
+Rewrite through compression, focus, and balance of image/speech. Cut for dramatic effect, not a deletion quota. Recheck emotional steps, information clarity, and action after each cut.
 
-- 一轮有效对白应带来信息、决定、策略或行动路线的变化。
-- 对话可以围绕同一目标多次交锋，但每次应改变抵达目标的方法或代价。
+## Explicit emotion in genre drama
 
-失效边界：微妙的情绪场景不一定每句都改变外部情节，但应改变理解、亲疏、信任或表演状态。
+Theory offers mechanisms, not one universal style. Realism, theatre, soap, revenge melodrama, vertical drama, and farce require different explicitness. Direct/exaggerated lines can perform five jobs:
+1. Emotional release after sustained pressure.
+2. Audience wish fulfillment: saying what viewers have wanted said.
+3. Rapidly clarifying moral stance, allegiance, or intimacy.
+4. A clear performance peak: cry, collapse, judgment, or cold rupture.
+5. An intelligible trailer, excerpt, or ending moment.
 
-### 大卫·马梅特：《刀的三种用法》及其戏剧行动传统
+Still check prior pressure or a plainly high-pressure situation, a new emotional stage rather than a fifth synonymous insult, changed speaker/listener/witness relationship, subsequent reaction/verdict/action, and whether a stronger character-specific outburst already exists.
 
-核心机制：戏剧来自人物在阻碍下追求目标的进展，场景必须回答谁想要什么、为何此刻必须得到、得不到有什么代价。
+### Outburst and consequence
 
-转成判断：
+“You're the cruelest parents I've ever known. I hate you!” may deliver emotional release. “From today on, you have a son. You don't have a daughter” delivers a relationship verdict. Departure, refusal of money, or public evidence can embody the result. Do not reject the first line solely for little subtext/new factual information. Merge uninterrupted same-speaker sentences under the formatting rule.
 
-- 给每一方写清场景目标、阻碍和风险。
-- 台词是克服阻碍的动作，不是作者对主题的说明。
-- 所谓“升级”必须增加具体代价或改变冲突性质。
+Three possible judgments:
+- **Effective outburst:** pressure, peak, and reaction/consequence; retain.
+- **Unresolved venting:** emotional/performance value but no follow-through; retain its core and recommend relationship/action continuation. Add such continuation only within authorization.
+- **Empty shouting:** no buildup, new emotional stage, reaction, or consequence, with synonymous repetition; cut/reconstruct within scope.
 
-失效边界：不要把所有对白写成高强度争吵；克制、沉默和转移话题也可以是强策略。
+## Six axes of repetition
 
-### 悉德·菲尔德：《电影剧本写作基础》
+| Axis | Question | Stagnation | Meaningful change |
+|---|---|---|---|
+| Information | What is learned? | Rephrasing known facts | New fact/interpretation, reversed meaning |
+| Tactic | How does the speaker affect the listener? | Same plea/denial/insult | Flattery → bargain → shame → threat |
+| Intensity | What concrete risk rises? | Only louder | Changed leverage, deadline, target, cost |
+| Consequence | Why is the next turn different? | Same response remains sufficient | Forced choice/action/exposure/lost power |
+| Emotion | What feeling pays off? | An already exhausted emotion | First explosion, public judgment, long pressure released |
+| Performance/genre | What job does it do here? | No new beat or hook | Actor's peak, viewer's wished-for line, allegiance, excerpt moment |
 
-核心机制：电影剧本通过画面、对白与描述共同在戏剧结构中讲故事；漂亮对白不能替代有效的场景。
+No change on all six axes strongly suggests deletion. Emotion/performance-only change still deserves a check for unique peak, earned release, and response. This is a heuristic, not a mechanical score.
 
-转成判断：
+## Examples (English renderings)
 
-- 动作已清楚表达的信息，不再让人物口头复述。
-- 只有当解释本身用于欺骗、施压、掩饰或关系表演时才保留。
+**Stalled loop:** Mother demands money; daughter says none; mother demands again; daughter repeats none; mother insists. Information, tactic, and consequence remain unchanged.
 
-### 琳达·西格：《如何把好剧本变得更好》
+**Escalating exchange:** Mother asks for 100,000 to cover the brother's debt. Daughter refuses gambling debt. Mother invokes education costs. Daughter cites grandmother's payments and transfer records. Mother threatens to visit the daughter's workplace. The goal stays, but tactics move from request to family debt, evidence rebuttal, and social threat. The source amount illustrates established leverage, not a suggested amount to add elsewhere.
 
-核心机制：好剧本来自重写、压缩、聚焦以及画面与对白的平衡。
+**Necessary repetition:** A child says “It wasn't me.” Police place a bloodied schoolbag on the table. The child repeats the denial in fear. Their mother reaches out; the child recoils and begs her to believe them. Wording repeats while performance and relationship change; keeping only one denial loses the arc.
 
-转成判断：
+## Quality checks
 
-- 压缩以戏剧效果为准，不设删字比例。
-- 每次删减后检查情绪台阶、信息清晰度和动作是否仍然成立。
+1. Clear speaking objective.
+2. Action affecting the listener.
+3. Response to the previous turn and pressure on the next.
+4. Situationally meaningful subtext, or direct speech with sufficient action.
+5. Necessary information, pressure, or understanding.
+6. Specific person and relationship.
+7. Division of labor with visuals.
+8. Speakable performance/rhythm.
+9. Concision retaining emotional process.
+10. Strong lines arising from character, moment, and consequences rather than portable copywriting.
+11. Respect for genre-appropriate directness, absolutes, and exaggeration rather than automatic understatement.
+12. Venting that earns a peak and receives reaction, relationship judgment, or action.
 
-## 类型化短剧的明情绪机制
+## Seven-question check
 
-经典对白理论提供的是机制，不是统一风格。现实主义、舞台剧、肥皂剧、复仇爽剧、竖屏短剧和喜剧闹剧对明示程度的要求不同。短剧中的直白夸张台词可能承担五类独立工作：
+Who wants what from whom? What tactic? What unstated action? What new information/pressure/relationship/meaning? Why can the listener not respond exactly as before? Would deletion leave subsequent plot/performance entirely unchanged? Even then, would it remove the only emotional payoff or performance peak?
 
-1. **情绪结算：** 把连续受压转化为一次明确爆发。
-2. **观众代偿：** 说出观众期待人物终于说出口的话。
-3. **立场标记：** 在有限时长内快速确认善恶、亲疏与阵营。
-4. **表演峰值：** 给演员特写、哭喊、崩溃、宣判或低温决裂的明确落点。
-5. **传播卡点：** 形成无需完整上下文也能理解的预告、切片或集尾句。
+If the first five have no answer, the sixth is unchanged, and the seventh identifies no loss, cut/merge. If the seventh identifies a real contribution, retain or reposition at the genuine peak within scope.
 
-这些功能不免除基本检验。至少确认：
-
-- 前面是否有足够蓄压，或人物是否处于公认的高压情境；
-- 此句是否是新的情绪阶段，而非第五次同义辱骂；
-- 说话对象、旁观者或观众关系是否因此改变；
-- 后面是否有反应、关系宣判或行动承接；
-- 同一场是否已经存在更强、更角色化的爆发句。
-
-### 爆发与落地
-
-短剧可以让两句台词分工：
-
-```text
-女：你们是我见过最恶毒的父母！我恨死你们了！
-女：从今天起，你们只有儿子，没有女儿。
-```
-
-第一句负责情绪结算、观众代偿和演员爆发；第二句负责关系宣判。若后面再有离开、拒绝给钱或公开证据等动作，则完成行动落地。不要因为第一句低潜台词、低新信息就单独判坏。
-
-### 三种不同结论
-
-- **有效爆发：** 有蓄压、有峰值、有反应或后果，直接保留。
-- **纯宣泄：** 有明确情绪／表演价值但缺少落地，保留核心句并补关系或行动承接。
-- **无效空喊：** 无蓄压、无新情绪阶段、无反应、无后果，且同义重复，删除或重构。
-
-## 车轱辘话六轴
-
-| 轴 | 要问的问题 | 停滞信号 | 有效变化 |
-| --- | --- | --- | --- |
-| 信息 | 新知道什么？ | 同义改写已知事实 | 新事实、新解释、旧事实意义反转 |
-| 策略 | 人物怎么影响对方？ | 继续请求、否认或辱骂 | 讨好转交易、交易转羞耻、羞耻转威胁 |
-| 力度 | 风险具体增加了吗？ | 只是音量更大 | 筹码、期限、对象或代价升级 |
-| 后果 | 下一轮为什么不同？ | 对方仍可原样回答 | 被迫选择、行动、暴露或失去权力 |
-| 情绪 | 此句兑现了什么感受？ | 继续重复已经喊满的情绪 | 首次爆发、公开宣判、释放长期蓄压 |
-| 表演／类型 | 它在当前类型中完成什么？ | 没有新的表演节拍或卡点 | 演员峰值、观众嘴替、站队或传播落点 |
-
-六轴都不变，是强删除信号。只在情绪或表演轴有变化时，不要立即删除：判断它是否位于唯一峰值、是否兑现前文蓄压、是否有反应或落地。这个矩阵是启发式工具，不是机械评分。
-
-## 正反例
-
-### 原地循环
-
-```text
-母亲：这钱你必须出。
-女儿：我没有钱。
-母亲：你怎么能不出？
-女儿：我真的没有。
-母亲：反正你必须拿出来。
-```
-
-信息只有“要钱／不给”，策略与后果都没有变化。
-
-### 攻防阶梯
-
-```text
-母亲：你先替你弟把这十万补上。
-女儿：我的钱不替他填赌债。
-母亲：我们供你读书的钱，你也不打算还？
-女儿：学费是奶奶出的。转账记录我留着。
-母亲：那我明天去你公司，问问你领导怎么教你做人。
-```
-
-目标相同，但策略依次是请求、亲情债务、证据反制、社会性威胁，压力持续变化。
-
-### 必要复沓
-
-```text
-孩子：不是我。
-警察把沾血的书包放到桌上。
-孩子：不是我……
-母亲伸手碰他，他猛地躲开。
-孩子：妈，真的不是我。
-```
-
-字面重复，但表演状态从快速否认变为恐惧，再变为向母亲求信任；动作与关系持续变化。不能只留一句。
-
-## 好台词十项检查
-
-1. 有明确说话目标。
-2. 是影响对方的行动。
-3. 回应上一轮并改变下一轮。
-4. 字面与真实意图之间存在符合情境的距离，或直接表达本身足够有行动力。
-5. 提供必要的新信息、压力或理解。
-6. 来自具体人物与具体关系。
-7. 与动作分工，不重复画面。
-8. 可由演员自然说出并形成节奏。
-9. 简洁但保留必要情绪过程。
-10. 强句来自人物、时刻与后果，而不是可移植的文案。
-11. 类型化短剧的明情绪、绝对化和夸张尺度得到尊重，不被自动改成含蓄表达。
-12. 纯宣泄句确实完成峰值或代偿，并由关系宣判、反应或行动承接。
-
-## 六问检查卡
-
-1. 谁想从谁那里得到什么？
-2. 这句话采用什么策略？
-3. 没有明说但正在实施的动作是什么？
-4. 它新增什么信息、压力、关系或意义？
-5. 对方为什么不能仍按原来的方式回应？
-6. 删除后，后续剧情或表演是否完全不变？
-7. 即使剧情不变，删除后是否失去唯一的情绪兑现、观众嘴替或演员爆发点？
-
-前五问都没有答案，第六问是“完全不变”，再检查第七问。第七问也是否定，基本应删或合并；第七问成立，则作为情绪／表演功能句保留或重新放到真正峰值。
-
-## 书目
+## Bibliography
 
 - Robert McKee, *Dialogue: The Art of Verbal Action for Page, Stage, and Screen*.
 - Lajos Egri, *The Art of Dramatic Writing*.
